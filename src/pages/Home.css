@@ -1,0 +1,39 @@
+.home {
+  text-align: center;
+}
+
+.test-selection {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.test-button {
+  width: 300px;
+  height: 200px;
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.test-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.test-button h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.8em;
+  color: white;
+}
+
+.test-button p {
+  margin: 0;
+  font-size: 1.1em;
+  opacity: 0.9;
+} 
