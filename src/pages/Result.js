@@ -48,15 +48,26 @@ const Result = () => {
 
   // 공유하기 기능
   const shareResult = () => {
+    // 점수를 URL 파라미터로 변환
+    const scoreParams = new URLSearchParams();
+    Object.entries(scores).forEach(([key, value]) => {
+      scoreParams.append(key.toLowerCase(), value);
+    });
+    
+    // 전체 공유 URL 생성
+    const shareUrl = `${window.location.origin}/result?${scoreParams.toString()}`;
+
     if (navigator.share) {
       navigator.share({
         title: '마인드랩 MBTI 결과',
         text: `내 MBTI 유형은 ${mbtiType}입니다! (${mbtiDescriptions[mbtiType]})`,
-        url: window.location.href
+        url: shareUrl
       }).catch(console.error);
     } else {
       // 클립보드에 복사
-      const text = `내 MBTI 유형은 ${mbtiType}입니다! (${mbtiDescriptions[mbtiType]})`;
+      const text = `내 MBTI 유형은 ${mbtiType}입니다! (${mbtiDescriptions[mbtiType]})
+결과 보기: ${shareUrl}`;
+      
       navigator.clipboard.writeText(text)
         .then(() => alert('클립보드에 복사되었습니다!'))
         .catch(console.error);
