@@ -1,12 +1,12 @@
 .result {
-  text-align: center;
   padding: 20px;
+  text-align: center;
 }
 
 .mbti-result {
   font-size: 4em;
   font-weight: bold;
-  margin: 40px 0;
+  margin: 30px 0;
   padding: 30px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -15,22 +15,76 @@
   letter-spacing: 5px;
 }
 
-.restart-button {
-  padding: 15px 40px;
-  border: none;
-  border-radius: 25px;
-  background: white;
+.mbti-description {
+  font-size: 1.2em;
   color: #2c3e50;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1.1em;
-  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.type-graphs {
+  margin: 40px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.restart-button:hover {
+.type-bar {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+.type-bar span {
+  width: 30px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.bar {
+  flex: 1;
+  height: 20px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.result-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.share-button, .restart-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.share-button {
   background: #667eea;
   color: white;
+}
+
+.restart-button {
+  background: white;
+  color: #2c3e50;
+  border: 2px solid #667eea;
+}
+
+.share-button:hover, .restart-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 } 
