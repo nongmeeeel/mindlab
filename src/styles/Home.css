@@ -1,0 +1,82 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.test-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.test-button {
+  width: 300px;
+  background: white;
+  border: none;
+  border-radius: 15px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.test-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.test-button h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.test-button p {
+  color: #666;
+  margin: 0;
+}
+
+.test-button.mbti {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #667eea;
+}
+
+.test-button.enneagram {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #ee8c68;
+}
+
+.test-button.attachment {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #ff6b6b;
+}
+
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .test-button {
+    width: 100%;
+    max-width: 300px;
+  }
+} 

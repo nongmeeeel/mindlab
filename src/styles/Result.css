@@ -1,0 +1,318 @@
+.result-page {
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.result-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.result-type {
+  text-align: center;
+}
+
+.mbti-result {
+  font-size: 4em;
+  font-weight: bold;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+  box-shadow: 0 10px 20px rgba(102,126,234,0.2);
+}
+
+.enneagram-result {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #ee8c68 0%, #eb6b9d 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(238,140,104,0.2);
+}
+
+.type-number {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.type-title {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.type-description {
+  font-size: 1.2em;
+  color: #2c3e50;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.traits-list {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 300px;
+  padding: 0 20px;
+}
+
+.trait-item {
+  font-size: 1.1em;
+  color: #2c3e50;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  text-align: left;
+  display: block;
+}
+
+.mbti-container .trait-item::before,
+.enneagram-container .trait-item::before,
+.attachment-container .trait-item::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.trait-item::before {
+  position: relative !important;
+  margin-right: 8px;
+}
+
+.mbti-container .trait-item::before {
+  content: "•";
+  color: #667eea;
+}
+
+.enneagram-container .trait-item::before {
+  content: "◆";
+  color: #ee8c68;
+}
+
+.attachment-container .trait-item::before {
+  content: "★";
+  color: #48c6ef;
+}
+
+.premium-container {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.premium-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.restart-button {
+  display: block;
+  width: 200px;
+  margin: 30px auto 0;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background: #667eea;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mbti-container .restart-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.enneagram-container .restart-button {
+  background: linear-gradient(135deg, #ee8c68 0%, #eb6b9d 100%);
+}
+
+.attachment-container .restart-button {
+  background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
+}
+
+@media (max-width: 768px) {
+  .result-container {
+    padding: 20px;
+  }
+
+  .mbti-result {
+    font-size: 3em;
+  }
+
+  .type-number {
+    font-size: 2.5em;
+  }
+
+  .type-title {
+    font-size: 1.5em;
+  }
+
+  .traits-list {
+    max-width: 280px;
+    padding: 0 10px;
+  }
+} 
+
+.mbti-container {
+  background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+}
+
+.enneagram-container {
+  background: linear-gradient(135deg, rgba(238,140,104,0.1) 0%, rgba(235,107,157,0.1) 100%);
+}
+
+.attachment-container {
+  background: linear-gradient(135deg, rgba(72,198,239,0.1) 0%, rgba(111,134,214,0.1) 100%);
+}
+
+.mbti-container .premium-container {
+  border-top: 2px solid rgba(102,126,234,0.2);
+}
+
+.enneagram-container .premium-container {
+  border-top: 2px solid rgba(238,140,104,0.2);
+}
+
+.attachment-container .premium-container {
+  border-top: 2px solid rgba(72,198,239,0.2);
+}
+
+/* MBTI 스타일 - 모던하고 그리드 형태 */
+.mbti-container .traits-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 500px;
+}
+
+.mbti-container .trait-item {
+  background: rgba(102,126,234,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.mbti-container .trait-item::before {
+  display: none;
+}
+
+/* 에니어그램 스타일 - 원형 또는 다각형 형태 */
+.enneagram-container .traits-list {
+  position: relative;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.enneagram-container .trait-item {
+  background: rgba(238,140,104,0.1);
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 30px;
+  text-align: left;
+  border-left: 4px solid #ee8c68;
+}
+
+.enneagram-container .trait-item::before {
+  display: none;
+}
+
+/* 애착유형 스타일 - 카드 형태 */
+.attachment-container .traits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.attachment-container .trait-item {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(72,198,239,0.2);
+  border-left: 4px solid #48c6ef;
+  transition: transform 0.2s ease;
+}
+
+.attachment-container .trait-item:hover {
+  transform: translateX(10px);
+}
+
+.attachment-result {
+  background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.attachment-result::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255,255,255,0.1) 50%,
+    transparent 100%
+  );
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .mbti-container .traits-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .enneagram-result {
+    width: 120px;
+    height: 120px;
+  }
+} 

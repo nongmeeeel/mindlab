@@ -1,23 +1,34 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Test from './pages/Test';
-import Result from './pages/Result';
-import './App.css';
+
+// Test 페이지들
+import MBTITest from './pages/mbti/MBTITest';
+import EnneagramTest from './pages/enneagram/EnneagramTest';
+import AttachmentTest from './pages/attachment/AttachmentTest';
+
+// Result 페이지들
+import MBTIResult from './pages/mbti/MBTIResult';
+import EnneagramResult from './pages/enneagram/EnneagramResult';
+import AttachmentResult from './pages/attachment/AttachmentResult';
+
+import './styles/App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/test" element={<Test />} />
-            <Route path="/result" element={<Result />} />
-          </Routes>
-        </div>
-      </div>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      
+      {/* 검사 페이지 라우트 */}
+      <Route path="/test/mbti" element={<MBTITest />} />
+      <Route path="/test/enneagram" element={<EnneagramTest />} />
+      <Route path="/test/attachment" element={<AttachmentTest />} />
+      
+      {/* 결과 페이지 라우트 */}
+      <Route path="/result/mbti" element={<MBTIResult />} />
+      <Route path="/result/enneagram" element={<EnneagramResult />} />
+      <Route path="/result/attachment" element={<AttachmentResult />} />
+    </Routes>
   );
 }
 
