@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>심리 검사 유형 선택</h1>
+      <h1>마인드랩 심리 검사</h1>
       <div className="test-selection">
         <button 
           className="test-button mbti"
