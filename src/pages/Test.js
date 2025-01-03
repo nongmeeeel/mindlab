@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Test.css';
 
 // MBTI 문항 데이터 (4문항)
@@ -31,8 +31,8 @@ const mbtiQuestions = [
 ];
 
 const Test = () => {
-  const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const navigate = useNavigate();
   const [scores, setScores] = useState({
     E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0
   });
@@ -60,7 +60,7 @@ const Test = () => {
       <div className="progress-bar">
         <div 
           className="progress" 
-          style={{ width: `${(currentQuestion + 1) * (100 / mbtiQuestions.length)}%` }}
+          style={{ width: `${(currentQuestion + 1) * (100 / 4)}%` }}
         ></div>
       </div>
       
