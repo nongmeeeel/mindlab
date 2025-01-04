@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { mbtiDescriptions } from '../../data/mbti/results';
-import Payment from '../../components/Payment';
 import DetailedReport from '../../components/DetailedReport';
 import '../../styles/Result.css';
 
