@@ -1,0 +1,161 @@
+.detail-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f5f6fa;
+}
+
+.detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+/* 차트 섹션 */
+.chart-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+/* 분석 섹션 공통 스타일 */
+section {
+  margin: 40px 0;
+}
+
+section h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* MBTI 특화 스타일 */
+.dimension-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dimension-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.dimension-item h4 {
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+/* 에니어그램 특화 스타일 */
+.main-type {
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.wing-types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.wing-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #ee8c68;
+}
+
+.growth-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stress-point, .growth-point {
+  padding: 20px;
+  border-radius: 10px;
+  background: #f8f9fa;
+}
+
+/* 애착유형 특화 스타일 */
+.pattern-item {
+  background: #f0f7ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.dynamics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dynamic-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #48c6ef;
+}
+
+/* 개선점 스타일 */
+.improvement-points, .development-points {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.improvement-item, .development-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.point-number {
+  background: #667eea;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .detail-container {
+    padding: 20px;
+  }
+
+  .dimension-grid,
+  .wing-types,
+  .growth-points,
+  .dynamics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-section {
+    padding: 10px;
+  }
+} 

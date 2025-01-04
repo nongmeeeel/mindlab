@@ -1,67 +1,80 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { mbtiQuestions } from '../../data/mbti/questions';
-import { calculateMBTI } from '../../data/mbti/calculator';
 import '../../styles/Test.css';
 
 const MBTITest = () => {
   const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState({
-    E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0
+    EI: { E: 0, I: 0 },
+    SN: { S: 0, N: 0 },
+    TF: { T: 0, F: 0 },
+    JP: { J: 0, P: 0 }
   });
 
-  const handleAnswer = (score) => {
-    const question = mbtiQuestions[currentQuestion];
-    const normalizedScore = score - 3; // 1~5를 -2~2로 변환
-
-    setScores(prev => ({
-      ...prev,
-      [question.type]: prev[question.type] + normalizedScore,
-      [question.opposite]: prev[question.opposite] - normalizedScore
-    }));
+  const handleAnswer = (dimension, type) => {
+    const newScores = { ...scores };
+    newScores[dimension][type] += 1;
 
     if (currentQuestion < mbtiQuestions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
+      setScores(newScores);
     } else {
-      const result = calculateMBTI(scores);
+      // 결과 계산
+      const result = {
+        E: scores.EI.E > scores.EI.I ? 'E' : 'I',
+        S: scores.SN.S > scores.SN.N ? 'S' : 'N',
+        T: scores.TF.T > scores.TF.F ? 'T' : 'F',
+        J: scores.JP.J > scores.JP.P ? 'J' : 'P'
+      };
+      const mbtiType = result.E + result.S + result.T + result.J;
+
+      // 각 차원별 선호도 점수 계산 (백분율)
+      const dimensionScores = [
+        Math.round((scores.EI.E / (scores.EI.E + scores.EI.I)) * 100),
+        Math.round((scores.SN.S / (scores.SN.S + scores.SN.N)) * 100),
+        Math.round((scores.TF.T / (scores.TF.T + scores.TF.F)) * 100),
+        Math.round((scores.JP.J / (scores.JP.J + scores.JP.P)) * 100)
+      ];
+      
       navigate('/result/mbti', { 
-        state: { resultType: result } 
+        state: { 
+          resultType: mbtiType,
+          scores: dimensionScores // 차원별 선호도 점수 전달
+        } 
       });
     }
   };
 
+  const question = mbtiQuestions[currentQuestion];
+
   return (
-    <div className="test-container">
-      <div className="test-content">
-        <div className="progress-bar">
-          <div 
-            className="progress" 
-            style={{ width: `${(currentQuestion + 1) / mbtiQuestions.length * 100}%` }}
-          ></div>
-        </div>
+    <div className="test-page mbti-test">
+      <div className="progress-bar">
+        <div 
+          className="progress" 
+          style={{ width: `${(currentQuestion + 1) / mbtiQuestions.length * 100}%` }}
+        />
+      </div>
 
-        <div className="question-section">
-          <h2>질문 {currentQuestion + 1}</h2>
-          <p className="question-text">{mbtiQuestions[currentQuestion].text}</p>
-        </div>
+      <div className="question-container">
+        <h2>질문 {currentQuestion + 1}</h2>
+        <p className="question-text">{question.text}</p>
 
-        <div className="answers-section">
-          <div className="scale-labels">
-            <span>전혀 아니다</span>
-            <span>매우 그렇다</span>
-          </div>
-          <div className="answer-buttons">
-            {[1, 2, 3, 4, 5].map((score) => (
-              <button
-                key={score}
-                onClick={() => handleAnswer(score)}
-                className="answer-button"
-              >
-                {score}
-              </button>
-            ))}
-          </div>
+        <div className="options-container mbti-options">
+          <button 
+            className="option-button"
+            onClick={() => handleAnswer(question.dimension, question.options[0].type)}
+          >
+            {question.options[0].text}
+          </button>
+          <button 
+            className="option-button"
+            onClick={() => handleAnswer(question.dimension, question.options[1].type)}
+          >
+            {question.options[1].text}
+          </button>
         </div>
       </div>
     </div>
