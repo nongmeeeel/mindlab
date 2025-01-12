@@ -64,10 +64,6 @@ const AttachmentResult = () => {
     recommendations: getRecommendations(resultType)
   };
 
-  const handlePaymentSuccess = () => {
-    setShowDetailedReport(true);
-  };
-
   return (
     <div className="result-page">
       <div className="result-container attachment-container">
@@ -76,17 +72,30 @@ const AttachmentResult = () => {
         </div>
 
         <div className="result-card">
+          <div className="result-image">
+            <img src={result.image} alt={result.title} />
+          </div>
+          
           <div className="result-type">
             <div className="attachment-result">
               <h2>{result.title}</h2>
             </div>
-            <p className="type-description">{result?.description}</p>
-            <div className="traits-list">
-              {result?.traits.map((trait, index) => (
-                <div key={index} className="trait-item">
-                  {trait}
-                </div>
-              ))}
+            <p className="type-description">{result.mainDescription}</p>
+            
+            <div className="traits-section">
+              <h3>주요 특징</h3>
+              <div className="traits-list">
+                {result.traits.map((trait, index) => (
+                  <div key={index} className="trait-item">
+                    {trait}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relationship-section">
+              <h3>관계에서의 특징</h3>
+              <p>{result.relationships}</p>
             </div>
           </div>
         </div>
@@ -98,7 +107,7 @@ const AttachmentResult = () => {
               onClick={() => {
                 const confirmed = window.confirm('상세 분석 리포트를 구매하시겠습니까? (5,000원)');
                 if (confirmed) {
-                  handlePaymentSuccess();
+                  setShowDetailedReport(true);
                 }
               }}
             >

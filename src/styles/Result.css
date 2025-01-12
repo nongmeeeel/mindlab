@@ -311,3 +311,34 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(102,126,234,0.3);
 } 
+
+.result-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.result-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.traits-section,
+.relationship-section {
+  margin: 30px 0;
+}
+
+.traits-section h3,
+.relationship-section h3 {
+  color: #48c6ef;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.relationship-section p {
+  line-height: 1.6;
+  color: #2c3e50;
+} 
