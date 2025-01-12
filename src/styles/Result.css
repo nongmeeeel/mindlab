@@ -35,7 +35,7 @@
 
 .mbti-result {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 15px;
   margin-bottom: 30px;
@@ -43,17 +43,19 @@
 }
 
 .mbti-result h2 {
-  font-size: 3.5em;
+  font-size: 1.5em;
   font-weight: bold;
   color: white;
-  margin-bottom: 10px;
-  letter-spacing: 5px;
+  margin-bottom: 5px;
+  letter-spacing: normal;
+  white-space: nowrap;
 }
 
 .mbti-subtitle {
-  font-size: 1.4em;
+  font-size: 1em;
   color: rgba(255, 255, 255, 0.9);
-  margin-top: 10px;
+  margin-top: 5px;
+  white-space: nowrap;
 }
 
 .analysis-section,
@@ -818,17 +820,16 @@
 .action-button {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
+  gap: 6px;
+  padding: 8px 16px;
   border: none;
   border-radius: 25px;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
-  min-width: 180px;
   justify-content: center;
 }
 
@@ -935,6 +936,7 @@
   display: flex;
   gap: 8px;
   z-index: 1000;
+  flex-direction: row;
 }
 
 /* 하단 버튼 */
@@ -959,17 +961,12 @@
   .action-buttons.fixed-top {
     top: 10px;
     right: 10px;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 6px;
   }
   
   .action-buttons.fixed-top .action-button {
-    padding: 8px 16px;
-    font-size: 0.9em;
-    min-width: auto;
-  }
-  
-  .action-buttons.fixed-top .action-button span {
-    display: none;
+    padding: 6px 12px;
+    font-size: 0.8em;
   }
 }

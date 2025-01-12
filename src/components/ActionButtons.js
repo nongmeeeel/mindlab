@@ -39,15 +39,15 @@ const ActionButtons = ({ position = 'bottom' }) => {
       <button 
         className="action-button premium-button"
         onClick={handlePremium}
-        aria-label="전체 결과 확인하기"
+        aria-label="전체 결과 확인"
       >
         <FaCrown size={18} />
-        <span>전체 결과 확인하기</span>
+        <span>전체 결과 확인</span>
       </button>
       <button 
         className="action-button share-button"
         onClick={handleShare}
-        aria-label="테스트 공유하기"
+        aria-label="테스트 공유"
       >
         <FaShareAlt size={18} />
         <span>테스트 공유</span>
@@ -55,7 +55,7 @@ const ActionButtons = ({ position = 'bottom' }) => {
       <button 
         className="action-button home-button"
         onClick={() => navigate('/')}
-        aria-label="다른 검사 하러가기"
+        aria-label="다른 검사"
       >
         <FaHome size={18} />
         <span>다른 검사</span>
