@@ -1,162 +1,467 @@
+import ESTPImg from '../../assets/images/result/mbti/ESTP.jpg';
+import ENTPImg from '../../assets/images/result/mbti/ENTP.jpg';
+import ESTJImg from '../../assets/images/result/mbti/ESTJ.jpg';
+import ENTJImg from '../../assets/images/result/mbti/ENTJ.jpg';
+import ESFPImg from '../../assets/images/result/mbti/ESFP.jpg';
+import ENFPImg from '../../assets/images/result/mbti/ENFP.jpg';
+import ESFJImg from '../../assets/images/result/mbti/ESFJ.jpg';
+import ENFJImg from '../../assets/images/result/mbti/ENFJ.jpg';
+import ISTPImg from '../../assets/images/result/mbti/ISTP.jpg';
+import INTPImg from '../../assets/images/result/mbti/INTP.jpg';
+import ISTJImg from '../../assets/images/result/mbti/ISTJ.jpg';
+import INTJImg from '../../assets/images/result/mbti/INTJ.jpg';
+import ISFPImg from '../../assets/images/result/mbti/ISFP.jpg';
+import INFPImg from '../../assets/images/result/mbti/INFP.jpg';
+import ISFJImg from '../../assets/images/result/mbti/ISFJ.jpg';
+import INFJImg from '../../assets/images/result/mbti/INFJ.jpg';
+
 export const mbtiDescriptions = {
-  ISTJ: {
-    title: "신중한 관리자",
-    description: "체계적이고 신중하며 질서를 중요시하는 당신은 책임감이 강하고 현실적인 성격을 가지고 있습니다.",
-    traits: [
-      "체계적이고 논리적인 사고방식",
-      "높은 책임감과 성실성",
-      "세부사항에 대한 뛰어난 관찰력",
-      "전통과 규칙을 중시"
-    ]
-  },
-  ISFJ: {
-    title: "따뜻한 수호자",
-    description: "세심하고 따뜻한 배려심을 가진 당신은 다른 사람들을 돕는 것에서 큰 보람을 느낍니다.",
-    traits: [
-      "타인을 향한 따뜻한 배려심",
-      "강한 책임감과 헌신",
-      "뛰어난 기억력과 관찰력",
-      "전통과 안정을 중시"
-    ]
-  },
-  INFJ: {
-    title: "통찰력 있는 선지자",
-    description: "이상적인 세상을 꿈꾸며 깊은 통찰력으로 사람들을 이해하는 당신은 특별한 영감을 가지고 있습니다.",
-    traits: [
-      "뛰어난 통찰력과 직관",
-      "강한 공감 능력",
-      "창의적인 문제 해결력",
-      "확고한 가치관"
-    ]
-  },
-  INTJ: {
-    title: "전략적인 설계자",
-    description: "논리적이고 전략적인 사고로 미래를 계획하는 당신은 혁신적인 비전을 가지고 있습니다.",
-    traits: [
-      "뛰어난 전략적 사고능력",
-      "독창적인 문제 해결력",
-      "높은 기준과 완벽주의",
-      "지적 호기심이 강함"
-    ]
-  },
-  ISTP: {
-    title: "만능 재주꾼",
-    description: "뛰어난 적응력과 문제 해결 능력을 가진 당신은 실용적이고 논리적인 성격을 가지고 있습니다.",
-    traits: [
-      "뛰어난 상황 적응력",
-      "실용적인 문제 해결 능력",
-      "효율성 추구",
-      "독립적인 사고방식"
-    ]
-  },
-  ISFP: {
-    title: "예술가",
-    description: "섬세한 감성과 예술적 감각을 지닌 당신은 자유로운 영혼과 따뜻한 마음을 가지고 있습니다.",
-    traits: [
-      "예술적 감각과 심미안",
-      "현재의 순간을 중시",
-      "타인을 향한 배려심",
-      "자유로운 영혼"
-    ]
-  },
-  INFP: {
-    title: "이상주의자",
-    description: "풍부한 상상력과 깊은 감성을 지닌 당신은 순수한 이상을 추구하는 성격을 가지고 있습니다.",
-    traits: [
-      "깊은 공감 능력",
-      "창의적인 상상력",
-      "강한 개성과 독창성",
-      "확고한 가치관"
-    ]
-  },
-  INTP: {
-    title: "아이디어 뱅크",
-    description: "논리적이고 창의적인 사고로 새로운 가능성을 탐구하는 당신은 지적 호기심이 가득합니다.",
-    traits: [
-      "뛰어난 분석력",
-      "창의적인 문제 해결",
-      "지적 호기심",
-      "독창적인 사고방식"
-    ]
-  },
   ESTP: {
-    title: "모험을 즐기는 사업가",
-    description: "활동적이고 현실적인 문제 해결사인 당신은 도전과 모험을 즐기는 성격을 가지고 있습니다.",
-    traits: [
-      "뛰어난 상황 대처 능력",
-      "실용적인 문제 해결력",
-      "모험과 도전을 즐김",
-      "활동적인 성격"
-    ]
-  },
-  ESFP: {
-    title: "자유로운 영혼의 연예인",
-    description: "밝고 낙천적인 성격의 당신은 삶의 즐거움을 아는 매력적인 성격을 가지고 있습니다.",
-    traits: [
-      "밝고 긍정적인 에너지",
-      "뛰어난 사교성",
-      "순발력 있는 대처 능력",
-      "예술적 감각"
-    ]
-  },
-  ENFP: {
-    title: "재기발랄한 활동가",
-    description: "열정적이고 창의적인 당신은 새로운 가능성을 발견하고 사람들과 소통하는 것을 즐깁니다.",
-    traits: [
-      "풍부한 상상력과 창의성",
-      "뛰어난 공감 능력",
-      "열정적인 태도",
-      "새로운 시도를 즐김"
-    ]
+    title: "ESTP",
+    subtitle: "모험을 즐기는 사업가",
+    image: ESTPImg,
+    description: "현재에 충실하며 실용적인 문제 해결과 임기응변에 능한 유형입니다. 에너지가 넘치고 활동적이며, 새로운 경험을 추구하는 모험가적 성향을 가지고 있습니다.",
+    strengths: [
+      "뛰어난 문제 해결 능력",
+      "현실적인 판단력",
+      "유연한 적응력",
+      "순발력과 임기응변"
+    ],
+    weaknesses: [
+      "장기 계획 수립의 어려움",
+      "감정적 공감 부족",
+      "규칙과 제약 거부감",
+      "인내심 부족"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ISFJ", "ISTJ"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ISTP", "ENTJ"]
+      }
+    }
   },
   ENTP: {
-    title: "논쟁을 즐기는 변론가",
-    description: "창의적이고 논리적인 당신은 새로운 아이디어를 탐구하고 토론하는 것을 즐깁니다.",
-    traits: [
-      "뛰어난 논리력",
+    title: "ENTP",
+    subtitle: "논쟁을 즐기는 변론가",
+    image: ENTPImg,
+    description: "창의적이고 도전적인 혁신가입니다. 새로운 아이디어를 탐구하고 논리적인 토론을 즐기며, 기존의 틀을 깨는 것을 두려워하지 않습니다.",
+    strengths: [
       "창의적인 문제 해결",
-      "다재다능함",
-      "도전적인 성향"
-    ]
+      "뛰어난 분석력",
+      "유연한 사고방식",
+      "카리스마 있는 설득력"
+    ],
+    weaknesses: [
+      "일관성 부족",
+      "마감일 준수 어려움",
+      "논쟁적인 성향",
+      "감정적 배려 부족"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["INFJ", "INTJ"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["INTP", "ENFP"]
+      }
+    }
   },
   ESTJ: {
-    title: "엄격한 관리자",
-    description: "체계적이고 실용적인 당신은 목표 달성을 위해 효율적으로 일을 처리하는 능력이 있습니다.",
-    traits: [
-      "체계적인 일 처리",
+    title: "ESTJ",
+    subtitle: "엄격한 관리자",
+    image: ESTJImg,
+    description: "체계적이고 규칙을 중시하는 현실주의자입니다. 명확한 기준과 질서를 바탕으로 목표를 달성하며, 책임감 있게 조직을 이끌어갑니다.",
+    strengths: [
+      "체계적인 조직력",
       "강한 책임감",
-      "실용적인 문제 해결",
-      "명확한 의사 결정"
-    ]
-  },
-  ESFJ: {
-    title: "사교적인 외교관",
-    description: "친절하고 배려심 깊은 당신은 다른 사람들과의 조화를 중요시하는 성격을 가지고 있습니다.",
-    traits: [
-      "뛰어난 대인관계",
-      "따뜻한 배려심",
-      "책임감과 헌신",
-      "협동심이 강함"
-    ]
-  },
-  ENFJ: {
-    title: "정의로운 사회운동가",
-    description: "카리스마 있는 리더십과 따뜻한 마음을 가진 당신은 사람들을 이끌고 돕는 것에 타고난 재능이 있습니다.",
-    traits: [
-      "뛰어난 리더십",
-      "강한 통찰력",
-      "따뜻한 배려심",
-      "이상을 추구하는 성향"
-    ]
+      "현실적인 문제해결",
+      "명확한 의사결정"
+    ],
+    weaknesses: [
+      "융통성 부족",
+      "감정 표현의 어려움",
+      "지나친 완벽주의",
+      "변화 수용의 어려움"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ISFP", "ISTP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ISTJ", "ENFP"]
+      }
+    }
   },
   ENTJ: {
-    title: "대담한 통솔자",
-    description: "카리스마 있는 리더십으로 목표를 달성하는 당신은 타고난 리더의 자질을 가지고 있습니다.",
-    traits: [
+    title: "ENTJ",
+    subtitle: "대담한 통솔자",
+    image: ENTJImg,
+    description: "카리스마 있는 리더십과 전략적 사고를 가진 유형입니다. 장기적인 비전을 제시하고 효율적으로 목표를 달성하며, 혁신적인 변화를 주도합니다.",
+    strengths: [
       "강력한 리더십",
-      "전략적 사고와 실행력",
-      "효율성 추구",
-      "도전을 즐기는 성향"
-    ]
+      "전략적 사고",
+      "추진력과 결단력",
+      "목표 지향적"
+    ],
+    weaknesses: [
+      "감정적 배려 부족",
+      "지나친 완벽주의",
+      "비인내심",
+      "독단적 성향"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["INFP", "INTP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["INTJ", "ESTP"]
+      }
+    }
+  },
+  ESFP: {
+    title: "ESFP",
+    subtitle: "자유로운 영혼의 연예인",
+    image: ESFPImg,
+    description: "밝고 낙천적인 성격으로 현재의 즐거움을 추구하는 유형입니다. 사교적이고 활발하며, 주변 사람들에게 긍정적인 에너지를 전파합니다.",
+    strengths: [
+      "뛰어난 사교성",
+      "긍정적인 에너지",
+      "실용적인 문제해결",
+      "즉흥적 적응력"
+    ],
+    weaknesses: [
+      "장기계획 부족",
+      "집중력 부족",
+      "갈등 회피",
+      "깊이 있는 분석 어려움"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ISTJ", "ISFJ"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ISFP", "ENFJ"]
+      }
+    }
+  },
+  ENFP: {
+    title: "ENFP",
+    subtitle: "재기발랄한 활동가",
+    image: ENFPImg,
+    description: "열정적이고 창의적인 자유영혼입니다. 새로운 가능성을 발견하고 사람들과 깊은 관계를 맺으며, 독창적인 아이디어로 세상을 변화시키고자 합니다.",
+    strengths: [
+      "창의적인 발상",
+      "뛰어난 공감능력",
+      "열정적인 추진력",
+      "유연한 적응력"
+    ],
+    weaknesses: [
+      "일관성 부족",
+      "현실감각 부족",
+      "감정 기복",
+      "체계적 수행 어려움"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["INTJ", "INFJ"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["INFP", "ENTP"]
+      }
+    }
+  },
+  ESFJ: {
+    title: "ESFJ",
+    subtitle: "사교적인 외교관",
+    image: ESFJImg,
+    description: "타인을 배려하고 도움을 주는 것을 좋아하는 사교적인 유형입니다. 조화로운 관계를 중시하며, 책임감 있게 공동체에 기여합니다.",
+    strengths: [
+      "뛰어난 대인관계",
+      "실용적인 봉사정신",
+      "체계적인 업무처리",
+      "신뢰성과 책임감"
+    ],
+    weaknesses: [
+      "과도한 자기희생",
+      "비판에 대한 민감성",
+      "변화에 대한 두려움",
+      "지나친 동조"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ISFP", "ISTP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ISFJ", "ESTJ"]
+      }
+    }
+  },
+  ENFJ: {
+    title: "ENFJ",
+    subtitle: "정의로운 사회운동가",
+    image: ENFJImg,
+    description: "카리스마 있는 이상주의자로 타인의 성장을 돕는 것을 좋아합니다. 공동체의 화합을 이끌어내며, 긍정적인 변화를 만들어내는 데 열정적입니다.",
+    strengths: [
+      "뛰어난 리더십",
+      "강한 통찰력",
+      "탁월한 의사소통",
+      "헌신적인 태도"
+    ],
+    weaknesses: [
+      "과도한 자기희생",
+      "비판에 예민함",
+      "완벽주의 성향",
+      "우유부단함"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["INFP", "ISFP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["INFJ", "ENFP"]
+      }
+    }
+  },
+  ISTP: {
+    title: "ISTP",
+    subtitle: "만능 재주꾼",
+    image: ISTPImg,
+    description: "뛰어난 상황 적응력과 문제해결 능력을 가진 유형입니다. 실용적이고 논리적인 사고로 효율적인 해결책을 찾아내며, 독립적인 성향을 가지고 있습니다.",
+    strengths: [
+      "뛰어난 적응력",
+      "실용적 문제해결",
+      "침착한 위기대처",
+      "객관적 분석력"
+    ],
+    weaknesses: [
+      "감정표현 부족",
+      "장기계획 어려움",
+      "관계형성 소극적",
+      "즉흥적 결정"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ESFJ", "ESTJ"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ESTP", "ISFJ"]
+      }
+    }
+  },
+  ISFP: {
+    title: "ISFP",
+    subtitle: "호기심 많은 예술가",
+    image: ISFPImg,
+    description: "예술적 감각과 섬세한 감성을 지닌 유형입니다. 자신만의 가치관을 중요시하며, 현재의 순간을 즐기고 자유로운 영혼을 가지고 있습니다.",
+    strengths: [
+      "예술적 감각",
+      "섬세한 감성",
+      "적응력",
+      "실용적 창의성"
+    ],
+    weaknesses: [
+      "장기계획 부족",
+      "우유부단함",
+      "스트레스에 약함",
+      "자기주장 부족"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ENFJ", "ESFJ"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ESFP", "ISTJ"]
+      }
+    }
+  },
+  INFP: {
+    title: "INFP",
+    subtitle: "낭만적인 이상주의자",
+    image: INFPImg,
+    description: "깊은 통찰력과 풍부한 상상력을 가진 유형입니다. 자신만의 가치관을 중요시하며, 인간의 잠재력과 가능성을 믿습니다.",
+    strengths: [
+      "창의적 사고",
+      "깊은 통찰력",
+      "강한 공감능력",
+      "이상적 가치추구"
+    ],
+    weaknesses: [
+      "현실감각 부족",
+      "우유부단함",
+      "완벽주의",
+      "비판에 예민함"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ENFJ", "ENTJ"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ENFP", "INTP"]
+      }
+    }
+  },
+  ISFJ: {
+    title: "ISFJ",
+    subtitle: "용감한 수호자",
+    image: ISFJImg,
+    description: "세심하고 헌신적인 성격으로 타인을 배려하는 유형입니다. 책임감이 강하고 전통을 중시하며, 실용적인 방식으로 다른 사람을 돕습니다.",
+    strengths: [
+      "뛰어난 관찰력",
+      "강한 책임감",
+      "실용적 봉사정신",
+      "세심한 배려"
+    ],
+    weaknesses: [
+      "자기주장 부족",
+      "변화 수용 어려움",
+      "과도한 자기희생",
+      "스트레스에 약함"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ESTP", "ESFP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ESFJ", "ISTP"]
+      }
+    }
+  },
+  INFJ: {
+    title: "INFJ",
+    subtitle: "선의의 옹호자",
+    image: INFJImg,
+    description: "이상적인 세상을 추구하며 깊은 통찰력을 가진 유형입니다. 타인의 성장을 돕는 것에 사명감을 느끼며, 창의적인 문제해결 능력을 가지고 있습니다.",
+    strengths: [
+      "뛰어난 통찰력",
+      "창의적 문제해결",
+      "깊은 공감능력",
+      "강한 직관력"
+    ],
+    weaknesses: [
+      "완벽주의",
+      "현실과 이상의 괴리",
+      "과도한 자기희생",
+      "스트레스에 민감"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ENTP", "ENFP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ENFJ", "INTP"]
+      }
+    }
+  },
+  INTJ: {
+    title: "INTJ",
+    subtitle: "용의주도한 전략가",
+    image: INTJImg,
+    description: "전략적 사고와 혁신적인 비전을 가진 유형입니다. 지적 탐구를 즐기며, 복잡한 문제를 해결하는데 탁월한 능력을 보입니다.",
+    strengths: [
+      "전략적 사고",
+      "혁신적 문제해결",
+      "높은 통찰력",
+      "독립적 판단력"
+    ],
+    weaknesses: [
+      "감정표현 부족",
+      "완벽주의",
+      "고집이 강함",
+      "대인관계 어려움"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ENFP", "ENTP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ISTJ", "ENTJ"]
+      }
+    }
+  },
+  INTP: {
+    title: "INTP",
+    subtitle: "논리적인 사색가",
+    image: INTPImg,
+    description: "논리적인 사고와 혁신적인 비전을 가진 유형입니다. 지적 탐구를 즐기며, 복잡한 문제를 해결하는데 탁월한 능력을 보입니다.",
+    strengths: [
+      "논리적인 사고",
+      "혁신적인 문제해결",
+      "높은 통찰력",
+      "독립적 판단력"
+    ],
+    weaknesses: [
+      "감정표현 부족",
+      "완벽주의",
+      "고집이 강함",
+      "대인관계 어려움"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ENFP", "ENTP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["INTP", "ENFP"]
+      }
+    }
+  },
+  ISTJ: {
+    title: "ISTJ",
+    subtitle: "청렴결백한 논리주의자",
+    image: ISTJImg,
+    description: "체계적이고 규칙을 중시하는 현실주의자입니다. 명확한 기준과 질서를 바탕으로 목표를 달성하며, 책임감 있게 조직을 이끌어갑니다.",
+    strengths: [
+      "체계적인 조직력",
+      "강한 책임감",
+      "현실적인 문제해결",
+      "명확한 의사결정"
+    ],
+    weaknesses: [
+      "융통성 부족",
+      "감정 표현의 어려움",
+      "지나친 완벽주의",
+      "변화 수용의 어려움"
+    ],
+    matches: {
+      romantic: {
+        title: "이상적인 연인 궁합",
+        types: ["ISFP", "ISTP"]
+      },
+      work: {
+        title: "최고의 업무 파트너",
+        types: ["ISTJ", "ENFP"]
+      }
+    }
   }
 }; 

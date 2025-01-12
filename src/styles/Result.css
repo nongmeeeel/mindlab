@@ -24,7 +24,7 @@
 .result-card {
   background: white;
   border-radius: 15px;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -34,15 +34,200 @@
 }
 
 .mbti-result {
-  font-size: 4em;
-  font-weight: bold;
+  text-align: center;
   padding: 30px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
   border-radius: 15px;
-  margin-bottom: 20px;
-  letter-spacing: 5px;
+  margin-bottom: 30px;
   box-shadow: 0 10px 20px rgba(102,126,234,0.2);
+}
+
+.mbti-result h2 {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+.mbti-subtitle {
+  font-size: 1.4em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 10px;
+}
+
+.analysis-section,
+.keywords-section,
+.compatibility-section {
+  position: relative;
+  margin: 40px 0;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+}
+
+.analysis-section h3,
+.keywords-section h3,
+.compatibility-section h3,
+.romantic-matches h3,
+.work-matches h3 {
+  text-align: center;
+  color: #667eea;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(102,126,234,0.1);
+}
+
+.romantic-matches,
+.work-matches {
+  text-align: center;
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.keywords-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.strengths, 
+.weaknesses {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.strengths h3, .weaknesses h3 {
+  color: #667eea;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.keyword-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.keyword-item {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.strength-item {
+  background: rgba(102,126,234,0.1);
+  border-left: 4px solid #667eea;
+}
+
+.weakness-item {
+  background: rgba(235,87,87,0.1);
+  border-left: 4px solid #eb5757;
+}
+
+.compatibility-section {
+  margin: 30px 0;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.compatibility-section h3 {
+  color: #667eea;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.match-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.match-item {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: transform 0.2s ease;
+}
+
+.match-item:hover {
+  transform: translateY(-2px);
+}
+
+.match-item.romantic {
+  background: linear-gradient(135deg, #ff6b95 0%, #ffc796 100%);
+  color: white;
+}
+
+.match-item.work {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.characters-section {
+  margin: 30px 0;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.characters-section h3 {
+  color: #667eea;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.character-item {
+  background: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  border: 2px solid rgba(102,126,234,0.3);
+  color: #2c3e50;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .mbti-result h2 {
+    font-size: 2.8em;
+  }
+
+  .mbti-subtitle {
+    font-size: 1.2em;
+  }
+
+  .keywords-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .strengths, .weaknesses {
+    width: 100%;
+  }
+
+  .character-list, .match-list {
+    justify-content: center;
+  }
 }
 
 .enneagram-result {
@@ -320,7 +505,7 @@
 .result-image {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -395,3 +580,379 @@
     margin: 0 auto 20px;
   }
 } 
+
+.image-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.image-action-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  color: #2c3e50;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-action-button span {
+  margin-left: 2px;
+}
+
+/* MBTI 테마 */
+.mbti-container .image-action-button {
+  color: #667eea;
+}
+
+/* 에니어그램 테마 */
+.enneagram-container .image-action-button {
+  color: #ee8c68;
+}
+
+/* 애착유형 테마 */
+.attachment-container .image-action-button {
+  color: #48c6ef;
+}
+
+.image-action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+} 
+
+.match-description {
+  margin-top: 15px;
+  color: #2c3e50;
+  font-size: 0.95em;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.romantic-matches, .work-matches {
+  margin-bottom: 25px;
+}
+
+.match-item.romantic {
+  background: linear-gradient(135deg, #ff6b95 0%, #ffc796 100%);
+}
+
+.match-item.work {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.compatibility-section h3 {
+  color: #667eea;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.match-description {
+  margin-top: 15px;
+  color: #2c3e50;
+  font-size: 0.95em;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+} 
+
+/* 반응형 디자인 수정 */
+@media (max-width: 768px) {
+  .analysis-section,
+  .keywords-section,
+  .compatibility-section {
+    padding: 20px;
+    margin: 30px 0;
+  }
+
+  .romantic-matches,
+  .work-matches {
+    padding: 20px;
+  }
+
+  .strengths, 
+  .weaknesses {
+    padding: 15px;
+  }
+} 
+
+.states-section {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.state-item {
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.state-item h3 {
+  color: #667eea;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(102,126,234,0.1);
+}
+
+.state-item p {
+  color: #2c3e50;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* 상태별 색상 구분 */
+.state-item:nth-child(1) h3 {
+  color: #4CAF50;
+}
+
+.state-item:nth-child(2) h3 {
+  color: #FF9800;
+}
+
+.state-item:nth-child(3) h3 {
+  color: #f44336;
+} 
+
+/* 애착유형 결과 페이지 스타일 */
+.perspectives-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.self-perspective,
+.others-perspective {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.background-section,
+.relationships-section {
+  margin: 30px 0;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.background-section p,
+.relationships-section p {
+  color: #2c3e50;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.phrases-section {
+  margin: 30px 0;
+}
+
+.phrases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.phrase-item {
+  background: rgba(72,198,239,0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  color: #2c3e50;
+  border-left: 4px solid #48c6ef;
+}
+
+@media (max-width: 768px) {
+  .perspectives-section {
+    flex-direction: column;
+  }
+  
+  .self-perspective,
+  .others-perspective {
+    width: 100%;
+  }
+} 
+
+/* 액션 버튼 컨테이너 */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 40px 0 20px;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 공유 버튼 스타일 */
+.action-button.share-button {
+  background: white;
+}
+
+/* 다른 검사 버튼 스타일 */
+.action-button.home-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+}
+
+/* 테마별 공유 버튼 색상 */
+.mbti-container .action-button.share-button {
+  color: #667eea;
+}
+
+.enneagram-container .action-button.share-button {
+  color: #ee8c68;
+}
+
+.attachment-container .action-button.share-button {
+  color: #48c6ef;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .action-button {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* 프리미엄 버튼 스타일 */
+.action-button.premium-button {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: white !important;
+  position: relative;
+  overflow: hidden;
+  animation: shimmer 2s infinite;
+}
+
+.action-button.premium-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 15px rgba(255, 215, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  }
+}
+
+.action-button.premium-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* 상단 고정 버튼 */
+.action-buttons.fixed-top {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+}
+
+/* 하단 버튼 */
+.action-buttons.bottom-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 40px 0 20px;
+}
+
+/* 하단 버튼 스타일 */
+.action-buttons.bottom-buttons .action-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px 24px;
+  font-size: 1.1em;
+}
+
+/* 모바일에서의 상단 고정 버튼 */
+@media (max-width: 768px) {
+  .action-buttons.fixed-top {
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .action-buttons.fixed-top .action-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    min-width: auto;
+  }
+  
+  .action-buttons.fixed-top .action-button span {
+    display: none;
+  }
+}
