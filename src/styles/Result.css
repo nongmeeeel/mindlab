@@ -318,6 +318,7 @@
 } 
 
 .result-image {
+  position: relative;
   width: 100%;
   max-width: 450px;
   margin: 0 auto 30px;
@@ -329,11 +330,45 @@
   height: auto;
   border-radius: 20px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .result-image img:hover {
   transform: scale(1.02);
+}
+
+.image-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+  border-radius: 20px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #48c6ef;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+.image-loading p {
+  color: #48c6ef;
+  font-size: 0.9em;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .traits-section,

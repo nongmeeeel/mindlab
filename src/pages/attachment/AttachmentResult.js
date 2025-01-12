@@ -10,6 +10,7 @@ const AttachmentResult = () => {
   const { resultType } = location.state || {};
   const result = attachmentDescriptions[resultType];
   const [showDetailedReport, setShowDetailedReport] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // 유형별 맞춤 추천사항 생성 함수를 먼저 정의
   const getRecommendations = (type) => {
@@ -72,7 +73,18 @@ const AttachmentResult = () => {
         </div>
 
         <div className="result-image">
-          <img src={result.image} alt={result.title} />
+          {!imageLoaded && (
+            <div className="image-loading">
+              <div className="loading-spinner"></div>
+              <p>이미지 로딩중...</p>
+            </div>
+          )}
+          <img 
+            src={result.image} 
+            alt={result.title}
+            onLoad={() => setImageLoaded(true)}
+            style={{ opacity: imageLoaded ? 1 : 0 }}
+          />
         </div>
 
         <div className="result-card">
