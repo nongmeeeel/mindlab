@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { enneagramDescriptions } from '../../data/enneagram/results';
 import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
@@ -7,7 +7,6 @@ import ActionButtons from '../../components/ActionButtons';
 
 const EnneagramResult = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const { resultType } = location.state || {};
   const result = enneagramDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);

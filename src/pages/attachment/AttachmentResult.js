@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { attachmentDescriptions } from '../../data/attachment/results';
 import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
@@ -7,7 +7,6 @@ import ActionButtons from '../../components/ActionButtons';
 
 const AttachmentResult = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const { resultType } = location.state || {};
   const result = attachmentDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
