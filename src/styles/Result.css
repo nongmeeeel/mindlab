@@ -208,12 +208,17 @@
 
 /* 모바일 대응 */
 @media (max-width: 768px) {
+  .mbti-result {
+    padding: 20px;
+  }
+
   .mbti-result h2 {
-    font-size: 2.8em;
+    font-size: 2.5em;
+    letter-spacing: 3px;
   }
 
   .mbti-subtitle {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .keywords-section {
@@ -227,6 +232,18 @@
 
   .character-list, .match-list {
     justify-content: center;
+  }
+}
+
+/* 더 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+  .mbti-result h2 {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  .mbti-subtitle {
+    font-size: 1em;
   }
 }
 
