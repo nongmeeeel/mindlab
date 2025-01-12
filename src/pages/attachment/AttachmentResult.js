@@ -71,11 +71,11 @@ const AttachmentResult = () => {
           <h1>애착유형 검사 결과</h1>
         </div>
 
+        <div className="result-image">
+          <img src={result.image} alt={result.title} />
+        </div>
+
         <div className="result-card">
-          <div className="result-image">
-            <img src={result.image} alt={result.title} />
-          </div>
-          
           <div className="result-type">
             <div className="attachment-result">
               <h2>{result.title}</h2>

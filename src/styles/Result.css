@@ -319,16 +319,16 @@
 
 .result-image {
   width: 100%;
-  max-width: 500px;
-  margin: -20px auto 20px;
+  max-width: 600px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
 .result-image img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -351,4 +351,12 @@
 .relationship-section p {
   line-height: 1.6;
   color: #2c3e50;
+} 
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .result-image {
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
 } 
