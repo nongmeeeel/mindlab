@@ -40,55 +40,49 @@ const EnneagramResult = () => {
         </div>
 
         <div className="result-card">
-          <div className="result-type">
-            <div className="mbti-result">
-              <h2>{result.title}</h2>
-              <p className="mbti-subtitle">{result.subtitle}</p>
+          <div className="mbti-result">
+            <h2>{result.title}</h2>
+            <p className="mbti-subtitle">{result.subtitle}</p>
+          </div>
+          
+          <div className="analysis-section">
+            <p className="type-description">{result.description}</p>
+          </div>
+
+          <div className="states-section">
+            <h3>건강한 상태</h3>
+            <div className="section-content">
+              <p>{result.states.healthy}</p>
             </div>
             
-            <div className="analysis-section">
-              <p className="type-description">{result.description}</p>
+            <h3>평균적인 상태</h3>
+            <div className="section-content">
+              <p>{result.states.average}</p>
+            </div>
+            
+            <h3>불건강한 상태</h3>
+            <div className="section-content">
+              <p>{result.states.unhealthy}</p>
+            </div>
+          </div>
+
+          <div className="keywords-section">
+            <h3>강점</h3>
+            <div className="keyword-list strength-list">
+              {result.strengths.map((strength, index) => (
+                <div key={index} className="keyword-item strength-item">
+                  {strength}
+                </div>
+              ))}
             </div>
 
-            <div className="states-section">
-              <div className="state-item">
-                <h3>건강한 상태</h3>
-                <p>{result.states.healthy}</p>
-              </div>
-              
-              <div className="state-item">
-                <h3>평균적인 상태</h3>
-                <p>{result.states.average}</p>
-              </div>
-              
-              <div className="state-item">
-                <h3>불건강한 상태</h3>
-                <p>{result.states.unhealthy}</p>
-              </div>
-            </div>
-
-            <div className="keywords-section">
-              <div className="strengths">
-                <h3>강점</h3>
-                <div className="keyword-list strength-list">
-                  {result.strengths.map((strength, index) => (
-                    <div key={index} className="keyword-item strength-item">
-                      {strength}
-                    </div>
-                  ))}
+            <h3>약점</h3>
+            <div className="keyword-list weakness-list">
+              {result.weaknesses.map((weakness, index) => (
+                <div key={index} className="keyword-item weakness-item">
+                  {weakness}
                 </div>
-              </div>
-
-              <div className="weaknesses">
-                <h3>약점</h3>
-                <div className="keyword-list weakness-list">
-                  {result.weaknesses.map((weakness, index) => (
-                    <div key={index} className="keyword-item weakness-item">
-                      {weakness}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 .result-page {
   min-height: 100vh;
   background-color: #f5f6fa;
-  padding: 20px;
+  padding: 20px 20px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .result-container {
@@ -18,7 +18,8 @@
 
 .result-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 .result-card {
@@ -35,35 +36,40 @@
 
 .mbti-result {
   text-align: center;
-  padding: 20px;
+  padding: 12px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   box-shadow: 0 10px 20px rgba(102,126,234,0.2);
 }
 
 .mbti-result h2 {
-  font-size: 1.5em;
+  font-size: 24px;
   font-weight: bold;
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   letter-spacing: normal;
   white-space: nowrap;
 }
 
 .mbti-subtitle {
-  font-size: 1em;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
-  margin-top: 5px;
+  margin-top: 4px;
   white-space: nowrap;
 }
 
 .analysis-section,
 .keywords-section,
-.compatibility-section {
+.compatibility-section,
+.states-section,
+.perspectives-section,
+.background-section,
+.relationships-section,
+.phrases-section {
   position: relative;
-  margin: 40px 0;
-  padding: 30px;
+  margin: 20px 0;
+  padding: 15px 20px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
@@ -72,13 +78,16 @@
 .analysis-section h3,
 .keywords-section h3,
 .compatibility-section h3,
-.romantic-matches h3,
-.work-matches h3 {
+.states-section h3,
+.perspectives-section h3,
+.background-section h3,
+.relationships-section h3,
+.phrases-section h3 {
   text-align: center;
-  color: #667eea;
   font-size: 1.3em;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
   border-bottom: 2px solid rgba(102,126,234,0.1);
 }
 
@@ -93,9 +102,22 @@
 }
 
 .keywords-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  margin: 30px 0;
+}
+
+.keywords-section h3 {
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.keywords-section h3:first-child {
+  margin-top: 0;
+}
+
+.keyword-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
 }
 
 .strengths, 
@@ -113,12 +135,6 @@
   font-size: 1.3em;
   margin-bottom: 15px;
   text-align: left;
-}
-
-.keyword-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .keyword-item {
@@ -211,16 +227,15 @@
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .mbti-result {
-    padding: 20px;
+    padding: 10px;
   }
 
   .mbti-result h2 {
-    font-size: 2.5em;
-    letter-spacing: 3px;
+    font-size: 20px;
   }
 
   .mbti-subtitle {
-    font-size: 1.1em;
+    font-size: 14px;
   }
 
   .keywords-section {
@@ -240,12 +255,11 @@
 /* 더 작은 모바일 화면 대응 */
 @media (max-width: 480px) {
   .mbti-result h2 {
-    font-size: 2em;
-    letter-spacing: 2px;
+    font-size: 18px;
   }
 
   .mbti-subtitle {
-    font-size: 1em;
+    font-size: 13px;
   }
 }
 
@@ -267,9 +281,9 @@
 }
 
 .type-description {
-  font-size: 1.2em;
-  color: #2c3e50;
+  font-size: 0.9em;
   line-height: 1.6;
+  color: #444;
   margin: 20px 0;
 }
 
@@ -747,7 +761,6 @@
 .perspectives-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   margin: 40px 0;
 }
 
@@ -813,7 +826,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin: 40px 0 20px;
+  margin: 10px 0 20px;
   flex-wrap: wrap;
 }
 
@@ -931,7 +944,7 @@
 /* 상단 고정 버튼 */
 .action-buttons.fixed-top {
   position: fixed;
-  top: 10px;
+  top: 5px;
   right: 10px;
   display: flex;
   gap: 6px;
@@ -940,13 +953,41 @@
 }
 
 .action-buttons.fixed-top .action-button {
-  padding: 8px;
-  font-size: 0.9em;
-  min-width: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  font-size: 0.7em;
+  border-radius: 15px;
+  white-space: nowrap;
+  min-width: fit-content;
+  height: 28px;
+}
+
+/* 각 버튼별 배경색 */
+.action-buttons.fixed-top .action-button.premium-button {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: white;
+}
+
+.action-buttons.fixed-top .action-button.share-button {
+  background: white;
+  color: #667eea;
+}
+
+.action-buttons.fixed-top .action-button.home-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.action-buttons.fixed-top .action-button svg {
+  font-size: 14px;
 }
 
 .action-buttons.fixed-top .action-button span {
-  display: none;
+  display: inline;
+  font-size: 11px;
+  line-height: 1;
 }
 
 /* 하단 버튼 */
@@ -968,12 +1009,146 @@
 /* 모바일 대응 - 상단 버튼 */
 @media (max-width: 768px) {
   .action-buttons.fixed-top {
-    flex-direction: row;
     gap: 4px;
   }
   
   .action-buttons.fixed-top .action-button {
-    padding: 6px 10px;
-    font-size: 0.75em;
+    padding: 4px 8px;
+    height: 24px;
+  }
+
+  .action-buttons.fixed-top .action-button svg {
+    font-size: 12px;
+  }
+
+  .action-buttons.fixed-top .action-button span {
+    font-size: 10px;
+  }
+}
+
+/* 본문 텍스트 크기 조정 */
+.type-description {
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #444;
+}
+
+.keyword-item {
+  font-size: 0.85em;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.keyword-item.weakness-item {
+  background: rgba(118, 75, 162, 0.1);
+  color: #764ba2;
+}
+
+.match-item {
+  font-size: 0.85em;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.match-description {
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.phrase-item {
+  font-size: 0.85em;
+  padding: 12px 16px;
+  line-height: 1.5;
+}
+
+/* 모바일에서는 더 작게 */
+@media (max-width: 768px) {
+  .type-description,
+  .keyword-item,
+  .match-item,
+  .match-description,
+  .phrase-item {
+    font-size: 0.8em;
+  }
+
+  .analysis-section h3,
+  .keywords-section h3,
+  .compatibility-section h3,
+  .states-section h3,
+  .perspectives-section h3,
+  .background-section h3,
+  .relationships-section h3,
+  .phrases-section h3 {
+    font-size: 1em;
+  }
+}
+
+/* 섹션 제목 공통 스타일 */
+.analysis-section h3,
+.keywords-section h3,
+.compatibility-section h3,
+.states-section h3,
+.perspectives-section h3,
+.background-section h3,
+.relationships-section h3,
+.phrases-section h3 {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(102,126,234,0.1);
+}
+
+/* MBTI 테마 색상 */
+.mbti-container h3 {
+  color: #667eea;
+}
+
+/* 에니어그램 테마 색상 */
+.enneagram-container h3 {
+  color: #ee8c68;
+}
+
+/* 애착유형 테마 색상 */
+.attachment-container h3 {
+  color: #48c6ef;
+}
+
+/* 섹션별 하단 보더 색상 */
+.enneagram-container h3 {
+  border-bottom-color: rgba(238,140,104,0.1);
+}
+
+.attachment-container h3 {
+  border-bottom-color: rgba(72,198,239,0.1);
+}
+
+/* 섹션 내용 여백 조정 */
+.type-description,
+.keyword-list,
+.match-list,
+.phrases-list {
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+/* section-content는 추가적인 여백이나 스타일링 없이 순수하게 구조화만 */
+.section-content {
+  display: contents;
+}
+
+/* 모바일에서도 동일한 크기 유지 */
+@media (max-width: 768px) {
+  .action-buttons.fixed-top {
+    gap: 4px;
+  }
+  
+  .action-buttons.fixed-top .action-button {
+    width: 32px;
+    height: 32px;
   }
 }

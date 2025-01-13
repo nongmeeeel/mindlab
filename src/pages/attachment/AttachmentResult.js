@@ -13,8 +13,9 @@ const AttachmentResult = () => {
 
   return (
     <div className="result-page">
+      <ActionButtons position="top" />
       <div className="result-container attachment-container">
-        <ActionButtons position="top" />
+        
         <div className="result-header">
           <h1>나의 애착유형은 ?</h1>
         </div>
@@ -40,55 +41,53 @@ const AttachmentResult = () => {
         </div>
 
         <div className="result-card">
-          <div className="result-type">
-            <div className="mbti-result">
-              <h2>{result.title}</h2>
-              <p className="mbti-subtitle">{result.subtitle}</p>
-            </div>
+          <div className="mbti-result">
+            <h2>{result.title}</h2>
+            <p className="mbti-subtitle">{result.subtitle}</p>
+          </div>
 
-            <div className="perspectives-section">
-              <div className="self-perspective">
-                <h3>자기 관점</h3>
-                <div className="keyword-list">
-                  {result.perspectives.self.map((perspective, index) => (
-                    <div key={index} className="keyword-item strength-item">
-                      {perspective}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="others-perspective">
-                <h3>타인 관점</h3>
-                <div className="keyword-list">
-                  {result.perspectives.others.map((perspective, index) => (
-                    <div key={index} className="keyword-item weakness-item">
-                      {perspective}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="background-section">
-              <h3>애착 형성 과정</h3>
-              <p>{result.background}</p>
-            </div>
-
-            <div className="relationships-section">
-              <h3>대인관계 특성</h3>
-              <p>{result.relationships}</p>
-            </div>
-
-            <div className="phrases-section">
-              <h3>자주 하는 말</h3>
-              <div className="phrases-list">
-                {result.commonPhrases.map((phrase, index) => (
-                  <div key={index} className="phrase-item">
-                    {phrase}
+          <div className="perspectives-section">
+            <h3>자기 관점</h3>
+            <div className="section-content">
+              <div className="keyword-list">
+                {result.perspectives.self.map((perspective, index) => (
+                  <div key={index} className="keyword-item strength-item">
+                    {perspective}
                   </div>
                 ))}
               </div>
+            </div>
+
+            <h3>타인 관점</h3>
+            <div className="section-content">
+              <div className="keyword-list">
+                {result.perspectives.others.map((perspective, index) => (
+                  <div key={index} className="keyword-item weakness-item">
+                    {perspective}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="background-section">
+            <h3>애착 형성 과정</h3>
+            <p>{result.background}</p>
+          </div>
+
+          <div className="relationships-section">
+            <h3>대인관계 특성</h3>
+            <p>{result.relationships}</p>
+          </div>
+
+          <div className="phrases-section">
+            <h3>자주 하는 말</h3>
+            <div className="phrases-list">
+              {result.commonPhrases.map((phrase, index) => (
+                <div key={index} className="phrase-item">
+                  {phrase}
+                </div>
+              ))}
             </div>
           </div>
         </div>
