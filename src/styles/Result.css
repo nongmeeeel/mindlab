@@ -940,10 +940,13 @@
 }
 
 .action-buttons.fixed-top .action-button {
-  padding: 6px 12px;
-  font-size: 0.8em;
+  padding: 8px;
+  font-size: 0.9em;
   min-width: auto;
-  white-space: nowrap;
+}
+
+.action-buttons.fixed-top .action-button span {
+  display: none;
 }
 
 /* 하단 버튼 */
