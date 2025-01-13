@@ -42,7 +42,7 @@ const ActionButtons = ({ position = 'bottom' }) => {
         aria-label="전체 결과 확인"
       >
         <FaCrown size={18} />
-        <span>전체 결과 확인</span>
+        <span>전체 결과</span>
       </button>
       <button 
         className="action-button share-button"
