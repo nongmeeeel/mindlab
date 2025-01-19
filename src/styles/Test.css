@@ -82,37 +82,85 @@
   flex-direction: row !important;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin: 20px auto;
+  gap: 15px;
+  margin: 10px auto;
   width: 100%;
   max-width: 600px;
+  padding: 0 20px;
 }
 
 .enneagram-options .option-button {
-  flex: 1;
-  min-width: 0;
-  padding: 12px 8px;
-  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
   background: white;
-  border: 2px solid #667eea;
-  color: #667eea;
-  font-size: 0.9em;
+  font-size: 1.2em;
   font-weight: 600;
   transition: all 0.2s ease;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 버튼별 색상 그라데이션 */
+.enneagram-options .option-button:nth-child(1) {
+  border: 2px solid #ff6b6b;
+  color: #ff6b6b;
+}
+
+.enneagram-options .option-button:nth-child(2) {
+  border: 2px solid #ff8f70;
+  color: #ff8f70;
+}
+
+.enneagram-options .option-button:nth-child(3) {
+  border: 2px solid #a5b4fc;
+  color: #a5b4fc;
+}
+
+.enneagram-options .option-button:nth-child(4) {
+  border: 2px solid #818cf8;
+  color: #818cf8;
+}
+
+.enneagram-options .option-button:nth-child(5) {
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+/* 선택된 버튼 스타일 */
+.enneagram-options .option-button:nth-child(1).selected {
+  background: #ff6b6b;
+  color: white;
+}
+
+.enneagram-options .option-button:nth-child(2).selected {
+  background: #ff8f70;
+  color: white;
+}
+
+.enneagram-options .option-button:nth-child(3).selected {
+  background: #a5b4fc;
+  color: white;
+}
+
+.enneagram-options .option-button:nth-child(4).selected {
+  background: #818cf8;
+  color: white;
+}
+
+.enneagram-options .option-button:nth-child(5).selected {
+  background: #667eea;
+  color: white;
 }
 
 .enneagram-options .option-button:hover {
-  background: rgba(102, 126, 234, 0.1);
   transform: translateY(-2px);
 }
 
 .enneagram-options .option-button.selected {
-  background: #667eea;
-  color: white;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* 애착유형 특화 스타일 */
@@ -141,55 +189,69 @@
   }
 
   .enneagram-options {
-    gap: 6px;
-    padding: 0 10px;
+    gap: 10px;
+    padding: 0 15px;
   }
 
   .enneagram-options .option-button {
-    padding: 8px 4px;
-    font-size: 0.7em;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1em;
   }
 }
 
 /* 더 작은 모바일 화면 대응 */
 @media (max-width: 480px) {
   .enneagram-options {
-    gap: 4px;
+    padding: 0 10px;
   }
 
   .enneagram-options .option-button {
-    padding: 6px 2px;
-    font-size: 0.65em;
-    font-weight: 500;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
   }
 }
 
-/* 호버 가능한 디바이스에만 hover 효과 적용 */
-@media (hover: hover) {
-  .option-button:hover {
-    background: rgba(102, 126, 234, 0.1);
-    transform: translateY(-2px);
-  }
+.scale-indicator {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 15px;
+  padding: 0 25px;
+  font-weight: 600;
+}
 
-  .mbti-options .option-button:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    transform: translateY(-2px);
-  }
+.scale-indicator span:first-child {
+  color: #ff6b6b;
+}
 
-  .enneagram-options .option-button:hover {
-    background: rgba(102, 126, 234, 0.1);
-    transform: translateY(-2px);
-  }
+.scale-indicator span:last-child {
+  color: #667eea;
+}
 
-  .attachment-options .response-button:hover {
-    background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
-    color: white;
-    transform: translateX(10px);
+@media (max-width: 768px) {
+  .scale-indicator {
+    font-size: 0.9em;
+    margin-bottom: 12px;
+    padding: 0 20px;
   }
 }
 
-/* 터치 디바이스의 탭 하이라이트 효과 제거 */
-.option-button {
-  -webkit-tap-highlight-color: transparent;
+@media (max-width: 480px) {
+  .scale-indicator {
+    font-size: 0.8em;
+    padding: 0 15px;
+  }
+}
+
+@media (hover: none) {
+  .mbti-options .option-button:hover,
+  .enneagram-options .option-button:hover,
+  .response-button:hover {
+    background: inherit; /* 기본 상태 유지 */
+    color: inherit;
+    transform: none; /* 이동 효과 제거 */
+  }
 }

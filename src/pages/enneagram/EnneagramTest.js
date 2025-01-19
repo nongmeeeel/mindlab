@@ -22,7 +22,7 @@ const EnneagramTest = () => {
     if (currentQuestion < enneagramQuestions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
       setAnswers(newAnswers);
-      setSelectedOption(null);
+      setSelectedOption(null);  // 다음 문항으로 넘어갈 때 선택 상태 초기화
     } else {
       const result = calculateEnneagramScores(newAnswers);
       
@@ -49,23 +49,28 @@ const EnneagramTest = () => {
       <div className="question-container">
         <p className="question-text">{question.text}</p>
 
+        <div className="scale-indicator">
+          <span>매우 아니다</span>
+          <span>매우 그렇다</span>
+        </div>
+
         <div className="options-container enneagram-options">
           {[
-            { value: 0, text: "매우 아니다" },
-            { value: 1, text: "아니다" },
-            { value: 2, text: "보통이다" },
-            { value: 3, text: "그렇다" },
-            { value: 4, text: "매우 그렇다" }
+            { value: 0, label: '1' },
+            { value: 1, label: '2' },
+            { value: 2, label: '3' },
+            { value: 3, label: '4' },
+            { value: 4, label: '5' }
           ].map((option, index) => (
             <button 
               key={index}
               className={`option-button ${selectedOption === index ? 'selected' : ''}`}
-              onClick={() => {
+              onClick={() => { 
                 setSelectedOption(index);
                 handleAnswer(option.value);
               }}
             >
-              {option.text}
+              {option.label}
             </button>
           ))}
         </div>
