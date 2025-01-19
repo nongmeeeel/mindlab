@@ -163,3 +163,33 @@
     font-weight: 500;
   }
 }
+
+/* 호버 가능한 디바이스에만 hover 효과 적용 */
+@media (hover: hover) {
+  .option-button:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .mbti-options .option-button:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .enneagram-options .option-button:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .attachment-options .response-button:hover {
+    background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
+    color: white;
+    transform: translateX(10px);
+  }
+}
+
+/* 터치 디바이스의 탭 하이라이트 효과 제거 */
+.option-button {
+  -webkit-tap-highlight-color: transparent;
+}
