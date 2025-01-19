@@ -1,20 +1,35 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { mbtiDescriptions } from '../../data/mbti/results';
+import MBTIDetail from '../../components/detail/MBTIDetail';
 import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 
 const MBTIResult = () => {
   const location = useLocation();
-  const { resultType } = location.state || {};
+  const { resultType, scores } = location.state || {};
   const result = mbtiDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isPremium, setIsPremium] = useState(false);
+
+  const handlePremiumPurchase = () => {
+    // 여기에 결제 로직 추가
+    setIsPremium(true);
+  };
 
   return (
     <div className="result-page">
-      <div className="result-container mbti-container">
-        <ActionButtons position="top" />
+      <div id="result-container" className="result-container mbti-container">
+        <ActionButtons 
+          position="top" 
+          type="mbti"
+          scores={scores}
+          resultType={resultType}
+          onPremiumPurchase={handlePremiumPurchase}
+          isPremium={isPremium}
+        />
+
         <div className="result-header">
           <h1>나의 MBTI는 ?</h1>
         </div>
@@ -101,7 +116,20 @@ const MBTIResult = () => {
           </div>
         </div>
 
-        <ActionButtons position="bottom" />
+        {isPremium && (
+          <div className="premium-content">
+            <MBTIDetail scores={scores} resultType={resultType} />
+          </div>
+        )}
+
+        <ActionButtons 
+          position="bottom"
+          type="mbti"
+          scores={scores}
+          resultType={resultType}
+          onPremiumPurchase={handlePremiumPurchase}
+          isPremium={isPremium}
+        />
       </div>
     </div>
   );

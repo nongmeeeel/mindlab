@@ -78,29 +78,41 @@
 }
 
 .enneagram-options {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  margin-top: 30px;
-}
-
-.scale-button {
+  margin: 20px auto;
   width: 100%;
-  min-height: 44px;
-  padding: 10px;
-  background: #f8f9fa;
-  color: #2c3e50;
-  border: 2px solid #ee8c68;
-  border-radius: 8px;
-  font-size: 0.9em;
-  white-space: nowrap;
+  max-width: 600px;
 }
 
-.scale-button:hover {
-  background: linear-gradient(135deg, #ee8c68 0%, #eb6b9d 100%);
-  color: white;
+.enneagram-options .option-button {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 8px;
+  border-radius: 10px;
+  background: white;
+  border: 2px solid #667eea;
+  color: #667eea;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.enneagram-options .option-button:hover {
+  background: rgba(102, 126, 234, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 3px 10px rgba(238,140,104,0.2);
+}
+
+.enneagram-options .option-button.selected {
+  background: #667eea;
+  color: white;
+  transform: scale(1.05);
 }
 
 /* 애착유형 특화 스타일 */
@@ -129,11 +141,25 @@
   }
 
   .enneagram-options {
-    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 0 10px;
   }
 
-  .scale-button {
-    padding: 15px;
-    font-size: 1em;
+  .enneagram-options .option-button {
+    padding: 8px 4px;
+    font-size: 0.7em;
+  }
+}
+
+/* 더 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+  .enneagram-options {
+    gap: 4px;
+  }
+
+  .enneagram-options .option-button {
+    padding: 6px 2px;
+    font-size: 0.65em;
+    font-weight: 500;
   }
 }

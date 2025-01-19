@@ -14,9 +14,36 @@
 }
 
 .home-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #2c3e50;
   margin-bottom: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.home-content h1::before,
+.home-content h1::after {
+  content: '';
+  position: absolute;
+  height: 8px;
+  border-radius: 4px;
+  bottom: 5px;
+  z-index: -1;
+}
+
+.home-content h1::before {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.3), rgba(238, 140, 104, 0.3));
+  left: 0;
+  right: 55%;
+}
+
+.home-content h1::after {
+  background: linear-gradient(90deg, rgba(238, 140, 104, 0.3), rgba(255, 107, 107, 0.3));
+  left: 55%;
+  right: 0;
 }
 
 .test-buttons {
@@ -31,52 +58,123 @@
   width: 300px;
   background: white;
   border: none;
-  border-radius: 15px;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 35px 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .test-button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .test-button h2 {
-  font-size: 1.5rem;
-  margin: 0 0 10px 0;
+  font-size: 1.6rem;
+  margin: 0 0 12px 0;
   color: #2c3e50;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .test-button p {
   color: #666;
   margin: 0;
+  font-size: 1.1em;
+  opacity: 0.9;
 }
 
 .test-button.mbti {
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-  border: 2px solid #667eea;
+  background: linear-gradient(145deg, #ffffff, #f0f3ff);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.test-button.mbti:hover {
+  border-color: rgba(102, 126, 234, 0.8);
+  background: linear-gradient(145deg, #f8faff, #eef2ff);
 }
 
 .test-button.enneagram {
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-  border: 2px solid #ee8c68;
+  background: linear-gradient(145deg, #ffffff, #fff0e8);
+  border: 2px solid rgba(238, 140, 104, 0.3);
+}
+
+.test-button.enneagram:hover {
+  border-color: rgba(238, 140, 104, 0.8);
+  background: linear-gradient(145deg, #fff8f5, #fff0e8);
 }
 
 .test-button.attachment {
-  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-  border: 2px solid #ff6b6b;
+  background: linear-gradient(145deg, #ffffff, #ffe8e8);
+  border: 2px solid rgba(255, 107, 107, 0.3);
+}
+
+.test-button.attachment:hover {
+  border-color: rgba(255, 107, 107, 0.8);
+  background: linear-gradient(145deg, #fff5f5, #ffe8e8);
+}
+
+.test-notice {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin: 10px 0 20px;
+  padding: 0 20px;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
   .home-content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  .home-content h1::before,
+  .home-content h1::after {
+    height: 6px;
+    bottom: 3px;
+  }
+
+  .test-buttons {
+    gap: 15px;
+    padding: 15px;
   }
 
   .test-button {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+    padding: 25px 20px;
+  }
+
+  .test-button h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .test-button p {
+    font-size: 1em;
+  }
+
+  .test-notice {
+    font-size: 0.85em;
+    margin: 8px 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .home-content h1::before,
+  .home-content h1::after {
+    height: 4px;
+    bottom: 2px;
   }
 } 

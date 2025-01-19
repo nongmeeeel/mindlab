@@ -9,6 +9,9 @@ const Home = () => {
     <div className="home-container">
       <div className="home-content">
         <h1>마인드랩 심리 검사</h1>
+        <p className="test-notice">
+          내가 원하는 모습이 아닌, 실제 내 모습을 생각하며 선택하면 검사의 정확도가 올라갑니다.
+        </p>
         <div className="test-buttons">
           <button 
             onClick={() => navigate('/test/mbti')} 
@@ -22,7 +25,7 @@ const Home = () => {
             className="test-button enneagram"
           >
             <h2>에니어그램 검사</h2>
-            <p>나의 내면 알아보기</p>
+            <p>나의 심층 내면 알아보기</p>
           </button>
           <button 
             onClick={() => navigate('/test/attachment')} 

@@ -1,279 +1,291 @@
 export const mbtiQuestions = [
   // 1번째 세트
   {
-    text: "👥 나는 모임에서 새로운 사람들을 만나는 것이?",
-    dimension: "EI",
-    options: [
-      { text: "즐겁고 기대된다", type: "E" },
-      { text: "조금 부담스럽다", type: "I" }
+    "text": "👥 새로운 모임에 가면 나는?",
+    "dimension": "EI",
+    "options": [
+      { "text": "먼저 사람들에게 다가가 대화를 시작한다", "type": "E" },
+      { "text": "조용히 분위기를 파악하며 시간을 보낸다", "type": "I" }
     ]
   },
   {
-    text: "⭐ 나는 평소 생각할 때?",
-    dimension: "SN",
-    options: [
-      { text: "현재의 상황에 집중하는 편이다", type: "S" },
-      { text: "미래를 상상하는 편이다", type: "N" }
+    "text": "🔎 내가 무언가를 배울 때 선호하는 방식은?",
+    "dimension": "SN",
+    "options": [
+      { "text": "구체적인 매뉴얼과 예제를 따라간다", "type": "S" },
+      { "text": "전체적인 맥락과 개념을 이해하며 스스로 탐구한다", "type": "N" }
     ]
   },
   {
-    text: "🤔 나는 결정을 내릴 때?",
-    dimension: "TF",
-    options: [
-      { text: "논리적으로 분석한다", type: "T" },
-      { text: "감정과 가치를 고려한다", type: "F" }
+    "text": "💬 친구가 나에게 고민을 얘기한다면?",
+    "dimension": "TF",
+    "options": [
+      { "text": "문제를 분석하고 해결책을 제안한다", "type": "T" },
+      { "text": "친구의 감정을 이해하며 공감한다", "type": "F" }
     ]
   },
   {
-    text: "📅 나는 일정을 계획할 때?",
-    dimension: "JP",
-    options: [
-      { text: "미리 세부적으로 계획한다", type: "J" },
-      { text: "상황에 따라 유연하게 조정하려 한다", type: "P" }
-    ]
-  },
-
-  // 2번째 세트
-  {
-    text: "🌅 나는 휴일에 주로?",
-    dimension: "EI",
-    options: [
-      { text: "친구들과 만나거나 밖에서 활동한다", type: "E" },
-      { text: "집에서 혼자만의 시간을 보낸다", type: "I" }
+    "text": "📅 내가 여행을 준비 한다면?",
+    "dimension": "JP",
+    "options": [
+      { "text": "짧은 단위로 정확한 일정과 계획을 세부적으로 세우고 정리한다", "type": "J" },
+      { "text": "대략적인 방향과 큰 그림만 정하고 즉흥적으로 움직인다", "type": "P" }
     ]
   },
   {
-    text: "💡 나는 문제를 해결할 때?",
-    dimension: "SN",
-    options: [
-      { text: "경험과 사실에 기반해 해결한다", type: "S" },
-      { text: "직관과 가능성을 고려해 해결한다", type: "N" }
+    "text": "🎉 파티나 친목 모임에서 대화를 한다면?",
+    "dimension": "EI",
+    "options": [
+      { "text": "중심에 서서 여러 사람과 어울린다", "type": "E" },
+      { "text": "한두 명과 깊이 있는 대화를 나눈다", "type": "I" }
     ]
   },
   {
-    text: "⚖️ 나는 갈등 상황에서?",
-    dimension: "TF",
-    options: [
-      { text: "객관적 사실을 중심으로 해결한다", type: "T" },
-      { text: "서로의 감정을 고려하며 해결한다", type: "F" }
+    "text": "📚 책을 고를 때 나는?",
+    "dimension": "SN",
+    "options": [
+      { "text": "요즘 유행하거나 알만한 책을 고른다", "type": "S" },
+      { "text": "작가의 스타일과 나의 성향, 느낌 등을 고려한다", "type": "N" }
     ]
   },
   {
-    text: "📚 나는 과제나 일을 할 때?",
-    dimension: "JP",
-    options: [
-      { text: "계획대로 미리미리 해놓는다", type: "J" },
-      { text: "마감에 맞춰 집중해서 한다", type: "P" }
-    ]
-  },
-
-  // 3번째 세트
-  {
-    text: "💬 스트레스 해소를 위해서 나는?",
-    dimension: "EI",
-    options: [
-      { text: "친구들과 수다를 떨며 푼다", type: "E" },
-      { text: "혼자만의 시간을 가지며 푼다", type: "I" }
+    "text": "🛠️ 조별과제 중 의견 충돌이 생기면 집중하는 것은?",
+    "dimension": "TF",
+    "options": [
+      { "text": "논리적으로 옳다는 것을 설득하며 조율한다", "type": "T" },
+      { "text": "상대방의 입장과 감정을 고려하며 중재한다", "type": "F" }
     ]
   },
   {
-    text: "💪 나는 일을 할 때?",
-    dimension: "SN",
-    options: [
-      { text: "정해진 방식대로 하는 것이 좋다", type: "S" },
-      { text: "새로운 방식을 시도하는 것이 좋다", type: "N" }
+    "text": "🏡 나는 집안일을 할 때?",
+    "dimension": "JP",
+    "options": [
+      { "text": "할 일 목록을 정리하고 차례대로 진행한다", "type": "J" },
+      { "text": "눈에 보이는 일부터 그때그때 처리한다", "type": "P" }
     ]
   },
   {
-    text: "❤️ 친구가 고민을 털어놓을 때 나는?",
-    dimension: "TF",
-    options: [
-      { text: "해결책을 제시한다", type: "T" },
-      { text: "공감하며 들어준다", type: "F" }
+    "text": "📞 누군가에게 연락이 왔을 때 나는?",
+    "dimension": "EI",
+    "options": [
+      { "text": "전화 통화가 편하다고 느낀다", "type": "E" },
+      { "text": "문자나 메시지가 편하다고 느낀다", "type": "I" }
     ]
   },
   {
-    text: "✨ 나는 여행을 갈 때?",
-    dimension: "JP",
-    options: [
-      { text: "세부 일정을 미리 정한다", type: "J" },
-      { text: "상황에 따라 즉흥적으로 결정한다", type: "P" }
-    ]
-  },
-
-  // 4번째 세트
-  {
-    text: "👥 나는 일할 때?",
-    dimension: "EI",
-    options: [
-      { text: "다른 사람들과 함께 일하는 것이 좋다", type: "E" },
-      { text: "혼자 집중해서 일하는 것이 좋다", type: "I" }
+    "text": "🛍️ 쇼핑을 할 때 나는 주로?",
+    "dimension": "SN",
+    "options": [
+      { "text": "필요한 물건만 미리 계획해서 산다", "type": "S" },
+      { "text": "정확히 정해두지 않고 현장에서 마음에 드는 것을 산다", "type": "N" }
     ]
   },
   {
-    text: "🎨 새로운 상황이나 사건이 생겼을 때 나는?",
-    dimension: "SN",
-    options: [
-      { text: "있는 그대로 받아들인다", type: "S" },
-      { text: "여러 의미를 생각하며 해석한다", type: "N" }
+    "text": "🤔 남들과 갈등 상황이 생긴다면?",
+    "dimension": "TF",
+    "options": [
+      { "text": "명확한 기준과 규칙으로 해결하려 한다", "type": "T" },
+      { "text": "상대방의 기분과 관계를 우선적으로 고려한다", "type": "F" }
     ]
   },
   {
-    text: "🤔 중요한 선택을 할 때 나는?",
-    dimension: "TF",
-    options: [
-      { text: "머리로 판단한다", type: "T" },
-      { text: "마음으로 결정한다", type: "F" }
+    "text": "📖 공부를 시작할 때 나는?",
+    "dimension": "JP",
+    "options": [
+      { "text": "필요한 것부터 계획표대를 만들어 진행한다", "type": "J" },
+      { "text": "흥미 있는 부분부터 찾아보며 시작한다", "type": "P" }
     ]
   },
   {
-    text: "📋 일상생활에서 나는?",
-    dimension: "JP",
-    options: [
-      { text: "체계적으로 정리하는 것을 좋아한다", type: "J" },
-      { text: "자유롭게 변화하는 것을 좋아한다", type: "P" }
-    ]
-  },
-
-  // 5번째 세트
-  {
-    text: "👥 대화할 때 나는?",
-    dimension: "EI",
-    options: [
-      { text: "생각하면서 말하는 편이다", type: "E" },
-      { text: "말하기 전에 생각하는 편이다", type: "I" }
+    "text": "🎤 발표를 할 때 나는?",
+    "dimension": "EI",
+    "options": [
+      { "text": "청중과 소통하며 활기차게 발표한다", "type": "E" },
+      { "text": "내용에만 집중하며 차분히 발표한다", "type": "I" }
     ]
   },
   {
-    text: "📚 책을 읽을 때 나는?",
-    dimension: "SN",
-    options: [
-      { text: "구체적인 묘사를 선호한다", type: "S" },
-      { text: "은유적인 표현을 선호한다", type: "N" }
+    "text": "🌍 나는 여행 중 예상치 못한 일이 생기면?",
+    "dimension": "SN",
+    "options": [
+      { "text": "스트레스를 받으며 기존 계획대로 최대한 맞추려한다", "type": "S" },
+      { "text": "나름 즐기며 상황에 맞춰 계획을 수정한다", "type": "N" }
     ]
   },
   {
-    text: "🤔 누군가를 평가할 때 나는?",
-    dimension: "TF",
-    options: [
-      { text: "능력과 성과를 중요하게 본다", type: "T" },
-      { text: "성격과 조화를 중요하게 본다", type: "F" }
+    "text": "📊 팀원이 모르는 것을 설명 해줄 때 나는?",
+    "dimension": "TF",
+    "options": [
+      { "text": "어떻게 하면 효과적으로 설명할지 먼저 고민한다", "type": "T" },
+      { "text": "어떻게 하면 기분 나쁘지 않게 설명할지 먼저 고민한다", "type": "F" }
     ]
   },
   {
-    text: "⚡ 결정을 내릴 때 나는?",
-    dimension: "JP",
-    options: [
-      { text: "빨리 결정하고 실행한다", type: "J" },
-      { text: "여러 가능성을 열어두고 천천히 결정한다", type: "P" }
-    ]
-  },
-
-  // 6번째 세트
-  {
-    text: "🌍 모르는 장소에 갔을 때 나는?",
-    dimension: "EI",
-    options: [
-      { text: "먼저 다가가서 물어본다", type: "E" },
-      { text: "혼자 찾아보려고 한다", type: "I" }
+    "text": "🗂️ 나는 개인적인 업무를 처리할 때?",
+    "dimension": "JP",
+    "options": [
+      { "text": "정리된 리스트와 일정을 우선해 처리한다", "type": "J" },
+      { "text": "필요에 따라 우선순위를 유연하게 처리한다", "type": "P" }
     ]
   },
   {
-    text: "🔍 계획을 세울 때 나는?",
-    dimension: "SN",
-    options: [
-      { text: "현실적으로 실현 가능한 것을 고른다", type: "S" },
-      { text: "이상적인 가능성을 추구한다", type: "N" }
+    "text": "🚪 나는 모르는 사람에게 먼저 인사하는 것이?",
+    "dimension": "EI",
+    "options": [
+      { "text": "자연스럽고 어렵지 않다", "type": "E" },
+      { "text": "약간 부담스럽거나 어색하다", "type": "I" }
     ]
   },
   {
-    text: "🤝 일을 할 때 나는?",
-    dimension: "TF",
-    options: [
-      { text: "효율성을 중시한다", type: "T" },
-      { text: "인간관계를 중시한다", type: "F" }
+    "text": "📚 새로운 주제를 연구할 때 나는?",
+    "dimension": "SN",
+    "options": [
+      { "text": "관련된 자료를 먼저 꼼꼼히 조사하며 접근한다", "type": "S" },
+      { "text": "주제에 대한 다양한 가능성과 아이디어를 떠올리며 탐구한다", "type": "N" }
     ]
   },
   {
-    text: "📌 나의 책상은?",
-    dimension: "JP",
-    options: [
-      { text: "깔끔하게 정리되어 있다", type: "J" },
-      { text: "약간 어수선한 편이다", type: "P" }
-    ]
-  },
-
-  /* 추가 문항들 (각 지표당 2문항씩 주석처리)
-  // E/I 추가 문항
-  {
-    text: "🎉 주말 시간이 생겼을 때 나는?",
-    dimension: "EI",
-    options: [
-      { text: "다양한 활동과 만남을 계획한다", type: "E" },
-      { text: "여유롭게 쉬는 것을 선호한다", type: "I" }
+    "text": "🎭 나는 영화를 볼 때?",
+    "dimension": "TF",
+    "options": [
+      { "text": "줄거리의 전개와 논리성이 적절한지 생각한다", "type": "T" },
+      { "text": "인물의 감정과 관계에 공감하며 시청한다", "type": "F" }
     ]
   },
   {
-    text: "👋 새로운 사람과 친해지는 과정에서 나는?",
-    dimension: "EI",
-    options: [
-      { text: "쉽게 친해지는 편이다", type: "E" },
-      { text: "천천히 친해지는 편이다", type: "I" }
-    ]
-  },
-
-  // S/N 추가 문항
-  {
-    text: "🎯 무언가를 선택할 때 나는?",
-    dimension: "SN",
-    options: [
-      { text: "실용적인 것을 선호한다", type: "S" },
-      { text: "창의적인 것을 선호한다", type: "N" }
+    "text": "🗓️ 주말에 친구들과 약속이 잡혀있다면?",
+    "dimension": "JP",
+    "options": [
+      { "text": "평일에 미리 생각한 구체적인 일정대로 움직인다", "type": "J" },
+      { "text": "금요일 쯤, 약속장소가 어디였더라? 찾아본다", "type": "P" }
     ]
   },
   {
-    text: "🔄 일상적인 변화가 생겼을 때 나는?",
-    dimension: "SN",
-    options: [
-      { text: "불편하다", type: "S" },
-      { text: "흥미롭다", type: "N" }
-    ]
-  },
-
-  // T/F 추가 문항
-  {
-    text: "💫 삶의 가치관에서 나는?",
-    dimension: "TF",
-    options: [
-      { text: "진실을 추구한다", type: "T" },
-      { text: "조화를 추구한다", type: "F" }
+    "text": "🎨 새로운 취미 활동을 시작할 때 나는?",
+    "dimension": "EI",
+    "options": [
+      { "text": "사람들과 함께 배우며 경험을 공유한다", "type": "E" },
+      { "text": "혼자 조용히 시도하며 나만의 방식을 찾아본다", "type": "I" }
     ]
   },
   {
-    text: "💬 다른 사람에게 조언할 때 나는?",
-    dimension: "TF",
-    options: [
-      { text: "솔직하고 직접적으로 말한다", type: "T" },
-      { text: "상대방을 배려하며 말한다", type: "F" }
-    ]
-  },
-
-  // J/P 추가 문항
-  {
-    text: "📊 여러 가지 일이 있을 때 나는?",
-    dimension: "JP",
-    options: [
-      { text: "한 가지씩 끝내고 다음으로 넘어간다", type: "J" },
-      { text: "여러 가지를 동시에 진행한다", type: "P" }
+    "text": "🎯 새로운 목표를 세울 때 나는?",
+    "dimension": "SN",
+    "options": [
+      { "text": "목표를 이루기 위해, 가능성보다 현실적인 단계에 집중한다", "type": "S" },
+      { "text": "목표를 통해 얻게 될 결과와 가능성을 충분히 상상한다", "type": "N" }
     ]
   },
   {
-    text: "🎯 목표를 이루는 과정에서 나는?",
-    dimension: "JP",
-    options: [
-      { text: "계획대로 되는 것이 좋다", type: "J" },
-      { text: "새로운 변화가 좋다", type: "P" }
+    "text": "🛠️ 친구가 고민 상담을 할 때 나는?",
+    "dimension": "TF",
+    "options": [
+      { "text": "실질적인 해결책을 제공한다", "type": "T" },
+      { "text": "친구의 상황을 공감하며 위로한다", "type": "F" }
+    ]
+  },
+  {
+    "text": "📦 이사를 준비하게 된다면?",
+    "dimension": "JP",
+    "options": [
+      { "text": "미리 생각해서 필요한 업체를 날짜별로 예약해 둔다", "type": "J" },
+      { "text": "나중에 짐을 싸다가 생각나는 대로 예약하면 된다", "type": "P" }
+    ]
+  },
+  {
+    "text": "🚶‍♂️ 아침에 운동을 하기로 다짐했을 때 나는?",
+    "dimension": "EI",
+    "options": [
+      { "text": "함께 운동할 동료를 찾아본다", "type": "E" },
+      { "text": "혼자 집중해서 한다", "type": "I" }
+    ]
+  },
+  {
+    "text": "❤️ 이성과의 데이트를 계획할 때 나는?",
+    "dimension": "SN",
+    "options": [
+      { "text": "요즘 유명하거나 검증된 장소를 찾으며 계획한다", "type": "S" },
+      { "text": "데이트의 전체적인 분위기와 흐름을 상상하며 준비한다", "type": "N" }
+    ]
+  },
+  {
+    "text": "✈️ 여행 중 동행자와 길을 잃었을 때 나는?",
+    "dimension": "TF",
+    "options": [
+      { "text": "빠르게 정보를 탐색해 효율적인 경로를 찾아본다", "type": "T" },
+      { "text": "우선 동행자를 안심시킨 후 함께 방법을 찾아본다", "type": "F" }
+    ]
+  },
+  {
+    "text": "🎨 새로운 취미를 시작할 때 나는?",
+    "dimension": "JP",
+    "options": [
+      { "text": "계획과 목표를 정하고 시작한다", "type": "J" },
+      { "text": "우선 시작해보고 생각한다", "type": "P" }
+    ]
+  },
+  {
+    "text": "📞 전화 통화를 할 때 나는?",
+    "dimension": "EI",
+    "options": [
+      { "text": "통화를 길게 이어가며 대화를 즐긴다", "type": "E" },
+      { "text": "필요한 정보를 빠르게 전달하고 통화를 끝낸다", "type": "I" }
+    ]
+  },
+  {
+    "text": "🎬 영화를 볼 때 나는?",
+    "dimension": "SN",
+    "options": [
+      { "text": "영화의 세부적인 설정과 현실성을 주의 깊게 본다", "type": "S" },
+      { "text": "영화의 숨겨진 의미와 감독의 의도를 상상하며 본다", "type": "N" }
+    ]
+  },
+  {
+    "text": "🎁 친구의 생일 선물을 고를 때 나는?",
+    "dimension": "TF",
+    "options": [
+      { "text": "실용적이고 유용한 선물을 선택한다", "type": "T" },
+      { "text": "친구가 좋아할 만한 감성적인 선물을 고른다", "type": "F" }
+    ]
+  },
+  {
+    "text": "⏰ 오랜만에 만나는 친구가 약속 시간에 늦을 것 같다 말할 때?",
+    "dimension": "JP",
+    "options": [
+      { "text": "계획이 틀어진 것에 불편함을 느낀다", "type": "J" },
+      { "text": "그럴만한 상황이 있겠지, 다른 것을 하며 시간을 보낸다", "type": "P" }
+    ]
+  },
+  {
+    "text": "🎤 쉬는 날이 주어진다면 나는?",
+    "dimension": "EI",
+    "options": [
+      { "text": "지인들과 어울리며 활기찬 하루를 보내고 싶다", "type": "E" },
+      { "text": "조용히 혼자만의 여유로운 시간을 보내고 싶다", "type": "I" }
+    ]
+  },
+  {
+    "text": "💬 대화할 때 나는 주로 어떤 주제를 선호하나요?",
+    "dimension": "SN",
+    "options": [
+      { "text": "요즘 유행하거나 사람들이 관심을 가지는 현실적인 주제", "type": "S" },
+      { "text": "인문학적인 의미나 상상력을 자극하는 주제", "type": "N" }
+    ]
+  },
+  {
+    "text": "💬 중요한 대화를 앞두고 나는?",
+    "dimension": "TF",
+    "options": [
+      { "text": "할 말의 논리와 근거를 미리 준비한다", "type": "T" },
+      { "text": "상대방의 감정과 반응을 먼저 생각한다", "type": "F" }
+    ]
+  },
+  {
+    "text": "🚪 어떤 상사가 더 스트레스를 받나요?",
+    "dimension": "JP",
+    "options": [
+      { "text": "명확하게 업무를 주지 않고 일을 다시 하게 만드는 상사", "type": "J" },
+      { "text": "엄격하게 세부 계획을 강요하며 자율성을 주지 않는 상사", "type": "P" }
     ]
   }
-  */
 ]; 

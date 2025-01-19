@@ -68,8 +68,8 @@
 .relationships-section,
 .phrases-section {
   position: relative;
-  margin: 20px 0;
-  padding: 15px 20px;
+  margin: 10px 0;
+  padding: 10px 10px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
@@ -231,7 +231,7 @@
   }
 
   .mbti-result h2 {
-    font-size: 20px;
+    font-size: 26px;
   }
 
   .mbti-subtitle {
@@ -761,7 +761,9 @@
 .perspectives-section {
   display: flex;
   flex-wrap: wrap;
-  margin: 40px 0;
+  justify-content: center; /* 가로축(center) 기준 가운데 정렬 */
+  gap: 20px; /* 항목 간 간격 (20px 예시) */
+  margin: 20px 0;
 }
 
 .self-perspective,
@@ -776,7 +778,7 @@
 
 .background-section,
 .relationships-section {
-  margin: 30px 0;
+  margin: 0px 0;
   padding: 25px;
   background: #fff;
   border-radius: 12px;
@@ -878,14 +880,41 @@
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .action-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
   
   .action-button {
-    width: 90%;
-    max-width: 300px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .action-button span {
+    margin-left: 6px;
+  }
+
+  /* 상단 고정 버튼 위치 조정 */
+  .fixed-top {
+    top: 10px;
+    right: 10px;
+  }
+
+  /* 결과 컨테이너 상단 여백 조정 */
+  .result-container {
+    padding-top: 60px;
+  }
+
+  /* 결과 헤더 크기 조정 */
+  .result-header {
+    margin-top: 0;
+  }
+
+  .result-header h1 {
+    font-size: 1.5em;
+  }
+
+  /* 프리미엄 버튼 특별 처리 */
+  .premium-button {
+    font-size: 0.85em;
   }
 }
 
@@ -1028,13 +1057,13 @@
 
 /* 본문 텍스트 크기 조정 */
 .type-description {
-  font-size: 0.9em;
+  font-size: 1.0em;
   line-height: 1.6;
   color: #444;
 }
 
 .keyword-item {
-  font-size: 0.85em;
+  font-size: 1.0em;
   padding: 8px 14px;
   border-radius: 8px;
 }
@@ -1071,7 +1100,7 @@
   .match-item,
   .match-description,
   .phrase-item {
-    font-size: 0.8em;
+    font-size: 1.0em;
   }
 
   .analysis-section h3,
@@ -1150,5 +1179,384 @@
   .action-buttons.fixed-top .action-button {
     width: 32px;
     height: 32px;
+  }
+} 
+
+.premium-content {
+  margin: 30px 0;
+  padding: 30px;
+  background: linear-gradient(to bottom, #fffdf7, #fff9e6);
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(218, 165, 32, 0.1);
+  border: 1px solid rgba(218, 165, 32, 0.2);
+}
+
+.premium-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(218, 165, 32, 0.2);
+}
+
+.premium-icon {
+  color: #daa520;  /* 골든로드 색상 */
+  font-size: 24px;
+}
+
+.premium-header h3 {
+  color: #8b7355;  /* 황금빛이 도는 갈색 */
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.detail-section {
+  margin: 35px 0;
+}
+
+.detail-section h4 {
+  text-align: center;
+  color: #8B7355;  /* 골드와 어울리는 갈색 */
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 15px 0;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+/* 타이틀 밑에 장식선 추가 */
+.detail-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #DAA520, #FFD700);  /* 골드 그라데이션 */
+  border-radius: 2px;
+}
+
+/* 첫 번째 섹션의 타이틀은 위 마진 제거 */
+.detail-section:first-child h4 {
+  margin-top: 0;
+}
+
+.chart-wrapper {
+  height: 300px;
+  margin: 20px 0;
+}
+
+.description {
+  text-align: center;
+  color: #666;
+  margin-top: 15px;
+  font-size: 0.9em;
+  line-height: 1.6;
+} 
+
+/* PDF 생성 시 필요한 스타일 */
+@media print {
+  .pdf-only {
+    position: static;
+    visibility: visible;
+  }
+}
+
+.development-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.development-item {
+  background: rgba(218, 165, 32, 0.1);  /* 골드 색상의 연한 배경 */
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 0.95em;
+  color: #8B7355;  /* 골드와 어울리는 진한 갈색 */
+  border-left: 4px solid #DAA520;  /* 골드로드 색상의 왼쪽 테두리 */
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(218, 165, 32, 0.1);  /* 미묘한 그림자 효과 */
+}
+
+.development-item:hover {
+  background: rgba(218, 165, 32, 0.15);  /* 호버 시 약간 진해지는 효과 */
+  transform: translateY(-1px);  /* 살짝 떠오르는 효과 */
+  transition: all 0.2s ease;
+}
+
+.mbti-dimension-descriptions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background: rgba(218, 165, 32, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dimension-item {
+  padding: 10px;
+}
+
+.dimension-item h5 {
+  color: #8B7355;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.dimension-item p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #666;
+}
+
+.dimension-item strong {
+  color: #2c3e50;
+}
+
+.enneagram-descriptions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background: rgba(218, 165, 32, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.description-item {
+  padding: 10px;
+}
+
+.description-item h5 {
+  color: #8B7355;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.description-item p {
+  margin: 5px 0;
+  font-size: 1.0em;
+  line-height: 1.5;
+  color: #666;
+}
+
+.description-item .example {
+  font-style: italic;
+  color: #8B7355;
+  margin-top: 8px;
+  padding-left: 10px;
+  border-left: 2px solid #DAA520;
+}
+
+.attachment-descriptions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background: rgba(218, 165, 32, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.attachment-types {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.type-item {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.type-item h6 {
+  color: #8B7355;
+  font-size: 1em;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.type-feature {
+  font-style: italic;
+  color: #8B7355;
+  margin-top: 5px;
+  padding-left: 10px;
+  border-left: 2px solid #DAA520;
+}
+
+.attachment-descriptions ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.attachment-descriptions ul p {
+  margin: 5px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.mbti-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.indicator-item {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.indicator-item h6 {
+  color: #8B7355;
+  font-size: 1em;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.indicator-item > p {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.indicator-item ul {
+  margin-top: 5px;
+}
+
+.indicator-item ul p {
+  margin: 5px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.indicator-item strong {
+  color: #8B7355;
+}
+
+@media screen and (min-width: 768px) {
+  .description-item p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .description-item h5 {
+    font-size: 1.2em;
+  }
+
+  .indicator-item h6,
+  .type-item h6 {
+    font-size: 1.1em;
+  }
+
+  .indicator-item p,
+  .type-item p {
+    font-size: 1em;
+  }
+
+  .indicator-item ul p,
+  .type-item ul p,
+  .description-item ul p {
+    font-size: 1em;
+  }
+
+  .type-feature,
+  .example {
+    font-size: 1em;
+  }
+
+  .development-item {
+    font-size: 1em;
+  }
+
+  .type-analysis p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+}
+
+/* 기본 줄 간격 설정 */
+.description-item p,
+.indicator-item p,
+.type-item p,
+.type-analysis p {
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .description-item p,
+  .indicator-item p,
+  .type-item p,
+  .type-analysis p {
+    font-size: 1.0em;
+    line-height: 1.5;
+    margin: 6px 0;
+  }
+
+  .description-item h5 {
+    font-size: 1.1em;
+    margin: 12px 0 8px;
+  }
+
+  .indicator-item,
+  .type-item {
+    padding: 12px;
+    margin: 6px 0;
+  }
+
+  .indicator-item h6,
+  .type-item h6 {
+    font-size: 1em;
+    margin-bottom: 6px;
+  }
+
+  .type-feature,
+  .example {
+    margin-top: 6px;
+    padding-left: 8px;
+  }
+
+  .mbti-indicators,
+  .attachment-types {
+    gap: 10px;
+  }
+
+  .description-item ul p,
+  .indicator-item ul p {
+    margin: 4px 0;
+    padding-left: 12px;
+  }
+}
+
+/* 더 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+  .action-button {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+
+  .fixed-top {
+    top: 8px;
+    right: 8px;
+  }
+
+  .result-container {
+    padding-top: 50px;
   }
 }

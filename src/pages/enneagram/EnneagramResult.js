@@ -1,20 +1,37 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { enneagramDescriptions } from '../../data/enneagram/results';
+import EnneagramDetail from '../../components/detail/EnneagramDetail';
 import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 
 const EnneagramResult = () => {
   const location = useLocation();
-  const { resultType } = location.state || {};
+  const { resultType, scores } = location.state || {};
   const result = enneagramDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isPremium, setIsPremium] = useState(false);
+
+  console.log(scores);
+
+  const handlePremiumPurchase = () => {
+    // 여기에 결제 로직 추가
+    setIsPremium(true);
+  };
 
   return (
     <div className="result-page">
-      <div className="result-container enneagram-container">
-        <ActionButtons position="top" />
+      <div id="result-container" className="result-container enneagram-container">
+        <ActionButtons 
+          position="top" 
+          type="enneagram"
+          scores={scores}
+          resultType={resultType}
+          onPremiumPurchase={handlePremiumPurchase}
+          isPremium={isPremium}
+        />
+
         <div className="result-header">
           <h1>나의 에니어그램은 ?</h1>
         </div>
@@ -87,7 +104,20 @@ const EnneagramResult = () => {
           </div>
         </div>
 
-        <ActionButtons position="bottom" />
+        {isPremium && (
+          <div className="premium-content">
+            <EnneagramDetail scores={scores} resultType={resultType} />
+          </div>
+        )}
+
+        <ActionButtons 
+          position="bottom"
+          type="enneagram"
+          scores={scores}
+          resultType={resultType}
+          onPremiumPurchase={handlePremiumPurchase}
+          isPremium={isPremium}
+        />
       </div>
     </div>
   );

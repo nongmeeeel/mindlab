@@ -1,0 +1,9 @@
+.save-button {
+  background: #4CAF50 !important;  /* 초록색 계열 */
+}
+
+.save-button:hover {
+  background: #45a049 !important;
+}
+
+/* 기존 버튼 스타일은 유지 */ 
