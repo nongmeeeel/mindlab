@@ -61,8 +61,8 @@
 }
 
 .mbti-options .option-button {
-  background: #f8f9fa;
-  color: #2c3e50;
+  background: #FFFFFF;
+  color: #000000;
   border: 2px solid #e9ecef;
 }
 
@@ -106,27 +106,27 @@
 /* 버튼별 색상 그라데이션 */
 .enneagram-options .option-button:nth-child(1) {
   border: 2px solid #ff6b6b;
-  color: #ff6b6b;
+  color: #000000;
 }
 
 .enneagram-options .option-button:nth-child(2) {
   border: 2px solid #ff8f70;
-  color: #ff8f70;
+  color: #000000;
 }
 
 .enneagram-options .option-button:nth-child(3) {
   border: 2px solid #a5b4fc;
-  color: #a5b4fc;
+  color: #000000;
 }
 
 .enneagram-options .option-button:nth-child(4) {
   border: 2px solid #818cf8;
-  color: #818cf8;
+  color: #000000;
 }
 
 .enneagram-options .option-button:nth-child(5) {
   border: 2px solid #667eea;
-  color: #667eea;
+  color: #000000;
 }
 
 /* 선택된 버튼 스타일 */
@@ -169,8 +169,8 @@
 }
 
 .response-button {
-  background: white;
-  color: #2c3e50;
+  background: #FFFFFF;
+  color: #000000;
   border: 2px solid #48c6ef;
   text-align: left;
   padding: 20px;
