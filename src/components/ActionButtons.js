@@ -62,17 +62,35 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
       if (isMobile) {
         // 모바일에서는 share API를 통해 저장
         canvas.toBlob(async (blob) => {
-          const file = new File([blob], `${type}_결과_${resultType}.png`, { type: 'image/png' });
-          if (navigator.canShare && navigator.canShare({ files: [file] })) {
-            try {
-              await navigator.share({
-                files: [file],
-                title: '결과 저장',
+          try {
+            // 파일 시스템에 직접 저장 시도
+            if ('showSaveFilePicker' in window) {
+              const handle = await window.showSaveFilePicker({
+                suggestedName: `${type}_결과_${resultType}.png`,
+                types: [{
+                  description: 'PNG 이미지',
+                  accept: {'image/png': ['.png']},
+                }],
               });
-            } catch (error) {
-              console.error('공유 실패:', error);
-              alert('이미지 저장에 실패했습니다.');
+              const writable = await handle.createWritable();
+              await writable.write(blob);
+              await writable.close();
+            } else {
+              // 기존 share API 방식으로 폴백
+              const file = new File([blob], `${type}_결과_${resultType}.png`, { type: 'image/png' });
+              if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                await navigator.share({
+                  files: [file],
+                  title: '결과 저장',
+                });
+              }
             }
+          } catch (error) {
+            console.error('저장 실패:', error);
+            // 모든 방법이 실패하면 새 탭에서 열기
+            const url = URL.createObjectURL(blob);
+            window.open(url, '_blank');
+            URL.revokeObjectURL(url);
           }
         }, 'image/png');
       } else {

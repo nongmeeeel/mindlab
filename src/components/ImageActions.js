@@ -27,7 +27,6 @@ const ImageActions = ({ image, title, type }) => {
 
   const handleSave = async () => {
     try {
-      // 이미지 URL을 Blob으로 변환
       const response = await fetch(image);
       const blob = await response.blob();
       
@@ -35,26 +34,13 @@ const ImageActions = ({ image, title, type }) => {
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       
       if (isMobile) {
-        // 모바일에서는 share API를 통해 저장
-        const file = new File([blob], `${title}.png`, { type: 'image/png' });
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-          await navigator.share({
-            files: [file],
-            title: '이미지 저장',
-          });
-        } else {
-          // share API를 지원하지 않는 경우 직접 다운로드
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = `${title}.png`;
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(url);
-          document.body.removeChild(a);
-        }
+        // 모바일에서는 새 탭에서 이미지를 열어서 길게 누르면 저장할 수 있도록 함
+        const url = window.URL.createObjectURL(blob);
+        window.open(url, '_blank');
+        window.URL.revokeObjectURL(url);
+        alert('이미지를 길게 눌러서 저장할 수 있습니다.');
       } else {
-        // 데스크톱에서는 일반적인 다운로드
+        // 데스크톱에서는 기존 방식대로 다운로드
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
