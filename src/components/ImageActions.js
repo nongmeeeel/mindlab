@@ -31,8 +31,30 @@ const ImageActions = ({ image, title, type }) => {
       const response = await fetch(image);
       const blob = await response.blob();
       
-      if ('download' in document.createElement('a')) {
-        // 데스크톱에서 다운로드
+      // 모바일 여부 확인
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // 모바일에서는 share API를 통해 저장
+        const file = new File([blob], `${title}.png`, { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            files: [file],
+            title: '이미지 저장',
+          });
+        } else {
+          // share API를 지원하지 않는 경우 직접 다운로드
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `${title}.png`;
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+          document.body.removeChild(a);
+        }
+      } else {
+        // 데스크톱에서는 일반적인 다운로드
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -41,15 +63,6 @@ const ImageActions = ({ image, title, type }) => {
         a.click();
         window.URL.revokeObjectURL(url);
         document.body.removeChild(a);
-      } else {
-        // 모바일에서 저장
-        const filesArray = [new File([blob], `${title}.png`, { type: 'image/png' })];
-        if (navigator.canShare && navigator.canShare({ files: filesArray })) {
-          await navigator.share({
-            files: filesArray,
-            title: '이미지 저장',
-          });
-        }
       }
     } catch (error) {
       console.error('저장 실패:', error);
@@ -62,18 +75,18 @@ const ImageActions = ({ image, title, type }) => {
       <button 
         className="image-action-button"
         onClick={handleShare}
-        aria-label="결과 공유하기"
+        aria-label="이미지 공유"
       >
         <FaShareAlt size={16} />
-        <span>공유하기</span>
+        <span>이미지 공유</span>
       </button>
       <button 
         className="image-action-button"
         onClick={handleSave}
-        aria-label="이미지 저장하기"
+        aria-label="이미지 저장"
       >
         <FaDownload size={16} />
-        <span>저장하기</span>
+        <span>이미지 저장</span>
       </button>
     </div>
   );

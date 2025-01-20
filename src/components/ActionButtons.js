@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaShareAlt, FaHome, FaCrown, FaDownload } from 'react-icons/fa';
-import { generatePDF } from '../utils/pdfGenerator';
+import html2canvas from 'html2canvas';
 
 const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiumPurchase, isPremium }) => {
   const navigate = useNavigate();
@@ -33,19 +33,58 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   };
 
   const handleSaveResult = async () => {
-    const elementId = 'result-container'; // MBTIResult의 결과 컨테이너 ID
-    const fileName = `MBTI_결과_${resultType}`;
-    
+    const element = document.getElementById('result-container');
+    if (!element) return;
+
     try {
-      const success = await generatePDF(elementId, fileName);
-      if (success) {
-        alert('결과가 PDF로 저장되었습니다.');
+      // 버튼들을 임시로 숨김
+      const actionButtons = element.querySelectorAll('.action-buttons');
+      const imageActions = element.querySelectorAll('.image-actions');
+      [...actionButtons, ...imageActions].forEach(button => {
+        button.style.display = 'none';
+      });
+
+      const canvas = await html2canvas(element, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        allowTaint: true
+      });
+
+      // 버튼들 다시 표시
+      [...actionButtons, ...imageActions].forEach(button => {
+        button.style.display = '';
+      });
+
+      // 모바일 여부 확인
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // 모바일에서는 share API를 통해 저장
+        canvas.toBlob(async (blob) => {
+          const file = new File([blob], `${type}_결과_${resultType}.png`, { type: 'image/png' });
+          if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            try {
+              await navigator.share({
+                files: [file],
+                title: '결과 저장',
+              });
+            } catch (error) {
+              console.error('공유 실패:', error);
+              alert('이미지 저장에 실패했습니다.');
+            }
+          }
+        }, 'image/png');
       } else {
-        alert('PDF 저장 중 오류가 발생했습니다.');
+        // 데스크톱에서는 직접 다운로드
+        const link = document.createElement('a');
+        link.download = `${type}_결과_${resultType}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
       }
     } catch (error) {
-      console.error('PDF 저장 실패:', error);
-      alert('PDF 저장에 실패했습니다.');
+      console.error('저장 실패:', error);
+      alert('결과 저장에 실패했습니다.');
     }
   };
 
@@ -71,7 +110,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
           aria-label="결과 저장"
         >
           <FaDownload size={14} />
-          <span>결과PDF 저장</span>
+          <span>결과저장</span>
         </button>
       )}
       

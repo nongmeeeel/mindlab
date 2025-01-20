@@ -285,7 +285,7 @@
   line-height: 1.6;
   color: #444;
   margin: 20px 0;
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .traits-list {
