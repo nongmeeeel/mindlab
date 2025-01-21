@@ -11,7 +11,7 @@ const EnneagramResult = () => {
   const { resultType, scores } = location.state || {};
   const result = enneagramDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isPremium, setIsPremium] = useState(false);
+  const [isPremium, setIsPremium] = useState(true);
 
   console.log(scores);
 

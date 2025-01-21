@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaShareAlt, FaHome, FaCrown, FaDownload } from 'react-icons/fa';
+import { FaShareAlt, FaHome, FaCrown, FaDownload, FaComments } from 'react-icons/fa';
 import html2canvas from 'html2canvas';
 import Payment from './Payment';
 
@@ -96,6 +96,10 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
     }
   };
 
+  const handleKakaoChat = () => {
+    window.open('http://pf.kakao.com/_tHxlxbn/chat', '_blank');
+  };
+
   const className = `action-buttons ${position === 'top' ? 'fixed-top' : 'bottom-buttons'}`;
 
   return (
@@ -137,6 +141,15 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
         >
           <FaHome size={14} />
           <span>다른검사</span>
+        </button>
+
+        <button 
+          className="action-button chat-button"
+          onClick={handleKakaoChat}
+          aria-label="문의 및 피드백"
+        >
+          <FaComments size={14} />
+          <span>문의 및 피드백</span>
         </button>
       </div>
 

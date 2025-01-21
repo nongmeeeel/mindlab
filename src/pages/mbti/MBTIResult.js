@@ -11,7 +11,7 @@ const MBTIResult = () => {
   const { resultType, scores } = location.state || {};
   const result = mbtiDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isPremium, setIsPremium] = useState(false);
+  const [isPremium, setIsPremium] = useState(true);
 
   const handlePremiumPurchase = () => {
     // 여기에 결제 로직 추가

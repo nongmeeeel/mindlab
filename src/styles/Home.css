@@ -14,8 +14,7 @@
 }
 
 .header-section {
-  /* margin-bottom: 10px; */
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .home-content h1 {
@@ -160,7 +159,7 @@
 
   .home-content h1 {
     font-size: 2rem;
-    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .subtitle {
@@ -204,7 +203,7 @@
   }
 
   .header-section {
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
   }
 
   .home-content h1 {

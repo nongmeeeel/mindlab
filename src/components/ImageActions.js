@@ -26,8 +26,8 @@ const ImageActions = ({ image, title, type }) => {
         document.body.removeChild(a);
       }
     } catch (error) {
-      console.error('공유/저장 실패:', error);
-      alert('이미지 공유/저장에 실패했습니다.');
+      // console.error('공유/저장 실패:', error);
+      // alert('이미지 공유/저장에 실패했습니다.');
     }
   };
 

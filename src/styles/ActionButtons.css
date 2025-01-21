@@ -7,3 +7,48 @@
 }
 
 /* 기존 버튼 스타일은 유지 */ 
+
+.chat-button {
+  background-color: #F7E600 !important; /* 카카오톡 노란색 */
+  color: #000 !important; /* 검정색 텍스트 */
+  font-weight: 500;
+}
+
+.chat-button:hover {
+  background-color: #F0DC00 !important; /* 호버 시 살짝 어두운 노란색 */
+}
+
+/* 기존 스타일 초기화를 위해 구체적인 선택자 사용 */
+.action-buttons .chat-button {
+  background: #F7E600 !important;
+  background-color: #F7E600 !important;
+  color: #000 !important;
+  font-weight: 500;
+  border: none !important;
+}
+
+.action-buttons .chat-button:hover {
+  background: #F0DC00 !important;
+  background-color: #F0DC00 !important;
+}
+
+/* 버튼 4개일 때의 그리드 조정 */
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .action-buttons {
+    gap: 6px;
+  }
+  
+  .action-button span {
+    font-size: 0.75rem;
+  }
+  
+  .chat-button span {
+    letter-spacing: -0.5px;
+  }
+} 

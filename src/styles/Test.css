@@ -90,11 +90,11 @@
 }
 
 .enneagram-options .option-button {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 30px;
   background: white;
-  font-size: 1.2em;
+  font-size: 1.1rem;
   font-weight: 600;
   transition: all 0.2s ease;
   padding: 0;
@@ -168,6 +168,12 @@
   background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
 }
 
+.attachment-options .option-button {
+  font-size: 0.95rem;
+  padding: 12px 15px;
+  line-height: 1.4;
+}
+
 .response-button {
   background: #FFFFFF;
   color: #000000;
@@ -194,9 +200,14 @@
   }
 
   .enneagram-options .option-button {
-    width: 45px;
-    height: 45px;
-    font-size: 1.1em;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .attachment-options .option-button {
+    font-size: 0.9rem;
+    padding: 10px 12px;
   }
 }
 
@@ -207,8 +218,8 @@
   }
 
   .enneagram-options .option-button {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     font-size: 1em;
   }
 }
@@ -219,7 +230,7 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto 15px;
-  padding: 0 25px;
+  padding: 0 10px;
   font-weight: 600;
 }
 

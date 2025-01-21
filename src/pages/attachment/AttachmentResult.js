@@ -11,7 +11,7 @@ const AttachmentResult = () => {
   const { resultType, scores } = location.state || {};
   const result = attachmentDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isPremium, setIsPremium] = useState(false);
+  const [isPremium, setIsPremium] = useState(true);
 
   // 자기/타인 이미지 성향 텍스트 생성
   const getSelfImageText = () => {

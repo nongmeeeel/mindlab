@@ -1060,6 +1060,13 @@
 @media (max-width: 768px) {
   .action-buttons.fixed-top {
     gap: 4px;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    display: flex;
+    /* gap: 6px; */
+    z-index: 1000;
+    flex-direction: row;
   }
   
   .action-buttons.fixed-top .action-button {
@@ -1591,4 +1598,28 @@
   background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* 기존 스타일 유지하고 카카오 버튼 스타일만 추가/수정 */
+
+.action-button.chat-button {
+  background: #F7E600 !important;
+  background-color: #F7E600 !important;
+  color: #000000 !important;
+  font-weight: 500;
+  border: none !important;
+}
+
+.action-button.chat-button:hover {
+  background: #F0DC00 !important;
+  background-color: #F0DC00 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .action-button.chat-button {
+    font-size: 0.9em;
+  }
 }
