@@ -1,11 +1,22 @@
 {
-  "short_name": "심리 검사",
-  "name": "심리 검사 웹사이트",
+  "short_name": "마인드랩",
+  "name": "마인드랩 심리 테스트",
+  "description": "MBTI, 에니어그램, 애착유형 테스트로 나를 이해하는 첫걸음",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "assets/images/logo-favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logo-favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/images/logo-favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
