@@ -996,10 +996,10 @@
   position: fixed;
   top: 5px;
   right: 10px;
-  display: flex;
+  display: flex !important;
   gap: 6px;
   z-index: 1000;
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .action-buttons.fixed-top .action-button {
