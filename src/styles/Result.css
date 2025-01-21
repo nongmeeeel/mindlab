@@ -1001,12 +1001,12 @@
   position: fixed;
   top: 5px;
   right: 10px;
-  display: flex !important; /* !important로 override */
+  display: flex !important;
   flex-direction: row !important;
   gap: 6px;
   z-index: 1000;
   margin: 0;
-  width: auto;
+  max-width: calc(100% - 20px);
 }
 
 .action-buttons.fixed-top .action-button {
@@ -1067,11 +1067,16 @@
 @media (max-width: 768px) {
   .action-buttons.fixed-top {
     gap: 4px;
+    right: 50%;
+    transform: translateX(50%);
+    width: calc(100% - 20px);
   }
   
   .action-buttons.fixed-top .action-button {
     padding: 4px 8px;
     height: 24px;
+    flex: 1;
+    min-width: 0;
   }
 
   .action-buttons.fixed-top .action-button svg {
@@ -1080,6 +1085,24 @@
 
   .action-buttons.fixed-top .action-button span {
     font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* 더 작은 화면에서의 대응 */
+@media (max-width: 480px) {
+  .action-buttons.fixed-top {
+    gap: 3px;
+  }
+  
+  .action-buttons.fixed-top .action-button {
+    padding: 4px 6px;
+  }
+
+  .action-buttons.fixed-top .action-button span {
+    font-size: 9px;
   }
 }
 
