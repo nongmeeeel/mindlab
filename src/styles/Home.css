@@ -1,7 +1,7 @@
 .home-container {
   min-height: 100vh;
-  background-color: #f5f6fa;
-  padding: 20px;
+  background: linear-gradient(135deg, #f5f7ff 0%, #fff 100%);
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,59 +13,70 @@
   text-align: center;
 }
 
+.header-section {
+  /* margin-bottom: 10px; */
+  margin-top: 10px;
+}
+
 .home-content h1 {
   font-size: 2.8rem;
   color: #2c3e50;
-  margin-bottom: 40px;
   font-weight: 800;
   letter-spacing: -1px;
+  margin-bottom: 15px;
   position: relative;
   display: inline-block;
   padding: 0 15px;
 }
 
-.home-content h1::before,
-.home-content h1::after {
-  content: '';
-  position: absolute;
-  height: 8px;
-  border-radius: 4px;
-  bottom: 5px;
-  z-index: -1;
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
-.home-content h1::before {
-  background: linear-gradient(90deg, rgba(102, 126, 234, 0.3), rgba(238, 140, 104, 0.3));
-  left: 0;
-  right: 55%;
-}
-
-.home-content h1::after {
-  background: linear-gradient(90deg, rgba(238, 140, 104, 0.3), rgba(255, 107, 107, 0.3));
-  left: 55%;
-  right: 0;
+.test-notice {
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
 }
 
 .test-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .test-button {
-  width: 300px;
-  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
   border: none;
   border-radius: 20px;
-  padding: 35px 25px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.button-icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  transition: all 0.3s ease;
 }
 
 .test-button:hover {
@@ -73,108 +84,154 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.test-button h2 {
-  font-size: 1.6rem;
-  margin: 0 0 12px 0;
-  color: #2c3e50;
+.test-button:hover .button-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.button-text h2 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #2d3748;
   font-weight: 700;
-  letter-spacing: -0.5px;
 }
 
-.test-button p {
-  color: #666;
-  margin: 0;
-  font-size: 1.1em;
-  opacity: 0.9;
-}
-
-.test-button.mbti {
-  background: linear-gradient(145deg, #ffffff, #f0f3ff);
-  border: 2px solid rgba(102, 126, 234, 0.3);
-}
-
-.test-button.mbti:hover {
-  border-color: rgba(102, 126, 234, 0.8);
-  background: linear-gradient(145deg, #f8faff, #eef2ff);
-}
-
-.test-button.enneagram {
-  background: linear-gradient(145deg, #ffffff, #fff0e8);
-  border: 2px solid rgba(238, 140, 104, 0.3);
-}
-
-.test-button.enneagram:hover {
-  border-color: rgba(238, 140, 104, 0.8);
-  background: linear-gradient(145deg, #fff8f5, #fff0e8);
-}
-
-.test-button.attachment {
-  background: linear-gradient(145deg, #ffffff, #ffe8e8);
-  border: 2px solid rgba(255, 107, 107, 0.3);
-}
-
-.test-button.attachment:hover {
-  border-color: rgba(255, 107, 107, 0.8);
-  background: linear-gradient(145deg, #fff5f5, #ffe8e8);
-}
-
-.test-notice {
-  text-align: center;
-  color: #666;
-  font-size: 0.9em;
-  margin: 10px 0 20px;
-  padding: 0 20px;
+.button-text p {
+  color: #718096;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
+.test-button.mbti {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.test-button.mbti:hover {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6ebff 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.test-button.mbti .button-icon {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(102, 126, 234, 0.2) 100%);
+  color: #667eea;
+}
+
+.test-button.enneagram {
+  background: linear-gradient(135deg, #ffffff 0%, #fff4f0 100%);
+  border: 1px solid rgba(238, 140, 104, 0.1);
+}
+
+.test-button.enneagram:hover {
+  background: linear-gradient(135deg, #fff4f0 0%, #ffe9e0 100%);
+  border: 1px solid rgba(238, 140, 104, 0.2);
+}
+
+.test-button.enneagram .button-icon {
+  background: linear-gradient(135deg, rgba(238, 140, 104, 0.1) 0%, rgba(238, 140, 104, 0.2) 100%);
+  color: #ee8c68;
+}
+
+.test-button.attachment {
+  background: linear-gradient(135deg, #ffffff 0%, #fff0f0 100%);
+  border: 1px solid rgba(255, 107, 107, 0.1);
+}
+
+.test-button.attachment:hover {
+  background: linear-gradient(135deg, #fff0f0 0%, #ffe6e6 100%);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.test-button.attachment .button-icon {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 107, 107, 0.2) 100%);
+  color: #ff6b6b;
+}
+
+.home-footer {
+  color: #a0aec0;
+  font-size: 0.85rem;
+  margin-top: 20px;
+}
+
 @media (max-width: 768px) {
+  .home-container {
+    padding: 15px 10px;
+    min-height: 100dvh;
+  }
+
   .home-content h1 {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    padding: 0 10px;
+    font-size: 2rem;
+    margin-top: 8px;
   }
 
-  .home-content h1::before,
-  .home-content h1::after {
-    height: 6px;
-    bottom: 3px;
-  }
-
-  .test-buttons {
-    gap: 15px;
-    padding: 15px;
-  }
-
-  .test-button {
-    width: 100%;
-    max-width: 320px;
-    padding: 25px 20px;
-  }
-
-  .test-button h2 {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
-
-  .test-button p {
-    font-size: 1em;
+  .subtitle {
+    font-size: 1rem;
   }
 
   .test-notice {
-    font-size: 0.85em;
-    margin: 8px 0 16px;
+    font-size: 0.85rem;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+  }
+
+  .test-buttons {
+    gap: 12px;
+    padding: 5px;
+  }
+
+  .test-button {
+    padding: 15px 12px;
+  }
+
+  .button-icon {
+    font-size: 1.4rem;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  .button-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  .button-text p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .home-container {
+    padding: 10px;
+  }
+
+  .header-section {
+    /* margin-bottom: 15px; */
+  }
+
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .test-notice {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+  }
+
+  .test-button {
+    padding: 12px 10px;
   }
 }
 
 @media (max-width: 480px) {
   .home-content h1 {
     font-size: 1.8rem;
-    margin-bottom: 25px;
   }
 
-  .home-content h1::before,
-  .home-content h1::after {
-    height: 4px;
-    bottom: 2px;
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .test-notice {
+    font-size: 0.85rem;
+    padding: 10px 15px;
   }
 } 

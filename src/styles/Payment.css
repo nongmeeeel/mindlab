@@ -119,4 +119,127 @@
   width: 150px;
   height: auto;
   margin: 20px 0;
+}
+
+.payment-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-out;
+  z-index: 1000;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payment-header h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.payment-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.payment-button:active {
+  transform: scale(0.98);
+}
+
+.payment-button.kakao {
+  background: #FEE500;
+  color: #000000;
+}
+
+.payment-button.naver {
+  background: #03C75A;
+  color: white;
+}
+
+.payment-button.card {
+  background: #f8f9fa;
+  color: #1a1a1a;
+  border: 1px solid #dee2e6;
+}
+
+.payment-cancel {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: none;
+  color: #6c757d;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .payment-container {
+    padding: 20px 16px;
+  }
+
+  .payment-button {
+    padding: 16px;
+  }
+}
+
+/* 아이폰 하단 노치 대응 */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .payment-container {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+}
+
+.naver-icon {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  width: 24px;
+  height: 24px;
+  background: white;
+  color: #03C75A;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 } 
