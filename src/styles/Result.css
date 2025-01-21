@@ -846,11 +846,10 @@
 
 /* 액션 버튼 컨테이너 */
 .action-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 10px 0 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 20px 0;
 }
 
 .action-button {
@@ -885,6 +884,11 @@
   color: white !important;
 }
 
+.action-button.chat-button {
+  background: #F7E600;
+  color: #000;
+}
+
 /* 테마별 공유 버튼 색상 */
 .mbti-container .action-button.share-button {
   color: #667eea;
@@ -901,7 +905,8 @@
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .action-buttons {
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   
   .action-button {
@@ -996,10 +1001,12 @@
   position: fixed;
   top: 5px;
   right: 10px;
-  display: flex !important;
+  display: flex !important; /* !important로 override */
+  flex-direction: row !important;
   gap: 6px;
   z-index: 1000;
-  flex-direction: row !important;
+  margin: 0;
+  width: auto;
 }
 
 .action-buttons.fixed-top .action-button {
@@ -1025,9 +1032,9 @@
   color: #667eea;
 }
 
-.action-buttons.fixed-top .action-button.home-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+.action-buttons.fixed-top .action-button.chat-button {
+  background: #F7E600;
+  color: #000;
 }
 
 .action-buttons.fixed-top .action-button svg {
@@ -1060,13 +1067,6 @@
 @media (max-width: 768px) {
   .action-buttons.fixed-top {
     gap: 4px;
-    position: fixed;
-    top: 5px;
-    right: 10px;
-    display: flex;
-    /* gap: 6px; */
-    z-index: 1000;
-    flex-direction: row;
   }
   
   .action-buttons.fixed-top .action-button {
@@ -1200,9 +1200,9 @@
 
 /* 모바일에서도 동일한 크기 유지 */
 @media (max-width: 768px) {
-  /* .action-buttons.fixed-top {
+  .action-buttons.fixed-top {
     gap: 4px;
-  } */
+  }
   
   .action-buttons.fixed-top .action-button {
     width: 32px;
@@ -1598,28 +1598,4 @@
   background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* 기존 스타일 유지하고 카카오 버튼 스타일만 추가/수정 */
-
-.action-button.chat-button {
-  background: #F7E600 !important;
-  background-color: #F7E600 !important;
-  color: #000000 !important;
-  font-weight: 500;
-  border: none !important;
-}
-
-.action-button.chat-button:hover {
-  background: #F0DC00 !important;
-  background-color: #F0DC00 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* 모바일 대응 */
-@media (max-width: 768px) {
-  .action-button.chat-button {
-    font-size: 0.9em;
-  }
 }
