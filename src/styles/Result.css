@@ -1200,9 +1200,9 @@
 
 /* 모바일에서도 동일한 크기 유지 */
 @media (max-width: 768px) {
-  .action-buttons.fixed-top {
+  /* .action-buttons.fixed-top {
     gap: 4px;
-  }
+  } */
   
   .action-buttons.fixed-top .action-button {
     width: 32px;
