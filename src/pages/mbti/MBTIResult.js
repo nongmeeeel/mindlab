@@ -5,6 +5,7 @@ import MBTIDetail from '../../components/detail/MBTIDetail';
 import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
+import AdBanner from '../../components/AdBanner';
 
 const MBTIResult = () => {
   const location = useLocation();
@@ -130,6 +131,10 @@ const MBTIResult = () => {
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
         />
+      </div>
+
+      <div className="ad-container">
+        <AdBanner slot="YOUR_AD_SLOT_ID" />
       </div>
     </div>
   );
