@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 메인 페이지 -->
   <url>
-    <loc>https://mindlab-test.com</loc>
+    <loc>https://mind-lab-test.com</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,7 +10,7 @@
   
   <!-- MBTI 테스트 -->
   <url>
-    <loc>https://mindlab-test.com/test/mbti</loc>
+    <loc>https://mind-lab-test.com/test/mbti</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -18,7 +18,7 @@
   
   <!-- 에니어그램 테스트 -->
   <url>
-    <loc>https://mindlab-test.com/test/enneagram</loc>
+    <loc>https://mind-lab-test.com/test/enneagram</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -26,7 +26,7 @@
   
   <!-- 애착유형 테스트 -->
   <url>
-    <loc>https://mindlab-test.com/test/attachment</loc>
+    <loc>https://mind-lab-test.com/test/attachment</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
