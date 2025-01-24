@@ -9,10 +9,12 @@ import { logEvent } from '../../utils/analytics';
 
 const MBTIResult = () => {
   const location = useLocation();
-  const { resultType } = location.state || {};
+  const { resultType, scores } = location.state || {};
   const result = mbtiDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
+
+  console.log('MBTIResult scores:', scores);
 
   useEffect(() => {
     logEvent('test_result', {
@@ -20,6 +22,10 @@ const MBTIResult = () => {
       result_type: resultType
     });
   }, [resultType]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handlePremiumPurchase = () => {
     // 여기에 결제 로직 추가
@@ -125,13 +131,14 @@ const MBTIResult = () => {
 
         {isPremium && (
           <div className="premium-content">
-            <MBTIDetail resultType={resultType} />
+            <MBTIDetail scores={scores} resultType={resultType} />
           </div>
         )}
 
         <ActionButtons 
           position="bottom"
           type="mbti"
+          scores={scores}
           resultType={resultType}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}

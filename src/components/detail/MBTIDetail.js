@@ -24,6 +24,7 @@ ChartJS.register(
 );
 
 const MBTIDetail = ({ scores, resultType }) => {
+  console.log('MBTIResult2 scores:', scores);
   const detail = mbtiDetails[resultType];
   
   const options = {

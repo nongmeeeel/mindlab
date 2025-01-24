@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaBrain, FaUserCircle, FaHeart } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
-
+import Footer from '../components/Footer';
 const Home = () => {
   const navigate = useNavigate();
 
@@ -67,9 +67,7 @@ const Home = () => {
           </button>
         </div>
 
-        <footer className="home-footer">
-          <p>© 2024 마인드랩. All rights reserved.</p>
-        </footer>
+        <Footer />  
       </div>
     </div>
   );

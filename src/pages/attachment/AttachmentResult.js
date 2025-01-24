@@ -21,6 +21,10 @@ const AttachmentResult = () => {
     });
   }, [resultType]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // 자기/타인 이미지 성향 텍스트 생성
   const getSelfImageText = () => {
     return scores.self >= 0 ? "긍정적" : "부정적";

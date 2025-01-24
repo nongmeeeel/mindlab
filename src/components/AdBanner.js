@@ -1,11 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const AdBanner = () => {
+  const isLoaded = useRef(false);
+
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (error) {
-      console.error('AdSense 에러:', error);
+    if (!isLoaded.current) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        isLoaded.current = true;
+      } catch (error) {
+        console.error('AdSense 에러:', error);
+      }
     }
   }, []);
 

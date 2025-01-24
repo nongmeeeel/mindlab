@@ -21,6 +21,10 @@ const EnneagramResult = () => {
     });
   }, [resultType]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   console.log(scores);
 
   const handlePremiumPurchase = () => {
