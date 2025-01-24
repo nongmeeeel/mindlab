@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { mbtiQuestions } from '../../data/mbti/questions';
 import '../../styles/Test.css';
 import { calculateMBTIScores, determineMBTIType } from '../../data/mbti/calculator';
+import { logEvent } from '../../utils/analytics';
 
 const MBTITest = () => {
   const navigate = useNavigate();
@@ -38,10 +39,19 @@ const MBTITest = () => {
           ]
         }
       });
+
+      // MBTI 테스트 완료 시
+      logEvent('test_complete', { 
+        test_type: 'mbti',
+        result_type: 'INTJ' // 실제 결과 타입
+      });
     }
   };
 
   const question = mbtiQuestions[currentQuestion];
+
+  // MBTI 테스트 시작시
+  logEvent('test_start', { test_type: 'mbti' });
 
   return (
     <div className="test-page mbti-test">

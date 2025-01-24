@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { mbtiDescriptions } from '../../data/mbti/results';
 import MBTIDetail from '../../components/detail/MBTIDetail';
@@ -6,13 +6,21 @@ import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import AdBanner from '../../components/AdBanner';
+import { logEvent } from '../../utils/analytics';
 
 const MBTIResult = () => {
   const location = useLocation();
-  const { resultType, scores } = location.state || {};
+  const { resultType } = location.state || {};
   const result = mbtiDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
+
+  useEffect(() => {
+    logEvent('test_result', {
+      test_type: 'mbti',
+      result_type: resultType
+    });
+  }, [resultType]);
 
   const handlePremiumPurchase = () => {
     // 여기에 결제 로직 추가
@@ -25,7 +33,6 @@ const MBTIResult = () => {
         <ActionButtons 
           position="top" 
           type="mbti"
-          scores={scores}
           resultType={resultType}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
@@ -119,14 +126,13 @@ const MBTIResult = () => {
 
         {isPremium && (
           <div className="premium-content">
-            <MBTIDetail scores={scores} resultType={resultType} />
+            <MBTIDetail resultType={resultType} />
           </div>
         )}
 
         <ActionButtons 
           position="bottom"
           type="mbti"
-          scores={scores}
           resultType={resultType}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}

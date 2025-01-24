@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { enneagramDescriptions } from '../../data/enneagram/results';
 import EnneagramDetail from '../../components/detail/EnneagramDetail';
 import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
+import { logEvent } from '../../utils/analytics';
 
 const EnneagramResult = () => {
   const location = useLocation();
@@ -12,6 +13,13 @@ const EnneagramResult = () => {
   const result = enneagramDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
+
+  useEffect(() => {
+    logEvent('test_result', {
+      test_type: 'enneagram',
+      result_type: resultType
+    });
+  }, [resultType]);
 
   console.log(scores);
 

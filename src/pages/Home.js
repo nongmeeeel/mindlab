@@ -2,9 +2,18 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaBrain, FaUserCircle, FaHeart } from 'react-icons/fa';
 import '../styles/Home.css';
+import { logEvent } from '../utils/analytics';
 
 const Home = () => {
   const navigate = useNavigate();
+
+  const handleTestStart = (testType) => {
+    // 테스트 시작 이벤트 추적
+    logEvent('test_click', { 
+      test_type: testType
+    });
+    navigate(`/test/${testType}`);
+  };
 
   return (
     <div className="home-container">
@@ -19,7 +28,7 @@ const Home = () => {
 
         <div className="test-buttons">
           <button 
-            onClick={() => navigate('/test/mbti')} 
+            onClick={() => handleTestStart('mbti')} 
             className="test-button mbti"
           >
             <div className="button-icon">
@@ -32,7 +41,7 @@ const Home = () => {
           </button>
 
           <button 
-            onClick={() => navigate('/test/enneagram')} 
+            onClick={() => handleTestStart('enneagram')} 
             className="test-button enneagram"
           >
             <div className="button-icon">
@@ -45,7 +54,7 @@ const Home = () => {
           </button>
 
           <button 
-            onClick={() => navigate('/test/attachment')} 
+            onClick={() => handleTestStart('attachment')} 
             className="test-button attachment"
           >
             <div className="button-icon">

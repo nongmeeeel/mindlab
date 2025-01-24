@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { attachmentDescriptions } from '../../data/attachment/results';
 import AttachmentDetail from '../../components/detail/AttachmentDetail';
 import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
+import { logEvent } from '../../utils/analytics';
 
 const AttachmentResult = () => {
   const location = useLocation();
@@ -12,6 +13,13 @@ const AttachmentResult = () => {
   const result = attachmentDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
+
+  useEffect(() => {
+    logEvent('test_result', {
+      test_type: 'attachment',
+      result_type: resultType
+    });
+  }, [resultType]);
 
   // 자기/타인 이미지 성향 텍스트 생성
   const getSelfImageText = () => {
