@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { attachmentQuestions } from '../../data/attachment/questions';
 import { calculateAttachmentScores } from '../../data/attachment/calculator';
 import '../../styles/Test.css';
+import AdBanner from '../../components/AdBanner';
 
 const AttachmentTest = () => {
   const navigate = useNavigate();
@@ -66,6 +67,11 @@ const AttachmentTest = () => {
             </button>
           ))}
         </div>
+      </div>
+
+      {/* 테스트 하단에 광고 추가 */}
+      <div className="ad-container">
+        <AdBanner />
       </div>
     </div>
   );
