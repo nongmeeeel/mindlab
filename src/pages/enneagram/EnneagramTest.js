@@ -77,9 +77,9 @@ const EnneagramTest = () => {
         </div>
       </div>
 
-      <div className="ad-container">
+      {/* <div className="ad-container">
         <AdBanner />
-      </div>
+      </div> */}
     </div>
   );
 };

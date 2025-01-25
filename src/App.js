@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import MBTITest from './pages/mbti/MBTITest';
 import EnneagramTest from './pages/enneagram/EnneagramTest';
 import AttachmentTest from './pages/attachment/AttachmentTest';
+import NewYearWish from './pages/newYear/NewYearWish';
 
 // Result 페이지들
 import MBTIResult from './pages/mbti/MBTIResult';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/test/mbti" element={<MBTITest />} />
         <Route path="/test/enneagram" element={<EnneagramTest />} />
         <Route path="/test/attachment" element={<AttachmentTest />} />
+        <Route path="/test/newYearWish" element={<NewYearWish />} />
         
         {/* 결과 페이지 라우트 */}
         <Route path="/result/mbti" element={<MBTIResult />} />

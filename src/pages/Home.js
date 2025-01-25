@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { FaBrain, FaUserCircle, FaHeart } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
-import Footer from '../components/Footer';
+import fortuneColor from '../pages/newYear/assets/fortune-color.png';
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -65,9 +66,24 @@ const Home = () => {
               <p>나의 연애 스타일 알아보기</p>
             </div>
           </button>
-        </div>
 
-        <Footer />  
+          <button 
+            onClick={() => handleTestStart('newYearWish')} 
+            className="test-button newyear"
+          >
+            <div className="button-icon">
+              <img 
+                src={fortuneColor}
+                alt="설날 운세"
+                className="fortune-icon"
+              />
+            </div>
+            <div className="button-text">
+              <h2>설날 운세</h2>
+              <p>2024년 나의 운세 보기</p>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );

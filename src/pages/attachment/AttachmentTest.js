@@ -70,9 +70,9 @@ const AttachmentTest = () => {
       </div>
 
       {/* 테스트 하단에 광고 추가 */}
-      <div className="ad-container">
+      {/* <div className="ad-container">
         <AdBanner />
-      </div>
+      </div> */}
     </div>
   );
 };
