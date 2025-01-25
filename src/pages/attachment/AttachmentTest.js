@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { attachmentQuestions } from '../../data/attachment/questions';
 import { calculateAttachmentScores } from '../../data/attachment/calculator';
 import '../../styles/Test.css';
-import AdBanner from '../../components/AdBanner';
+// import AdBanner from '../../components/AdBanner';
 
 const AttachmentTest = () => {
   const navigate = useNavigate();

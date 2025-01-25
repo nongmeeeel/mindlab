@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/NewYearWish.css';
 import fortuneColor from './assets/fortune-color.png';
-import { wishes, getRandomFortune } from './data/wishes';
+import { getRandomFortune } from './data/wishes';
 
 const NewYearWish = () => {
   const navigate = useNavigate();

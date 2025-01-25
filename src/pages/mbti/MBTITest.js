@@ -4,7 +4,7 @@ import { mbtiQuestions } from '../../data/mbti/questions';
 import '../../styles/Test.css';
 import { calculateMBTIScores, determineMBTIType } from '../../data/mbti/calculator';
 
-import AdBanner from '../../components/AdBanner';
+// import AdBanner from '../../components/AdBanner';
 
 const MBTITest = () => {
   const navigate = useNavigate();
