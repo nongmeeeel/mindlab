@@ -15,10 +15,13 @@ const EnneagramResult = () => {
   const [isPremium, setIsPremium] = useState(true);
 
   useEffect(() => {
-    logEvent('test_result', {
-      test_type: 'enneagram',
-      result_type: resultType
-    });
+    if (resultType) {
+      logEvent(
+        'test_complete',
+        'result_view',
+        `enneagram_type${resultType}`
+      );
+    }
   }, [resultType]);
 
   useEffect(() => {

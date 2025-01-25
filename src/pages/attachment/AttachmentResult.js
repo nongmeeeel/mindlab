@@ -15,10 +15,13 @@ const AttachmentResult = () => {
   const [isPremium, setIsPremium] = useState(true);
 
   useEffect(() => {
-    logEvent('test_result', {
-      test_type: 'attachment',
-      result_type: resultType
-    });
+    if (resultType) {
+      logEvent(
+        'test_complete',
+        'result_view',
+        `attachment_${resultType}`
+      );
+    }
   }, [resultType]);
 
   useEffect(() => {

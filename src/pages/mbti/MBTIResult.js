@@ -17,10 +17,13 @@ const MBTIResult = () => {
   console.log('MBTIResult scores:', scores);
 
   useEffect(() => {
-    logEvent('test_result', {
-      test_type: 'mbti',
-      result_type: resultType
-    });
+    if (resultType) {
+      logEvent(
+        'test_complete',
+        'result_view',
+        `mbti_${resultType}`
+      );
+    }
   }, [resultType]);
 
   useEffect(() => {

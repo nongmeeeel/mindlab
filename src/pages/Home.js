@@ -9,10 +9,11 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleTestStart = (testType) => {
-    // 테스트 시작 이벤트 추적
-    logEvent('test_click', { 
-      test_type: testType
-    });
+    logEvent(
+      'test_start',  // category
+      'click',       // action
+      testType       // label
+    );
     navigate(`/test/${testType}`);
   };
 
