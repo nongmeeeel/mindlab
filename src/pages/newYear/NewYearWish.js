@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './styles/NewYearWish.css';
 import fortuneColor from './assets/fortune-color.png';
 import { getRandomFortune } from './data/wishes';
@@ -37,80 +38,95 @@ const NewYearWish = () => {
   console.log('current selectedWish:', selectedWish);
   console.log('showResult:', showResult);
 
+  useEffect(() => {
+    document.title = "2025년 신년 운세 | 마인드랩";
+  }, []);
+
   return (
-    <div className="newyear-container">
-      <div className="fortune-content">
-        <h1>2025년 올해의 운세</h1>
-        
-        {!showResult && (
-          <div className={`fortune-image ${showResult ? 'fade-out' : ''}`}>
-            <img 
-              src={fortuneColor}
-              alt="복주머니"
-              className={isAnimating ? 'pulse' : ''}
-            />
-          </div>
-        )}
+    <>
+      <Helmet>
+        <title>2025년 신년 운세 | 마인드랩</title>
+        <meta name="description" content="2025년 나의 운세는? 재물운, 애정운, 귀인 등 상세한 운세를 무료로 확인해보세요." />
+        <meta property="og:title" content="2025년 신년 운세 | 마인드랩" />
+        <meta property="og:description" content="2025년 나의 운세는? 재물운, 애정운, 귀인 등 상세한 운세를 무료로 확인해보세요." />
+        <meta property="og:image" content="/assets/images/fortune/fortune-share.png" />
+        <meta property="og:url" content="https://mind-lab-test.com/test/newYearWish" />
+      </Helmet>
 
-        {!isActivated && (
-          <div className="input-section">
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="이름을 입력하세요"
-              className="name-input"
-            />
-            
-            <select
-              value={birthYear}
-              onChange={(e) => setBirthYear(e.target.value)}
-              className="year-select"
-            >
-              <option value="">출생년도</option>
-              {years.map(year => (
-                <option key={year} value={year}>
-                  {year}년
-                </option>
-              ))}
-            </select>
-
-            <button 
-              onClick={handleSubmit}
-              className="submit-button"
-            >
-              운세 보기
-            </button>
-          </div>
-        )}
-
-        {showResult && selectedWish && (
-          <div className="result-section fade-in">
-            <div className="wish-section money">
-              <h2>💰 재물운</h2>
-              <p>{selectedWish.money}</p>
+      <div className="newyear-container">
+        <div className="fortune-content">
+          <h1>2025년 올해의 운세</h1>
+          
+          {!showResult && (
+            <div className={`fortune-image ${showResult ? 'fade-out' : ''}`}>
+              <img 
+                src={fortuneColor}
+                alt="복주머니"
+                className={isAnimating ? 'pulse' : ''}
+              />
             </div>
-            
-            <div className="wish-section love">
-              <h2>💕 애정운</h2>
-              <p>{selectedWish.love}</p>
-            </div>
-            
-            <div className="wish-section person">
-              <h2>👥 올해 만날 귀인</h2>
-              <p>{selectedWish.person}</p>
-            </div>
+          )}
 
-            <button 
-              onClick={() => navigate('/')}
-              className="home-button"
-            >
-              다른 검사 하기
-            </button>
-          </div>
-        )}
+          {!isActivated && (
+            <div className="input-section">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="이름을 입력하세요"
+                className="name-input"
+              />
+              
+              <select
+                value={birthYear}
+                onChange={(e) => setBirthYear(e.target.value)}
+                className="year-select"
+              >
+                <option value="">출생년도</option>
+                {years.map(year => (
+                  <option key={year} value={year}>
+                    {year}년
+                  </option>
+                ))}
+              </select>
+
+              <button 
+                onClick={handleSubmit}
+                className="submit-button"
+              >
+                운세 보기
+              </button>
+            </div>
+          )}
+
+          {showResult && selectedWish && (
+            <div className="result-section fade-in">
+              <div className="wish-section money">
+                <h2>💰 재물운</h2>
+                <p>{selectedWish.money}</p>
+              </div>
+              
+              <div className="wish-section love">
+                <h2>💕 애정운</h2>
+                <p>{selectedWish.love}</p>
+              </div>
+              
+              <div className="wish-section person">
+                <h2>👥 올해 만날 귀인</h2>
+                <p>{selectedWish.person}</p>
+              </div>
+
+              <button 
+                onClick={() => navigate('/')}
+                className="home-button"
+              >
+                다른 검사 하기
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
