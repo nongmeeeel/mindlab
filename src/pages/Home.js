@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { FaBrain, FaUserCircle, FaHeart } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
-import fortuneColor from '../pages/newYear/assets/fortune-color.png';
 
 const Home = () => {
   const navigate = useNavigate();
