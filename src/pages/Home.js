@@ -68,7 +68,7 @@ const Home = () => {
             </div>
           </button>
 
-          <button 
+          {/* <button 
             onClick={() => handleTestStart('newYearWish')} 
             className="test-button newyear"
           >
@@ -83,7 +83,7 @@ const Home = () => {
               <h2>설날 운세</h2>
               <p>2024년 나의 운세 보기</p>
             </div>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
