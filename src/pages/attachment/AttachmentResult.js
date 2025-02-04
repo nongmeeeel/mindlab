@@ -6,6 +6,7 @@ import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import { logEvent } from '../../utils/analytics';
+import AdBanner from '../../components/AdBanner';
 
 const AttachmentResult = () => {
   const location = useLocation();
@@ -75,6 +76,10 @@ const AttachmentResult = () => {
             title={`${result.title}-${result.subtitle}`}
             type="애착유형"
           />
+        </div>
+
+        <div className="ad-container">
+          <AdBanner />
         </div>
 
         <div className="result-card">

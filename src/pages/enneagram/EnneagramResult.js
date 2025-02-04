@@ -6,7 +6,7 @@ import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import { logEvent } from '../../utils/analytics';
-
+import AdBanner from '../../components/AdBanner';
 const EnneagramResult = () => {
   const location = useLocation();
   const { resultType, scores } = location.state || {};
@@ -69,6 +69,10 @@ const EnneagramResult = () => {
             title={`${result.title}-${result.subtitle}`}
             type="에니어그램"
           />
+        </div>
+
+        <div className="ad-container">
+          <AdBanner />
         </div>
 
         <div className="result-card">

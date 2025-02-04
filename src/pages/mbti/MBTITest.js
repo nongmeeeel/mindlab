@@ -4,8 +4,6 @@ import { mbtiQuestions } from '../../data/mbti/questions';
 import '../../styles/Test.css';
 import { calculateMBTIScores, determineMBTIType } from '../../data/mbti/calculator';
 
-// import AdBanner from '../../components/AdBanner';
-
 const MBTITest = () => {
   const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -73,11 +71,6 @@ const MBTITest = () => {
           </button>
         </div>
       </div>
-
-      {/* 테스트 하단에 광고 추가 */}
-      {/* <div className="ad-container">
-        <AdBanner />
-      </div> */}
     </div>
   );
 };
