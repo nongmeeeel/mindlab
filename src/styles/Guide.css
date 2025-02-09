@@ -1,0 +1,163 @@
+.guide-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7ff 0%, #fff 100%);
+}
+
+.guide-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.guide-container h1 {
+  color: #2c3e50;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.guide-container section {
+  margin: 40px 0;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.guide-container section:hover {
+  transform: translateY(-2px);
+}
+
+.guide-container h2 {
+  color: #34495e;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.guide-container p {
+  line-height: 1.8;
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.guide-container ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.guide-container li {
+  margin: 15px 0;
+  color: #4a5568;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.guide-container li:before {
+  content: "•";
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.ad-container {
+  margin: 40px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .guide-page {
+    padding: 20px 15px;
+  }
+
+  .guide-container {
+    padding: 25px;
+  }
+
+  .guide-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .guide-container section {
+    margin: 25px 0;
+    padding: 15px;
+  }
+
+  .guide-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .guide-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .guide-container li {
+    font-size: 1rem;
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+
+  .ad-container {
+    margin: 25px 0;
+    padding: 15px;
+  }
+}
+
+/* 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+  .guide-page {
+    padding: 15px 10px;
+  }
+
+  .guide-container {
+    padding: 20px;
+  }
+
+  .guide-container h1 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .guide-container section {
+    margin: 20px 0;
+    padding: 12px;
+  }
+
+  .guide-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .guide-container p,
+  .guide-container li {
+    font-size: 0.95rem;
+  }
+}
+
+/* 높이가 작은 화면 대응 */
+@media (max-height: 700px) {
+  .guide-page {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .guide-container section {
+    margin: 15px 0;
+  }
+} 

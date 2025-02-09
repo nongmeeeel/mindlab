@@ -1,8 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaBrain, FaUserCircle, FaHeart } from 'react-icons/fa';
+import { FaBrain, FaUserCircle, FaHeart, FaBook } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
+import AdBanner from '../components/AdBanner';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -83,6 +84,43 @@ const Home = () => {
               <p>2024년 나의 운세 보기</p>
             </div>
           </button> */}
+        </div>
+        
+        <div className="ad-container">
+          <AdBanner />
+        </div>
+
+        <div className="test-backgrounds">
+          <h2>검사 이론 배경</h2>
+          <div className="background-links">
+            <div className="background-item" onClick={() => navigate('/guide/mbti')}>
+              <div className="background-icon">
+                <FaBook />
+              </div>
+              <h3>MBTI 검사의 배경</h3>
+              <p>융의 심리유형론을 기반으로 한 MBTI의 이론적 배경과 역사를 알아보세요.</p>
+            </div>
+
+            <div className="background-item" onClick={() => navigate('/guide/enneagram')}>
+              <div className="background-icon">
+                <FaBook />
+              </div>
+              <h3>에니어그램 검사의 배경</h3>
+              <p>고대 수피즘에서 시작된 에니어그램의 역사와 이론을 살펴보세요.</p>
+            </div>
+
+            <div className="background-item" onClick={() => navigate('/guide/attachment')}>
+              <div className="background-icon">
+                <FaBook />
+              </div>
+              <h3>애착유형 검사의 배경</h3>
+              <p>존 볼비의 애착이론이 현대 심리학에 미친 영향을 이해해보세요.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ad-container">
+          <AdBanner />
         </div>
       </div>
     </div>

@@ -13,6 +13,11 @@ import MBTIResult from './pages/mbti/MBTIResult';
 import EnneagramResult from './pages/enneagram/EnneagramResult';
 import AttachmentResult from './pages/attachment/AttachmentResult';
 
+// Guide 페이지들 추가
+import MBTIGuide from './pages/guide/MBTIGuide';
+import EnneagramGuide from './pages/guide/EnneagramGuide';
+import AttachmentGuide from './pages/guide/AttachmentGuide';
+
 // DetailedReport 대신 직접 Detail 컴포넌트 사용
 
 import './styles/App.css';
@@ -44,7 +49,12 @@ function App() {
         <Route path="/result/enneagram" element={<EnneagramResult />} />
         <Route path="/result/attachment" element={<AttachmentResult />} />
         
-        {/* Detail 페이지 라우트 추가 */}
+        {/* 가이드 페이지 라우트 추가 */}
+        <Route path="/guide/mbti" element={<MBTIGuide />} />
+        <Route path="/guide/enneagram" element={<EnneagramGuide />} />
+        <Route path="/guide/attachment" element={<AttachmentGuide />} />
+        
+        {/* 기타 페이지 라우트 */}
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
       </Routes>
