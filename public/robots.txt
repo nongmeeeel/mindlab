@@ -6,7 +6,19 @@ Allow: /guide/
 Allow: /privacy
 Allow: /terms
 
+# Allow Google Ads and Analytics
+Allow: /pagead/
+Allow: /pagead2/
+Allow: /googleads/
+Allow: /google-analytics/
+Allow: /analytics/
+Allow: /doubleclick/
+Allow: /adsense/
+Allow: /gtag/
+Allow: /gtm/
+
 # Block dynamic result pages
 Disallow: /result/
 
+# Sitemap
 Sitemap: https://mind-lab-test.com/sitemap.xml

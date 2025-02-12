@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /test/
+Allow: /static/
+Allow: /guide/
+Allow: /privacy
+Allow: /terms
+
+# 중요: 크롤러에게 sitemap 위치 알려주기
+Sitemap: https://mind-lab-test.com/sitemap.xml 
