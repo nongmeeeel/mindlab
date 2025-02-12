@@ -1,36 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { mbtiDescriptions } from '../../data/mbti/results';
-import MBTIDetail from '../../components/detail/MBTIDetail';
+import MBTIDetail from '../detail/MBTIDetail';
 import '../../styles/Result.css';
-import ImageActions from '../../components/ImageActions';
-import ActionButtons from '../../components/ActionButtons';
-import { logEvent } from '../../utils/analytics';
-const MBTIResult = () => {
-  const location = useLocation();
-  const { resultType, scores } = location.state || {};
+import ImageActions from '../ImageActions';
+import ActionButtons from '../ActionButtons';
+
+const StaticMBTIResult = ({ resultType }) => {
   const result = mbtiDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
 
-  console.log('MBTIResult scores:', scores);
-
-  useEffect(() => {
-    if (resultType) {
-      logEvent(
-        'test_complete',
-        'result_view',
-        `mbti_${resultType}`
-      );
-    }
-  }, [resultType]);
+  // 정적 페이지용 기본 scores 설정
+  const scores = [
+    resultType.includes('I') ? -33 : 33,  // EI (음수는 I, 양수는 E)
+    resultType.includes('N') ? -33 : 33,  // SN (음수는 N, 양수는 S)
+    resultType.includes('F') ? -33 : 33,  // TF (음수는 F, 양수는 T)
+    resultType.includes('P') ? -33 : 33   // JP (음수는 P, 양수는 J)
+  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const handlePremiumPurchase = () => {
-    // 여기에 결제 로직 추가
     setIsPremium(true);
   };
 
@@ -41,6 +33,7 @@ const MBTIResult = () => {
           position="top" 
           type="mbti"
           resultType={resultType}
+          scores={scores}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
         />
@@ -140,8 +133,8 @@ const MBTIResult = () => {
         <ActionButtons 
           position="bottom"
           type="mbti"
-          scores={scores}
           resultType={resultType}
+          scores={scores}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
         />
@@ -150,4 +143,4 @@ const MBTIResult = () => {
   );
 };
 
-export default MBTIResult; 
+export default StaticMBTIResult; 

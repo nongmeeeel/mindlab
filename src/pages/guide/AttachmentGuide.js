@@ -1,5 +1,4 @@
 import React from 'react';
-import AdBanner from '../../components/AdBanner';
 import '../../styles/Guide.css';
 
 const AttachmentGuide = () => {
@@ -7,10 +6,6 @@ const AttachmentGuide = () => {
     <div className="guide-page">
       <div className="guide-container">
         <h1>애착유형의 이해</h1>
-
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>애착이론의 시작</h2>
@@ -42,10 +37,6 @@ const AttachmentGuide = () => {
             </li>
           </ul>
         </section>
-
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>애착유형의 형성 과정</h2>
@@ -79,10 +70,6 @@ const AttachmentGuide = () => {
             </li>
           </ul>
         </section>
-
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>애착유형의 변화 가능성</h2>

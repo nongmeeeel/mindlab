@@ -5,7 +5,7 @@ import disorganizedImg from '../../assets/images/result/attachment/Disorganized.
 
 export const attachmentDescriptions = {
   secure: {
-    title: "안정형 애착",
+    title: "안정형",
     subtitle: "자기긍정 / 타인긍정",
     image: secureImg,
     perspectives: {
@@ -32,7 +32,7 @@ export const attachmentDescriptions = {
     ]
   },
   anxious: {
-    title: "불안형 애착",
+    title: "불안형",
     subtitle: "자기부정 / 타인긍정",
     image: anxiousImg,
     perspectives: {

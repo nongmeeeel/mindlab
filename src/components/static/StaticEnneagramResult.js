@@ -1,38 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { enneagramDescriptions } from '../../data/enneagram/results';
-import EnneagramDetail from '../../components/detail/EnneagramDetail';
+import EnneagramDetail from '../detail/EnneagramDetail';
 import '../../styles/Result.css';
-import ImageActions from '../../components/ImageActions';
-import ActionButtons from '../../components/ActionButtons';
-import { logEvent } from '../../utils/analytics';
-const EnneagramResult = () => {
-  const location = useLocation();
-  const { resultType, scores } = location.state || {};
+import ImageActions from '../ImageActions';
+import ActionButtons from '../ActionButtons';
+
+const StaticEnneagramResult = ({ resultType }) => {
   const result = enneagramDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
 
-  console.log('EnneagramResult scores:', scores);
-
-  useEffect(() => {
-    if (resultType) {
-      logEvent(
-        'test_complete',
-        'result_view',
-        `enneagram_type${resultType}`
-      );
-    }
-  }, [resultType]);
+  // 정적 페이지용 기본 scores 설정
+  const scores = {
+    1: resultType === 1 ? 40 : 20,
+    2: resultType === 2 ? 40 : 20,
+    3: resultType === 3 ? 40 : 20,
+    4: resultType === 4 ? 40 : 20,
+    5: resultType === 5 ? 40 : 20,
+    6: resultType === 6 ? 40 : 20,
+    7: resultType === 7 ? 40 : 20,
+    8: resultType === 8 ? 40 : 20,
+    9: resultType === 9 ? 40 : 20
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(scores);
-
   const handlePremiumPurchase = () => {
-    // 여기에 결제 로직 추가
     setIsPremium(true);
   };
 
@@ -42,8 +37,8 @@ const EnneagramResult = () => {
         <ActionButtons 
           position="top" 
           type="enneagram"
-          scores={scores}
           resultType={resultType}
+          scores={scores}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
         />
@@ -129,8 +124,8 @@ const EnneagramResult = () => {
         <ActionButtons 
           position="bottom"
           type="enneagram"
-          scores={scores}
           resultType={resultType}
+          scores={scores}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
         />
@@ -139,4 +134,4 @@ const EnneagramResult = () => {
   );
 };
 
-export default EnneagramResult; 
+export default StaticEnneagramResult; 

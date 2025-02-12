@@ -1,5 +1,4 @@
 import React from 'react';
-import AdBanner from '../../components/AdBanner';
 import '../../styles/Guide.css';
 
 const EnneagramGuide = () => {
@@ -7,10 +6,6 @@ const EnneagramGuide = () => {
     <div className="guide-page">
       <div className="guide-container">
         <h1>에니어그램의 이해</h1>
-
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>에니어그램의 기원과 역사</h2>
@@ -69,10 +64,6 @@ const EnneagramGuide = () => {
           </ul>
         </section>
 
-        <div className="ad-container">
-          <AdBanner />
-        </div>
-
         <section>
           <h2>에니어그램의 핵심 개념</h2>
           <ul>
@@ -112,10 +103,6 @@ const EnneagramGuide = () => {
             </li>
           </ul>
         </section>
-
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>에니어그램을 통한 성장</h2>

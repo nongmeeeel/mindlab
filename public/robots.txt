@@ -1,11 +1,12 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Allow: /test/
+Allow: /static/
+Allow: /guide/
+Allow: /privacy
+Allow: /terms
 
-# 사이트맵 위치 지정
-Sitemap: https://yourdomain.com/sitemap.xml
+# Block dynamic result pages
+Disallow: /result/
 
-# 크롤링 제한
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/ 
+Sitemap: https://mind-lab-test.com/sitemap.xml

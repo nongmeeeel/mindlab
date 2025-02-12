@@ -1,43 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { attachmentDescriptions } from '../../data/attachment/results';
-import AttachmentDetail from '../../components/detail/AttachmentDetail';
+import AttachmentDetail from '../detail/AttachmentDetail';
 import '../../styles/Result.css';
-import ImageActions from '../../components/ImageActions';
-import ActionButtons from '../../components/ActionButtons';
-import { logEvent } from '../../utils/analytics';
+import ImageActions from '../ImageActions';
+import ActionButtons from '../ActionButtons';
 
-const AttachmentResult = () => {
-  const location = useLocation();
-  const { resultType, scores } = location.state || {};
+const StaticAttachmentResult = ({ resultType }) => {
+  console.log('type:', resultType);
+  console.log('available types:', Object.keys(attachmentDescriptions));
+  
   const result = attachmentDescriptions[resultType];
+  console.log('result:', result);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
 
-  console.log('AttachmentResult scores:', scores);
+  // 정적 페이지용 기본 scores 설정
+  const scores = {
+    self: resultType === 'secure' || resultType === 'avoidant' ? 2 : -2,   // 긍정: 2, 부정: -2
+    others: resultType === 'secure' || resultType === 'anxious' ? 2 : -2   // 긍정: 2, 부정: -2
+  };
 
-  useEffect(() => {
-    if (resultType) {
-      logEvent(
-        'test_complete',
-        'result_view',
-        `attachment_${resultType}`
-      );
-    }
-  }, [resultType]);
+  // 점수 설명:
+  // secure: { self: 2, others: 2 }       - 자기/타인 모두 긍정
+  // anxious: { self: -2, others: 2 }     - 자기 부정, 타인 긍정
+  // avoidant: { self: 2, others: -2 }    - 자기 긍정, 타인 부정
+  // disorganized: { self: -2, others: -2 } - 자기/타인 모두 부정
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // 자기/타인 이미지 성향 텍스트 생성
-  const getSelfImageText = () => {
-    return scores.self >= 0 ? "긍정적" : "부정적";
-  };
-
-  const getOthersImageText = () => {
-    return scores.others >= 0 ? "긍정적" : "부정적";
-  };
 
   const handlePremiumPurchase = () => {
     setIsPremium(true);
@@ -49,8 +40,8 @@ const AttachmentResult = () => {
         <ActionButtons 
           position="top" 
           type="attachment"
-          scores={scores}
           resultType={resultType}
+          scores={scores}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
         />
@@ -89,9 +80,6 @@ const AttachmentResult = () => {
             <div className="section-content">
               <div className="keyword-list">
                 <h3>자기 관점</h3>
-                <div className="keyword-item strength-item">
-                  자신에 대해 {getSelfImageText()} 이미지
-                </div>
                 {result.perspectives.self.map((perspective, index) => (
                   <div key={index} className="keyword-item strength-item">
                     {perspective}
@@ -103,9 +91,6 @@ const AttachmentResult = () => {
             <div className="section-content">
               <div className="keyword-list">
                 <h3>타인 관점</h3>
-                <div className="keyword-item weakness-item">
-                  타인에 대해 {getOthersImageText()} 이미지
-                </div>
                 {result.perspectives.others.map((perspective, index) => (
                   <div key={index} className="keyword-item weakness-item">
                     {perspective}
@@ -139,15 +124,18 @@ const AttachmentResult = () => {
 
         {isPremium && (
           <div className="premium-content">
-            <AttachmentDetail scores={scores} resultType={resultType} />
+            <AttachmentDetail 
+              resultType={resultType}
+              scores={scores}
+            />
           </div>
         )}
 
         <ActionButtons 
           position="bottom"
           type="attachment"
-          scores={scores}
           resultType={resultType}
+          scores={scores}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
         />
@@ -156,4 +144,4 @@ const AttachmentResult = () => {
   );
 };
 
-export default AttachmentResult; 
+export default StaticAttachmentResult; 

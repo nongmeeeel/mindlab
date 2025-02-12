@@ -1,5 +1,4 @@
 import React from 'react';
-import AdBanner from '../../components/AdBanner';
 import '../../styles/Guide.css';
 
 const MBTIGuide = () => {
@@ -7,10 +6,6 @@ const MBTIGuide = () => {
     <div className="guide-page">
       <div className="guide-container">
         <h1>MBTI의 이해</h1>
-        
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>MBTI의 역사와 발전</h2>
@@ -43,10 +38,6 @@ const MBTIGuide = () => {
             </li>
           </ul>
         </section>
-
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>16가지 성격유형의 특징</h2>
@@ -99,10 +90,6 @@ const MBTIGuide = () => {
             </li>
           </ul>
         </section>
-
-        <div className="ad-container">
-          <AdBanner />
-        </div>
 
         <section>
           <h2>MBTI의 한계와 올바른 활용</h2>

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { FaBrain, FaUserCircle, FaHeart, FaBook } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
-import AdBanner from '../components/AdBanner';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -86,9 +85,9 @@ const Home = () => {
           </button> */}
         </div>
         
-        <div className="ad-container">
+        {/* <div className="ad-container">
           <AdBanner />
-        </div>
+        </div> */}
 
         <div className="test-backgrounds">
           <h2>검사 이론 배경</h2>
@@ -117,10 +116,6 @@ const Home = () => {
               <p>존 볼비의 애착이론이 현대 심리학에 미친 영향을 이해해보세요.</p>
             </div>
           </div>
-        </div>
-
-        <div className="ad-container">
-          <AdBanner />
         </div>
       </div>
     </div>
