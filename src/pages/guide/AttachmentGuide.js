@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/Guide.css';
+import { Link } from 'react-router-dom';
 
 const AttachmentGuide = () => {
   return (
@@ -81,6 +82,25 @@ const AttachmentGuide = () => {
             <li>정서적 자각과 표현 능력의 향상</li>
           </ul>
           <p>자신의 애착유형을 이해하고 개선하려는 노력은 더 건강하고 만족스러운 관계 형성에 도움이 됩니다.</p>
+        </section>
+
+        <section className="related-types">
+          <h5>애착유형별 특징 바로가기</h5>
+          <div className="type-links">
+            <div className="type-group">
+              <h6>긍정적 모델</h6>
+              <Link to="/static/attachment/secure" className="type-link">안정형 (Secure)</Link>
+            </div>
+            <div className="type-group">
+              <h6>양가적 모델</h6>
+              <Link to="/static/attachment/anxious" className="type-link">불안형 (Anxious)</Link>
+              <Link to="/static/attachment/avoidant" className="type-link">회피형 (Avoidant)</Link>
+            </div>
+            <div className="type-group">
+              <h6>부정적 모델</h6>
+              <Link to="/static/attachment/disorganized" className="type-link">혼란형 (Disorganized)</Link>
+            </div>
+          </div>
         </section>
       </div>
     </div>

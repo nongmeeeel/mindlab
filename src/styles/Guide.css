@@ -160,4 +160,46 @@
   .guide-container section {
     margin: 15px 0;
   }
+}
+
+.related-types {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.related-types h5 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.type-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.type-group {
+  min-width: 120px;
+}
+
+.type-group h6 {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.type-link {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #666;
+  text-decoration: none;
+  margin: 0 8px 8px 0;
+}
+
+.type-link:hover {
+  color: #333;
+  text-decoration: underline;
 } 

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/Guide.css';
+import { Link } from 'react-router-dom';
 
 const EnneagramGuide = () => {
   return (
@@ -124,6 +125,30 @@ const EnneagramGuide = () => {
               <p>- 지속적인 자기 성찰</p>
             </li>
           </ul>
+        </section>
+
+        <section className="related-types">
+          <h5>에니어그램 유형별 특징 바로가기</h5>
+          <div className="type-links">
+            <div className="type-group">
+              <h6>장 중심 (Body)</h6>
+              <Link to="/static/enneagram/8" className="type-link">8유형: 지도자</Link>
+              <Link to="/static/enneagram/9" className="type-link">9유형: 중재자</Link>
+              <Link to="/static/enneagram/1" className="type-link">1유형: 개혁가</Link>
+            </div>
+            <div className="type-group">
+              <h6>가슴 중심 (Heart)</h6>
+              <Link to="/static/enneagram/2" className="type-link">2유형: 조력가</Link>
+              <Link to="/static/enneagram/3" className="type-link">3유형: 성취가</Link>
+              <Link to="/static/enneagram/4" className="type-link">4유형: 예술가</Link>
+            </div>
+            <div className="type-group">
+              <h6>머리 중심 (Head)</h6>
+              <Link to="/static/enneagram/5" className="type-link">5유형: 연구가</Link>
+              <Link to="/static/enneagram/6" className="type-link">6유형: 충성가</Link>
+              <Link to="/static/enneagram/7" className="type-link">7유형: 낙천가</Link>
+            </div>
+          </div>
         </section>
       </div>
     </div>

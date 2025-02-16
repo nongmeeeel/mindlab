@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/Guide.css';
+import { Link } from 'react-router-dom';
 
 const MBTIGuide = () => {
   return (
@@ -106,6 +107,40 @@ const MBTIGuide = () => {
               <p>- 개인의 성장과 발전을 위한 참고자료로 활용</p>
             </li>
           </ul>
+        </section>
+
+        <section className="related-types">
+          <h5>MBTI 유형별 특징 바로가기</h5>
+          <div className="type-links">
+            <div className="type-group">
+              <h6>NT (분석가형)</h6>
+              <Link to="/static/mbti/INTJ" className="type-link">INTJ</Link>
+              <Link to="/static/mbti/INTP" className="type-link">INTP</Link>
+              <Link to="/static/mbti/ENTJ" className="type-link">ENTJ</Link>
+              <Link to="/static/mbti/ENTP" className="type-link">ENTP</Link>
+            </div>
+            <div className="type-group">
+              <h6>NF (이상가형)</h6>
+              <Link to="/static/mbti/INFJ" className="type-link">INFJ</Link>
+              <Link to="/static/mbti/INFP" className="type-link">INFP</Link>
+              <Link to="/static/mbti/ENFJ" className="type-link">ENFJ</Link>
+              <Link to="/static/mbti/ENFP" className="type-link">ENFP</Link>
+            </div>
+            <div className="type-group">
+              <h6>SJ (관리자형)</h6>
+              <Link to="/static/mbti/ISTJ" className="type-link">ISTJ</Link>
+              <Link to="/static/mbti/ISFJ" className="type-link">ISFJ</Link>
+              <Link to="/static/mbti/ESTJ" className="type-link">ESTJ</Link>
+              <Link to="/static/mbti/ESFJ" className="type-link">ESFJ</Link>
+            </div>
+            <div className="type-group">
+              <h6>SP (탐험가형)</h6>
+              <Link to="/static/mbti/ISTP" className="type-link">ISTP</Link>
+              <Link to="/static/mbti/ISFP" className="type-link">ISFP</Link>
+              <Link to="/static/mbti/ESTP" className="type-link">ESTP</Link>
+              <Link to="/static/mbti/ESFP" className="type-link">ESFP</Link>
+            </div>
+          </div>
         </section>
       </div>
     </div>
