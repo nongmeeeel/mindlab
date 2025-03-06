@@ -15,7 +15,7 @@ const EnneagramGuide = () => {
           <p>현대의 에니어그램은 심리학, 영성, 기업 컨설팅 등 다양한 분야에서 활용되는 종합적인 인간 이해의 도구로 자리잡았습니다.</p>
         </section>
 
-        <AdBanner />
+        <AdBanner adSlot="2126625993" />
 
         <section>
           <h2>9가지 성격유형의 특징</h2>

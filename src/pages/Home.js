@@ -86,7 +86,7 @@ const Home = () => {
           </button> */}
         </div>
         
-        <AdBanner />
+        <AdBanner adSlot="5402691877" />
 
         <div className="test-backgrounds">
           <h2>검사 이론 배경</h2>

@@ -1,0 +1,17 @@
+.ad-container {
+    width: 100%;
+    max-width: 800px;
+    min-width: 250px;
+    margin: 20px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+/* 모바일 대응 */
+@media (max-width: 768px) {
+.ad-container {
+    padding: 0 10px;
+    margin: 15px auto;
+}
+}

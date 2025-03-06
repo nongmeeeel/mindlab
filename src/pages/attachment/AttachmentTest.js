@@ -68,7 +68,7 @@ const AttachmentTest = () => {
           ))}
         </div>
       </div>
-      <AdBanner />
+      <AdBanner adSlot="1637634853" />
     </div>
   );
 };

@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from 'react';
+import '../styles/AdBanner.css';
 
 // 광고 타입을 props로 받아서 구분
-const AdBanner = ({ position, type = 'google' }) => {
+const AdBanner = ({ adSlot, position, type = 'google' }) => {
   const isLoaded = useRef(false);
 
   useEffect(() => {
-    if (!isLoaded.current && type === 'google') {
+    // 컴포넌트가 마운트되거나 adSlot이 변경될 때마다 광고 다시 로드
+    isLoaded.current = false;
+    
+    if (type === 'google') {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
         isLoaded.current = true;
@@ -13,7 +17,7 @@ const AdBanner = ({ position, type = 'google' }) => {
         console.error('AdSense 에러:', error);
       }
     }
-  }, [type]);
+  }, [adSlot, type]); // adSlot을 의존성 배열에 추가
 
   return (
     <div className={`ad-container ${position}`}>
@@ -25,7 +29,7 @@ const AdBanner = ({ position, type = 'google' }) => {
           data-ad-layout="in-article"
           data-ad-format="fluid"
           data-ad-client="ca-pub-2285464317468764"
-          data-ad-slot="3626007551"
+          data-ad-slot={adSlot}
           data-full-width-responsive="true"
         />
       ) : (

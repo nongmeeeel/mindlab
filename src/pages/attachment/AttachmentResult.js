@@ -80,7 +80,7 @@ const AttachmentResult = () => {
           />
         </div>
 
-        <AdBanner />
+        <AdBanner adSlot="3254771183" />
 
         <div className="result-card">
           <div className="mbti-result">
@@ -140,7 +140,7 @@ const AttachmentResult = () => {
           </div>
         </div>
 
-        <AdBanner />
+        <AdBanner adSlot="4584434229" />
 
         {isPremium && (
           <div className="premium-content">

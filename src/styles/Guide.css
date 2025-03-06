@@ -70,14 +70,6 @@
   left: 0;
 }
 
-.ad-container {
-  margin: 40px 0;
-  padding: 20px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .guide-page {
@@ -112,11 +104,6 @@
     font-size: 1rem;
     padding-left: 20px;
     margin: 10px 0;
-  }
-
-  .ad-container {
-    margin: 25px 0;
-    padding: 15px;
   }
 }
 

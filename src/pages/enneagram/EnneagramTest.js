@@ -76,7 +76,7 @@ const EnneagramTest = () => {
           ))}
         </div>
       </div>
-      <AdBanner />
+      <AdBanner adSlot="8692034349" />
     </div>
   );
 };

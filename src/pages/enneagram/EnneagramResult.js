@@ -73,7 +73,7 @@ const EnneagramResult = () => {
           />
         </div>
 
-        <AdBanner />
+        <AdBanner adSlot="5737464292" />
 
         <div className="result-card">
           <div className="mbti-result">
@@ -123,7 +123,7 @@ const EnneagramResult = () => {
           </div>
         </div>
 
-        <AdBanner />
+        <AdBanner adSlot="1036667926" />
 
         {isPremium && (
           <div className="premium-content">

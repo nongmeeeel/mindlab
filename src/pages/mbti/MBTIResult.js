@@ -70,7 +70,7 @@ const MBTIResult = () => {
           />
         </div>
         
-        <AdBanner />
+        <AdBanner adSlot="7194016199" />
 
         <div className="result-card">
           <div className="mbti-result">
@@ -134,9 +134,7 @@ const MBTIResult = () => {
           </div>
         </div>
 
-        <div className="ad-container">
-          <AdBanner />
-        </div>
+        <AdBanner adSlot="2349749592" />
 
         {isPremium && (
           <div className="premium-content">

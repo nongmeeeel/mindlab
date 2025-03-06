@@ -72,7 +72,7 @@ const MBTITest = () => {
           </button>
         </div>
       </div>
-      <AdBanner />
+      <AdBanner adSlot="7378952677" />
     </div>
   );
 };
