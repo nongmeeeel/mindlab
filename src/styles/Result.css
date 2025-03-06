@@ -918,12 +918,6 @@
     margin-left: 6px;
   }
 
-  /* 상단 고정 버튼 위치 조정 */
-  .fixed-top {
-    top: 10px;
-    right: 10px;
-  }
-
   /* 결과 컨테이너 상단 여백 조정 */
   .result-container {
     padding-top: 60px;
@@ -998,15 +992,15 @@
 
 /* 상단 고정 버튼 */
 .action-buttons.fixed-top {
-  /* position: fixed; */
+  position: fixed;
+  top: 20px;
+  right: 15px;
   display: flex !important;
   flex-direction: row !important;
   gap: 6px;
   z-index: 1000;
   margin: 0;
-  max-width: calc(100%);
-  justify-content: center; /* 가로 정렬 (가운데) */
-  align-items: center; /* 세로 정렬 (가운데) */
+  max-width: calc(100% - 20px);
 }
 
 .action-buttons.fixed-top .action-button {
@@ -1067,8 +1061,9 @@
 @media (max-width: 768px) {
   .action-buttons.fixed-top {
     gap: 4px;
-    /* transform: translateX(50%); */
-    width: calc(100%);
+    right: 50%;
+    transform: translateX(50%);
+    width: calc(100% - 20px);
   }
   
   .action-buttons.fixed-top .action-button {
@@ -1093,7 +1088,7 @@
 /* 더 작은 화면에서의 대응 */
 @media (max-width: 480px) {
   .action-buttons.fixed-top {
-    gap: 3px;
+    /* gap: 3px; */
   }
   
   .action-buttons.fixed-top .action-button {
@@ -1222,10 +1217,6 @@
 
 /* 모바일에서도 동일한 크기 유지 */
 @media (max-width: 768px) {
-  .action-buttons.fixed-top {
-    gap: 4px;
-  }
-  
   .action-buttons.fixed-top .action-button {
     width: 32px;
     height: 32px;
@@ -1601,11 +1592,6 @@
     font-size: 0.8em;
   }
 
-  .fixed-top {
-    top: 8px;
-    right: 8px;
-  }
-
   .result-container {
     padding-top: 50px;
   }
@@ -1621,3 +1607,22 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
+/* 광고 컨테이너 스타일 */
+.ad-container {
+  margin: 20px auto;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .ad-container {
+    margin: 15px auto;
+    padding: 8px;
+  }
+} 

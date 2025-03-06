@@ -2,11 +2,17 @@ import React from 'react';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
 import AdBanner from '../../components/AdBanner';
+import ActionButtons from '../../components/ActionButtons';
 
 const AttachmentGuide = () => {
   return (
     <div className="guide-page">
       <div className="guide-container">
+        <ActionButtons 
+          position="top" 
+          type="attachment"
+        />
+
         <h1>애착유형의 이해</h1>
 
         <section>

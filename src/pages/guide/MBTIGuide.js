@@ -2,11 +2,16 @@ import React from 'react';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
 import AdBanner from '../../components/AdBanner';
+import ActionButtons from '../../components/ActionButtons';
 
 const MBTIGuide = () => {
   return (
     <div className="guide-page">
       <div className="guide-container">
+        <ActionButtons 
+          position="top" 
+          type="attachment"
+        />
         <h1>MBTI의 이해</h1>
 
         <section>
