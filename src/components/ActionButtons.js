@@ -105,25 +105,29 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   return (
     <>
       <div className={className}>
-        {/* {!isPremium ? (
-          <button 
-            className="action-button premium-button"
-            onClick={handlePremium}
-            aria-label="전체 결과 확인"
-          >
-            <FaCrown size={14} />
-            <span>전체 결과 확인하기</span>
-          </button>
-        ) : (
-          <button 
-            className="action-button save-button"
-            onClick={handleSaveResult}
-            aria-label="결과저장"
-          >
-            <FaDownload size={14} />
-            <span>결과저장</span>
-          </button>
-        )} */}
+      {false && (
+        <>
+          {!isPremium ? (
+            <button 
+              className="action-button premium-button"
+              onClick={handlePremium}
+              aria-label="전체 결과 확인"
+            >
+              <FaCrown size={14} />
+              <span>전체 결과 확인하기</span>
+            </button>
+          ) : (
+            <button 
+              className="action-button save-button"
+              onClick={handleSaveResult}
+              aria-label="결과저장"
+            >
+              <FaDownload size={14} />
+              <span>결과저장</span>
+            </button>
+          )}
+        </>
+        )}
         
         <button 
           className="action-button share-button"
