@@ -70,9 +70,7 @@ const MBTIResult = () => {
           />
         </div>
         
-        <div className="ad-container">
-          <AdBanner />
-        </div>
+        <AdBanner />
 
         <div className="result-card">
           <div className="mbti-result">

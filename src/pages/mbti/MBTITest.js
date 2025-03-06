@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { mbtiQuestions } from '../../data/mbti/questions';
 import '../../styles/Test.css';
 import { calculateMBTIScores, determineMBTIType } from '../../data/mbti/calculator';
+import AdBanner from '../../components/AdBanner';
 
 const MBTITest = () => {
   const navigate = useNavigate();
@@ -71,6 +72,7 @@ const MBTITest = () => {
           </button>
         </div>
       </div>
+      <AdBanner />
     </div>
   );
 };

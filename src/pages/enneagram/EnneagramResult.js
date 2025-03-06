@@ -73,9 +73,7 @@ const EnneagramResult = () => {
           />
         </div>
 
-        <div className="ad-container">
-          <AdBanner />
-        </div>
+        <AdBanner />
 
         <div className="result-card">
           <div className="mbti-result">
@@ -125,9 +123,7 @@ const EnneagramResult = () => {
           </div>
         </div>
 
-        <div className="ad-container">
-          <AdBanner />
-        </div>
+        <AdBanner />
 
         {isPremium && (
           <div className="premium-content">

@@ -80,9 +80,7 @@ const AttachmentResult = () => {
           />
         </div>
 
-        <div className="ad-container">
-          <AdBanner />
-        </div>
+        <AdBanner />
 
         <div className="result-card">
           <div className="mbti-result">
@@ -142,9 +140,7 @@ const AttachmentResult = () => {
           </div>
         </div>
 
-        <div className="ad-container">
-          <AdBanner />
-        </div>
+        <AdBanner />
 
         {isPremium && (
           <div className="premium-content">

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { enneagramQuestions } from '../../data/enneagram/questions';
 import { calculateEnneagramScores } from '../../data/enneagram/calculator';
 import '../../styles/Test.css';
+import AdBanner from '../../components/AdBanner';
 
 const EnneagramTest = () => {
   const navigate = useNavigate();
@@ -75,6 +76,7 @@ const EnneagramTest = () => {
           ))}
         </div>
       </div>
+      <AdBanner />
     </div>
   );
 };
