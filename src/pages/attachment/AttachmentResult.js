@@ -6,6 +6,7 @@ import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import { logEvent } from '../../utils/analytics';
+import AdBanner from '../../components/AdBanner';
 
 const AttachmentResult = () => {
   const location = useLocation();
@@ -79,6 +80,10 @@ const AttachmentResult = () => {
           />
         </div>
 
+        <div className="ad-container">
+          <AdBanner />
+        </div>
+
         <div className="result-card">
           <div className="mbti-result">
             <h2>{result.title}</h2>
@@ -135,6 +140,10 @@ const AttachmentResult = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="ad-container">
+          <AdBanner />
         </div>
 
         {isPremium && (

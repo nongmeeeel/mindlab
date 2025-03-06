@@ -6,6 +6,7 @@ import '../../styles/Result.css';
 import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import { logEvent } from '../../utils/analytics';
+import AdBanner from '../../components/AdBanner';
 const MBTIResult = () => {
   const location = useLocation();
   const { resultType, scores } = location.state || {};
@@ -68,6 +69,10 @@ const MBTIResult = () => {
             type="MBTI"
           />
         </div>
+        
+        <div className="ad-container">
+          <AdBanner />
+        </div>
 
         <div className="result-card">
           <div className="mbti-result">
@@ -129,6 +134,10 @@ const MBTIResult = () => {
               {result.matches.work.description}
             </p>
           </div>
+        </div>
+
+        <div className="ad-container">
+          <AdBanner />
         </div>
 
         {isPremium && (

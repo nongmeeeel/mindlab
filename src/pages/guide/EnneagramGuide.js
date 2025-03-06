@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
+import AdBanner from '../../components/AdBanner';
 
 const EnneagramGuide = () => {
   return (
@@ -13,6 +14,10 @@ const EnneagramGuide = () => {
           <p>에니어그램은 고대 수피즘에서 유래한 인간 이해의 도구로, '9개의 그림'이라는 의미를 가지고 있습니다. 20세기 초 조지 거드지예프(George Gurdjieff)에 의해 서양에 소개되었고, 오스카 이차조(Oscar Ichazo)와 클라우디오 나란호(Claudio Naranjo)를 통해 현대적 성격유형 체계로 발전했습니다.</p>
           <p>현대의 에니어그램은 심리학, 영성, 기업 컨설팅 등 다양한 분야에서 활용되는 종합적인 인간 이해의 도구로 자리잡았습니다.</p>
         </section>
+
+        <div className="ad-container">
+          <AdBanner />
+        </div>
 
         <section>
           <h2>9가지 성격유형의 특징</h2>

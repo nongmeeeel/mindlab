@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
+import AdBanner from '../../components/AdBanner';
 
 const AttachmentGuide = () => {
   return (
@@ -12,6 +13,10 @@ const AttachmentGuide = () => {
           <h2>애착이론의 시작</h2>
           <p>애착이론은 영국의 정신분석학자 존 볼비(John Bowlby)에 의해 발전된 이론으로, 영유아기에 형성된 주 양육자와의 관계가 성인이 된 후의 대인관계에 미치는 영향을 설명합니다. 이후 메리 에인스워스(Mary Ainsworth)의 '낯선 상황 실험'을 통해 더욱 체계화되었으며, 현대 심리학의 핵심 이론 중 하나로 자리잡았습니다.</p>
         </section>
+
+        <div className="ad-container">
+          <AdBanner />
+        </div>
 
         <section>
           <h2>4가지 애착유형의 특징</h2>

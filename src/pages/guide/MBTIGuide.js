@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
+import AdBanner from '../../components/AdBanner';
 
 const MBTIGuide = () => {
   return (
@@ -13,6 +14,10 @@ const MBTIGuide = () => {
           <p>MBTI(Myers-Briggs Type Indicator)는 스위스의 정신분석학자 카를 융(Carl Jung)의 심리유형론을 기반으로, 캐서린 브릭스(Katherine Briggs)와 이사벨 마이어스(Isabel Myers)가 개발한 성격유형 지표입니다.</p>
           <p>1940년대에 개발이 시작되어 1960년대부터 본격적으로 사용되기 시작했으며, 현재는 전 세계적으로 가장 널리 활용되는 성격유형 검사 도구 중 하나로 자리잡았습니다. 특히 교육, 상담, 기업 등 다양한 분야에서 활발하게 활용되고 있습니다.</p>
         </section>
+
+        <div className="ad-container">
+          <AdBanner />
+        </div>
 
         <section>
           <h2>4가지 선호 경향의 이해</h2>
