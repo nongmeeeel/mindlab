@@ -47,14 +47,14 @@ const AttachmentResult = () => {
   return (
     <div className="result-page">
       <div id="result-container" className="result-container attachment-container">
-        <ActionButtons 
+        {/* <ActionButtons 
           position="top" 
           type="attachment"
           scores={scores}
           resultType={resultType}
           onPremiumPurchase={handlePremiumPurchase}
           isPremium={isPremium}
-        />
+        /> */}
 
         <div className="result-header">
           <h1>나의 애착유형은 ?</h1>
@@ -79,6 +79,15 @@ const AttachmentResult = () => {
             type="애착유형"
           />
         </div>
+
+        <ActionButtons 
+          position="top" 
+          type="attachment"
+          scores={scores}
+          resultType={resultType}
+          onPremiumPurchase={handlePremiumPurchase}
+          isPremium={isPremium}
+        />
 
         <AdBanner adSlot="3254771183" />
 

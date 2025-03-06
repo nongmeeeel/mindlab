@@ -998,15 +998,15 @@
 
 /* 상단 고정 버튼 */
 .action-buttons.fixed-top {
-  position: fixed;
-  top: 5px;
-  right: 10px;
+  /* position: fixed; */
   display: flex !important;
   flex-direction: row !important;
   gap: 6px;
   z-index: 1000;
   margin: 0;
-  max-width: calc(100% - 20px);
+  max-width: calc(100%);
+  justify-content: center; /* 가로 정렬 (가운데) */
+  align-items: center; /* 세로 정렬 (가운데) */
 }
 
 .action-buttons.fixed-top .action-button {
@@ -1067,9 +1067,8 @@
 @media (max-width: 768px) {
   .action-buttons.fixed-top {
     gap: 4px;
-    right: 50%;
-    transform: translateX(50%);
-    width: calc(100% - 20px);
+    /* transform: translateX(50%); */
+    width: calc(100%);
   }
   
   .action-buttons.fixed-top .action-button {

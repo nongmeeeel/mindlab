@@ -105,7 +105,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   return (
     <>
       <div className={className}>
-        {!isPremium ? (
+        {/* {!isPremium ? (
           <button 
             className="action-button premium-button"
             onClick={handlePremium}
@@ -123,7 +123,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
             <FaDownload size={14} />
             <span>결과저장</span>
           </button>
-        )}
+        )} */}
         
         <button 
           className="action-button share-button"
