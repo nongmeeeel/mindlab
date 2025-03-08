@@ -12,7 +12,6 @@ import {
 import { Radar } from 'react-chartjs-2';
 import { enneagramDetails } from '../../data/enneagram/detail';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import InterstitialAd from '../InterstitialAd';
 
 ChartJS.register(
   RadialLinearScale,
@@ -118,7 +117,6 @@ const EnneagramDetail = ({ scores, resultType }) => {
 
   return (
     <div className="premium-detail">
-      <InterstitialAd />
       <div className="premium-header">
         <FaCrown className="premium-icon" />
         <h3>프리미엄 상세 분석</h3>

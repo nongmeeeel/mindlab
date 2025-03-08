@@ -12,7 +12,6 @@ import {
 import annotationPlugin from 'chartjs-plugin-annotation';
 import { Bar } from 'react-chartjs-2';
 import { attachmentDetails } from '../../data/attachment/detail';
-import InterstitialAd from '../InterstitialAd';
 
 ChartJS.register(
   CategoryScale,
@@ -107,7 +106,6 @@ const AttachmentDetail = ({ scores, resultType }) => {
 
   return (
     <div className="premium-detail">
-      <InterstitialAd />
       <div className="premium-header">
         <FaCrown className="premium-icon" />
         <h3>프리미엄 상세 분석</h3>

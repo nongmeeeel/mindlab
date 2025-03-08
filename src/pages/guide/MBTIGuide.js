@@ -10,7 +10,7 @@ const MBTIGuide = () => {
       <div className="guide-container">
         <ActionButtons 
           position="top" 
-          type="attachment"
+          type="guide"
         />
         <h1>MBTI의 이해</h1>
 

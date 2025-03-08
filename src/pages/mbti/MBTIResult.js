@@ -7,13 +7,12 @@ import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import { logEvent } from '../../utils/analytics';
 import AdBanner from '../../components/AdBanner';
-import InterstitialAd from '../../components/InterstitialAd';
 const MBTIResult = () => {
   const location = useLocation();
   const { resultType, scores } = location.state || {};
   const result = mbtiDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isPremium, setIsPremium] = useState(false);
+  const [isPremium, setIsPremium] = useState(true);
 
   console.log('MBTIResult scores:', scores);
 
@@ -38,7 +37,6 @@ const MBTIResult = () => {
 
   return (
     <div className="result-page">
-      <InterstitialAd />
       <div id="result-container" className="result-container mbti-container">
         <ActionButtons 
           position="top" 

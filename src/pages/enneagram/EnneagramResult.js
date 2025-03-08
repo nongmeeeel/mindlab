@@ -7,13 +7,12 @@ import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import { logEvent } from '../../utils/analytics';
 import AdBanner from '../../components/AdBanner';
-import InterstitialAd from '../../components/InterstitialAd';
 const EnneagramResult = () => {
   const location = useLocation();
   const { resultType, scores } = location.state || {};
   const result = enneagramDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isPremium, setIsPremium] = useState(false);
+  const [isPremium, setIsPremium] = useState(true);
 
   console.log('EnneagramResult scores:', scores);
 
@@ -40,7 +39,6 @@ const EnneagramResult = () => {
 
   return (
     <div className="result-page">
-      <InterstitialAd />
       <div id="result-container" className="result-container enneagram-container">
         <ActionButtons 
           position="top" 
