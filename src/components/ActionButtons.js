@@ -108,7 +108,8 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   return (
     <>
       <div className={className}>
-          {!isPremium && type !== "guide"? (
+          {isPremium || type == "guide" ? null
+          : (
             <button 
               className="action-button premium-button"
               onClick={handlePremium}
@@ -117,7 +118,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
               <FaCrown size={14} />
               <span>무료 전체결과 확인</span>
             </button>
-          ) : null
+          )
           // (
           //   <button 
           //     className="action-button save-button"
