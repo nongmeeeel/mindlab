@@ -163,6 +163,8 @@ const EnneagramDetail = ({ scores, resultType }) => {
         </div>
       </div>
 
+      <AdBanner adSlot="2958525195"/>
+
       <div className="detail-section">
         <h4>세부 분석</h4>
         <div className="analysis-content">

@@ -246,6 +246,8 @@ const MBTIDetail = ({ scores, resultType }) => {
         </div>
       </div>
 
+      <AdBanner adSlot="3765412231"/>
+
       <div className="detail-section">
         <h4>세부 분석</h4>
         <div className="analysis-content">

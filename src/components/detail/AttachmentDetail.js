@@ -175,6 +175,8 @@ const AttachmentDetail = ({ scores, resultType }) => {
         </div>
       </div>
 
+      <AdBanner adSlot="1605049109"/>
+
       <div className="detail-section">
         <h4>세부 분석</h4>
         <div className="analysis-content">
