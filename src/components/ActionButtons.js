@@ -108,7 +108,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   return (
     <>
       <div className={className}>
-          {isPremium || type == "guide" ? null
+          {isPremium || type === "guide" ? null
           : (
             <button 
               className="action-button premium-button"

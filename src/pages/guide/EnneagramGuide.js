@@ -10,7 +10,7 @@ const EnneagramGuide = () => {
       <div className="guide-container">
         <ActionButtons 
           position="top" 
-          type="attachment"
+          type="guide"
         />
 
         <h1>에니어그램의 이해</h1>

@@ -10,7 +10,7 @@ const AttachmentGuide = () => {
       <div className="guide-container">
         <ActionButtons 
           position="top" 
-          type="attachment"
+          type="guide"
         />
 
         <h1>애착유형의 이해</h1>
