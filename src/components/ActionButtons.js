@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaShareAlt, FaHome, FaCrown, FaDownload, FaComments } from 'react-icons/fa';
-import html2canvas from 'html2canvas';
+import { FaShareAlt, FaHome, FaCrown, FaComments } from 'react-icons/fa';
+// import { FaDownload} from 'react-icons/fa';
+// import html2canvas from 'html2canvas';
 import Payment from './Payment';
 
 const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiumPurchase, isPremium }) => {
@@ -28,7 +29,9 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   };
 
   const handlePremium = () => {
-    setShowPayment(true);
+    onPremiumPurchase();
+    alert("전체 결과가 열렸습니다! 🎉");
+    // setShowPayment(true);
   };
 
   const handlePaymentSuccess = () => {
@@ -40,61 +43,61 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
     setShowPayment(false);
   };
 
-  const handleSaveResult = async () => {
-    const element = document.getElementById('result-container');
-    if (!element) return;
+  // const handleSaveResult = async () => {
+  //   const element = document.getElementById('result-container');
+  //   if (!element) return;
 
-    try {
-      // 버튼들을 임시로 숨김
-      const actionButtons = element.querySelectorAll('.action-buttons');
-      const imageActions = element.querySelectorAll('.image-actions');
-      [...actionButtons, ...imageActions].forEach(button => {
-        button.style.display = 'none';
-      });
+  //   try {
+  //     // 버튼들을 임시로 숨김
+  //     const actionButtons = element.querySelectorAll('.action-buttons');
+  //     const imageActions = element.querySelectorAll('.image-actions');
+  //     [...actionButtons, ...imageActions].forEach(button => {
+  //       button.style.display = 'none';
+  //     });
 
-      const canvas = await html2canvas(element, {
-        scale: 2,
-        useCORS: true,
-        logging: false,
-        allowTaint: true
-      });
+  //     const canvas = await html2canvas(element, {
+  //       scale: 2,
+  //       useCORS: true,
+  //       logging: false,
+  //       allowTaint: true
+  //     });
 
-      // 버튼들 다시 표시
-      [...actionButtons, ...imageActions].forEach(button => {
-        button.style.display = '';
-      });
+  //     // 버튼들 다시 표시
+  //     [...actionButtons, ...imageActions].forEach(button => {
+  //       button.style.display = '';
+  //     });
 
-      // 모바일 여부 확인
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  //     // 모바일 여부 확인
+  //     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       
-      if (isMobile && navigator.share) {
-        // 모바일에서는 공유 API 사용
-        canvas.toBlob(async (blob) => {
-          const file = new File([blob], `${type}_결과_${resultType}.png`, { type: 'image/png' });
-          try {
-            await navigator.share({
-              files: [file],
-              title: '결과 저장',
-            });
-          } catch (error) {
-            console.error('공유 실패:', error);
-            alert('이미지 저장에 실패했습니다.');
-          }
-        }, 'image/png');
-      } else {
-        // 데스크톱에서는 바로 다운로드
-        const link = document.createElement('a');
-        link.download = `${type}_결과_${resultType}.png`;
-        link.href = canvas.toDataURL('image/png');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-    } catch (error) {
-      console.error('저장 실패:', error);
-      alert('결과 저장에 실패했습니다.');
-    }
-  };
+  //     if (isMobile && navigator.share) {
+  //       // 모바일에서는 공유 API 사용
+  //       canvas.toBlob(async (blob) => {
+  //         const file = new File([blob], `${type}_결과_${resultType}.png`, { type: 'image/png' });
+  //         try {
+  //           await navigator.share({
+  //             files: [file],
+  //             title: '결과 저장',
+  //           });
+  //         } catch (error) {
+  //           console.error('공유 실패:', error);
+  //           alert('이미지 저장에 실패했습니다.');
+  //         }
+  //       }, 'image/png');
+  //     } else {
+  //       // 데스크톱에서는 바로 다운로드
+  //       const link = document.createElement('a');
+  //       link.download = `${type}_결과_${resultType}.png`;
+  //       link.href = canvas.toDataURL('image/png');
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       document.body.removeChild(link);
+  //     }
+  //   } catch (error) {
+  //     console.error('저장 실패:', error);
+  //     alert('결과 저장에 실패했습니다.');
+  //   }
+  // };
 
   const handleKakaoChat = () => {
     window.open('http://pf.kakao.com/_tHxlxbn/chat', '_blank');
@@ -105,8 +108,6 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   return (
     <>
       <div className={className}>
-      {false && (
-        <>
           {!isPremium ? (
             <button 
               className="action-button premium-button"
@@ -114,20 +115,20 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
               aria-label="전체 결과 확인"
             >
               <FaCrown size={14} />
-              <span>전체 결과 확인하기</span>
+              <span>무료 전체결과 확인</span>
             </button>
-          ) : (
-            <button 
-              className="action-button save-button"
-              onClick={handleSaveResult}
-              aria-label="결과저장"
-            >
-              <FaDownload size={14} />
-              <span>결과저장</span>
-            </button>
-          )}
-        </>
-        )}
+          ) : null
+          // (
+          //   <button 
+          //     className="action-button save-button"
+          //     onClick={handleSaveResult}
+          //     aria-label="결과저장"
+          //   >
+          //     <FaDownload size={14} />
+          //     <span>결과저장</span>
+          //   </button>
+          // )
+          }
         
         <button 
           className="action-button share-button"
@@ -147,14 +148,16 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
           <span>다른검사</span>
         </button>
 
-        <button 
-          className="action-button chat-button"
-          onClick={handleKakaoChat}
-          aria-label="문의 및 피드백"
-        >
-          <FaComments size={14} />
-          <span>문의 및 피드백</span>
-        </button>
+        {position !== "top" && (
+          <button 
+            className="action-button chat-button"
+            onClick={handleKakaoChat}
+            aria-label="문의 및 피드백"
+          >
+            <FaComments size={14} />
+            <span>문의 및 피드백</span>
+          </button>
+        )}
       </div>
 
       {showPayment && (

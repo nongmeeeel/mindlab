@@ -12,6 +12,7 @@ import annotationPlugin from 'chartjs-plugin-annotation';
 import { Bar } from 'react-chartjs-2';
 import { FaCrown } from 'react-icons/fa';
 import { mbtiDetails } from '../../data/mbti/detail';
+import InterstitialAd from '../InterstitialAd';
 
 ChartJS.register(
   CategoryScale,
@@ -179,6 +180,7 @@ const MBTIDetail = ({ scores, resultType }) => {
 
   return (
     <div className="premium-detail">
+      <InterstitialAd />
       <div className="premium-header">
         <FaCrown className="premium-icon" />
         <h3>프리미엄 상세 분석</h3>

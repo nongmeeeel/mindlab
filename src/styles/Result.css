@@ -1096,7 +1096,7 @@
   }
 
   .action-buttons.fixed-top .action-button span {
-    font-size: 9px;
+    font-size: 11px;
   }
 }
 
@@ -1593,7 +1593,7 @@
   }
 
   .result-container {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
 

@@ -36,10 +36,10 @@ const ImageActions = ({ image, title, type }) => {
       <button 
         className="image-action-button"
         onClick={handleShare}
-        aria-label="이미지 공유 및 저장"
+        aria-label="내 결과 이미지 공유"
       >
         <FaShareAlt size={16} />
-        <span>이미지 공유 및 저장</span>
+        <span>내 결과 이미지 공유</span>
       </button>
     </div>
   );

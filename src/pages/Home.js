@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { FaBrain, FaUserCircle, FaHeart, FaBook } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
-import AdBanner from '../components/AdBanner';
+// import AdBanner from '../components/AdBanner';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -86,7 +86,7 @@ const Home = () => {
           </button> */}
         </div>
         
-        <AdBanner adSlot="5402691877" />
+        {/* <AdBanner adSlot="5402691877" /> */}
 
         <div className="test-backgrounds">
           <h2>검사 이론 배경</h2>

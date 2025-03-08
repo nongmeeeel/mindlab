@@ -7,13 +7,14 @@ import ImageActions from '../../components/ImageActions';
 import ActionButtons from '../../components/ActionButtons';
 import { logEvent } from '../../utils/analytics';
 import AdBanner from '../../components/AdBanner';
+import InterstitialAd from '../../components/InterstitialAd';
 
 const AttachmentResult = () => {
   const location = useLocation();
   const { resultType, scores } = location.state || {};
   const result = attachmentDescriptions[resultType];
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [isPremium, setIsPremium] = useState(true);
+  const [isPremium, setIsPremium] = useState(false);
 
   console.log('AttachmentResult scores:', scores);
 
@@ -46,6 +47,7 @@ const AttachmentResult = () => {
 
   return (
     <div className="result-page">
+      <InterstitialAd />
       <div id="result-container" className="result-container attachment-container">
         <ActionButtons 
           position="top" 
