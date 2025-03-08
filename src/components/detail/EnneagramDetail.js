@@ -12,6 +12,7 @@ import {
 import { Radar } from 'react-chartjs-2';
 import { enneagramDetails } from '../../data/enneagram/detail';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import AdBanner from '../AdBanner';
 
 ChartJS.register(
   RadialLinearScale,

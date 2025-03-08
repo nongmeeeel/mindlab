@@ -12,6 +12,7 @@ import annotationPlugin from 'chartjs-plugin-annotation';
 import { Bar } from 'react-chartjs-2';
 import { FaCrown } from 'react-icons/fa';
 import { mbtiDetails } from '../../data/mbti/detail';
+import AdBanner from '../AdBanner';
 
 ChartJS.register(
   CategoryScale,
