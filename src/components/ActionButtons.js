@@ -30,6 +30,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
 
   const handlePremium = () => {
     onPremiumPurchase();
+    handleShowAd();
     alert("전체 결과가 열렸습니다! 🎉");
     // setShowPayment(true);
   };
@@ -41,6 +42,16 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
 
   const handlePaymentCancel = () => {
     setShowPayment(false);
+  };
+
+  const handleShowAd = () => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({
+        overlays: { interstitials: true } 
+      });
+    } catch (error) {
+      console.error('AdSense 전면 광고 로드 실패:', error);
+    }
   };
 
   // const handleSaveResult = async () => {
