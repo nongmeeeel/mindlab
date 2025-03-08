@@ -179,6 +179,7 @@ const MBTIDetail = ({ scores, resultType }) => {
   };
 
   return (
+    <>
     <div className="premium-detail">
       <div className="premium-header">
         <FaCrown className="premium-icon" />
@@ -246,9 +247,11 @@ const MBTIDetail = ({ scores, resultType }) => {
           </div>
         </div>
       </div>
+    </div>
 
-      <AdBanner adSlot="3765412231"/>
+    <AdBanner adSlot="3765412231"/>
 
+    <div className="premium-detail">
       <div className="detail-section">
         <h4>세부 분석</h4>
         <div className="analysis-content">
@@ -286,6 +289,7 @@ const MBTIDetail = ({ scores, resultType }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

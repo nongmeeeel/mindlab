@@ -117,6 +117,7 @@ const EnneagramDetail = ({ scores, resultType }) => {
   };
 
   return (
+    <>
     <div className="premium-detail">
       <div className="premium-header">
         <FaCrown className="premium-icon" />
@@ -163,9 +164,11 @@ const EnneagramDetail = ({ scores, resultType }) => {
           </div>
         </div>
       </div>
+    </div>
 
-      <AdBanner adSlot="2958525195"/>
+    <AdBanner adSlot="2958525195"/>
 
+    <div className="premium-detail">
       <div className="detail-section">
         <h4>세부 분석</h4>
         <div className="analysis-content">
@@ -203,6 +206,7 @@ const EnneagramDetail = ({ scores, resultType }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
