@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { FaBrain, FaUserCircle, FaHeart, FaBook, FaDumbbell } from 'react-icons/fa';
+import { FaBrain, FaUserCircle, FaHeart, FaBook } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
 import AdBanner from '../components/AdBanner';
@@ -30,20 +30,7 @@ const Home = () => {
         </p>
 
         <div className="test-buttons">
-          <button 
-            onClick={() => handleTestStart('egenTeto')} 
-            className="test-button mbti"
-          >
-            <div className="button-icon">
-              <FaDumbbell />
-            </div>
-            <div className="button-text">
-              <h2>에겐vs테토 성향 테스트</h2>
-              <p>나는 에겐..? 테토..?</p>
-            </div>
-          </button>
-
-          <button 
+          <button
             onClick={() => handleTestStart('mbti')} 
             className="test-button mbti"
           >
