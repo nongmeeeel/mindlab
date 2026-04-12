@@ -30,6 +30,7 @@ import { logPageView } from './utils/analytics';
 import StaticMBTIResult from './components/static/StaticMBTIResult';
 import StaticEnneagramResult from './components/static/StaticEnneagramResult';
 import StaticAttachmentResult from './components/static/StaticAttachmentResult';
+import EgenTetoTest from './pages/egenTeto/EgenTetoTest';
 
 function App() {
   const location = useLocation();
@@ -47,6 +48,7 @@ function App() {
         <Route path="/test/mbti" element={<MBTITest />} />
         <Route path="/test/enneagram" element={<EnneagramTest />} />
         <Route path="/test/attachment" element={<AttachmentTest />} />
+        <Route path="/test/egenTeto" element={<EgenTetoTest />} />
         <Route path="/test/newYearWish" element={<NewYearWish />} />
         
         {/* 결과 페이지 라우트 */}

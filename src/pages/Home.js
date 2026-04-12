@@ -31,6 +31,19 @@ const Home = () => {
 
         <div className="test-buttons">
           <button 
+            onClick={() => handleTestStart('egenTeto')} 
+            className="test-button mbti"
+          >
+            <div className="button-icon">
+              <FaDumbbell />
+            </div>
+            <div className="button-text">
+              <h2>에겐vs테토 성향 테스트</h2>
+              <p>나는 에겐..? 테토..?</p>
+            </div>
+          </button>
+
+          <button 
             onClick={() => handleTestStart('mbti')} 
             className="test-button mbti"
           >
