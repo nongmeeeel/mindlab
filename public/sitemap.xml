@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 메인 페이지 -->
   <url>
-    <loc>https://mind-lab-test.com</loc>
+    <loc>https://mindlab.indigolabz.com</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,7 +10,7 @@
   
   <!-- MBTI 테스트 -->
   <url>
-    <loc>https://mind-lab-test.com/test/mbti</loc>
+    <loc>https://mindlab.indigolabz.com/test/mbti</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -18,7 +18,7 @@
   
   <!-- 에니어그램 테스트 -->
   <url>
-    <loc>https://mind-lab-test.com/test/enneagram</loc>
+    <loc>https://mindlab.indigolabz.com/test/enneagram</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -26,7 +26,7 @@
   
   <!-- 애착유형 테스트 -->
   <url>
-    <loc>https://mind-lab-test.com/test/attachment</loc>
+    <loc>https://mindlab.indigolabz.com/test/attachment</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -34,97 +34,97 @@
   
   <!-- MBTI 정적 결과 페이지 -->
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/INTJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/INTJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/INTP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/INTP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/INFJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/INFJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/INFP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/INFP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ISTJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ISTJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ISTP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ISTP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ISFJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ISFJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ISFP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ISFP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ENTJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ENTJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ENTP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ENTP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ENFJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ENFJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ENFP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ENFP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ESTJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ESTJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ESTP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ESTP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ESFJ</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ESFJ</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/mbti/ESFP</loc>
+    <loc>https://mindlab.indigolabz.com/static/mbti/ESFP</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -132,55 +132,55 @@
 
   <!-- 에니어그램 정적 결과 페이지 -->
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/1</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/1</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/2</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/2</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/3</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/3</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/4</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/4</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/5</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/5</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/6</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/6</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/7</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/7</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/8</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/8</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/enneagram/9</loc>
+    <loc>https://mindlab.indigolabz.com/static/enneagram/9</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -188,25 +188,25 @@
 
   <!-- 애착유형 정적 결과 페이지 -->
   <url>
-    <loc>https://mind-lab-test.com/static/attachment/secure</loc>
+    <loc>https://mindlab.indigolabz.com/static/attachment/secure</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/attachment/anxious</loc>
+    <loc>https://mindlab.indigolabz.com/static/attachment/anxious</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/attachment/avoidant</loc>
+    <loc>https://mindlab.indigolabz.com/static/attachment/avoidant</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/static/attachment/disorganized</loc>
+    <loc>https://mindlab.indigolabz.com/static/attachment/disorganized</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -214,19 +214,19 @@
 
   <!-- 가이드 페이지 -->
   <url>
-    <loc>https://mind-lab-test.com/guide/mbti</loc>
+    <loc>https://mindlab.indigolabz.com/guide/mbti</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/guide/enneagram</loc>
+    <loc>https://mindlab.indigolabz.com/guide/enneagram</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/guide/attachment</loc>
+    <loc>https://mindlab.indigolabz.com/guide/attachment</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -234,13 +234,13 @@
 
   <!-- 법적 페이지 -->
   <url>
-    <loc>https://mind-lab-test.com/privacy</loc>
+    <loc>https://mindlab.indigolabz.com/privacy</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mind-lab-test.com/terms</loc>
+    <loc>https://mindlab.indigolabz.com/terms</loc>
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
