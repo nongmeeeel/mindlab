@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { FaBrain, FaUserCircle, FaHeart, FaBook } from 'react-icons/fa';
+import { FaBrain, FaUserCircle, FaHeart, FaBook, FaDumbbell } from 'react-icons/fa';
 import '../styles/Home.css';
 import { logEvent } from '../utils/analytics';
 import AdBanner from '../components/AdBanner';
