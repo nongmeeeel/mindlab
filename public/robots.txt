@@ -21,4 +21,4 @@ Allow: /gtm/
 Disallow: /result/
 
 # Sitemap
-Sitemap: https://mindlab.indigolabz.com/sitemap.xml
+Sitemap: https://indigolabz.com/sitemap.xml
