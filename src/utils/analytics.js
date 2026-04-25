@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga4';
 
 // Google Analytics 초기화
-ReactGA.initialize('G-RWT3HDG5ZK');  // 새로운 측정 ID 적용
+ReactGA.initialize('G-JJ7J4MNF17');
 
 // 페이지뷰 추적
 export const logPageView = () => {
