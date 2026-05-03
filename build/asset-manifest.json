@@ -1,13 +1,43 @@
 {
   "files": {
-    "main.css": "/static/css/main.19355cde.css",
-    "main.js": "/static/js/main.2a7e6217.js",
+    "main.css": "/static/css/main.e238cb9f.css",
+    "main.js": "/static/js/main.2b0d2e38.js",
+    "static/media/fortune-color.png": "/static/media/fortune-color.e573c2de66b8fb954353.png",
+    "static/media/ISTJ.jpg": "/static/media/ISTJ.19bfa1ca48042c0faffa.jpg",
+    "static/media/ESTP.jpg": "/static/media/ESTP.3ce46dda9a3628600895.jpg",
+    "static/media/INTJ.jpg": "/static/media/INTJ.f6ce4935150379c3322e.jpg",
+    "static/media/INFP.jpg": "/static/media/INFP.c0fcc5018ff13bd96ed3.jpg",
+    "static/media/ENFP.jpg": "/static/media/ENFP.2351b548503dad18f174.jpg",
+    "static/media/ESFP.jpg": "/static/media/ESFP.178644cafb1e316709c0.jpg",
+    "static/media/Disorganized.jpg": "/static/media/Disorganized.f49b6bad6b1370f77e28.jpg",
+    "static/media/ISFP.jpg": "/static/media/ISFP.966321789939701f5d76.jpg",
+    "static/media/type3.jpg": "/static/media/type3.9a895a6625a216525fb8.jpg",
+    "static/media/ESTJ.jpg": "/static/media/ESTJ.5830ed0facadbc4dbf9e.jpg",
+    "static/media/type9.jpg": "/static/media/type9.62ed11d026e866053f69.jpg",
+    "static/media/ENTJ.jpg": "/static/media/ENTJ.2377b65f5a848f654827.jpg",
+    "static/media/Secure.jpg": "/static/media/Secure.199fc24a2d3eb2bac0c0.jpg",
+    "static/media/INFJ.jpg": "/static/media/INFJ.23634d298b077f89f4c3.jpg",
+    "static/media/INTP.jpg": "/static/media/INTP.9a97727034440fb6a1de.jpg",
+    "static/media/ENFJ.jpg": "/static/media/ENFJ.e48163c810b2ec013710.jpg",
+    "static/media/type8.jpg": "/static/media/type8.aa1a9c2e3d9743b32b75.jpg",
+    "static/media/ISTP.jpg": "/static/media/ISTP.c9036aac587da9872a89.jpg",
+    "static/media/ENTP.jpg": "/static/media/ENTP.f64b8e219c60c430785d.jpg",
+    "static/media/type5.jpg": "/static/media/type5.6f654720bffa07d012d1.jpg",
+    "static/media/Anxious.jpg": "/static/media/Anxious.58234dd31730e2d3f01d.jpg",
+    "static/media/ESFJ.jpg": "/static/media/ESFJ.dd246e6d19e2bdb57f19.jpg",
+    "static/media/type4.jpg": "/static/media/type4.126db0ad4130746ebc29.jpg",
+    "static/media/ISFJ.jpg": "/static/media/ISFJ.aa2bfc006274cefb0471.jpg",
+    "static/media/type1.jpg": "/static/media/type1.e61b0b4c2cace9935de9.jpg",
+    "static/media/Avoidant.jpg": "/static/media/Avoidant.f3edd60ed879eeb06cab.jpg",
+    "static/media/type6.jpg": "/static/media/type6.db1be85db09b9b7001b3.jpg",
+    "static/media/type7.jpg": "/static/media/type7.472e063f428feaef8847.jpg",
+    "static/media/type2.jpg": "/static/media/type2.ac87a6ff3bb9797ad755.jpg",
     "index.html": "/index.html",
-    "main.19355cde.css.map": "/static/css/main.19355cde.css.map",
-    "main.2a7e6217.js.map": "/static/js/main.2a7e6217.js.map"
+    "main.e238cb9f.css.map": "/static/css/main.e238cb9f.css.map",
+    "main.2b0d2e38.js.map": "/static/js/main.2b0d2e38.js.map"
   },
   "entrypoints": [
-    "static/css/main.19355cde.css",
-    "static/js/main.2a7e6217.js"
+    "static/css/main.e238cb9f.css",
+    "static/js/main.2b0d2e38.js"
   ]
 }

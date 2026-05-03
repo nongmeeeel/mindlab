@@ -23,6 +23,7 @@ import AttachmentGuide from './pages/guide/AttachmentGuide';
 import './styles/App.css';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import About from './pages/About';
 import Footer from './components/Footer';
 import { logPageView } from './utils/analytics';
 
@@ -64,6 +65,7 @@ function App() {
         {/* 기타 페이지 라우트 */}
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/about" element={<About />} />
 
         {/* MBTI 정적 결과 페이지 라우트 */}
         <Route path="/static/mbti/INTJ" element={<StaticMBTIResult resultType="INTJ" />} />
