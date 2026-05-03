@@ -232,6 +232,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- 소개 페이지 -->
+  <url>
+    <loc>https://indigolabz.com/about</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- 법적 페이지 -->
   <url>
     <loc>https://indigolabz.com/privacy</loc>
