@@ -5,10 +5,10 @@
     <link rel="icon" href="%PUBLIC_URL%/assets/images/logo-favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    
+
     <!-- 기본 SEO 메타 태그 -->
-    <meta name="description" content="마인드랩 - MBTI, 에니어그램, 애착유형 등 다양한 심리 검사를 무료로 제공합니다." />
-    <meta name="keywords" content="MBTI, 에니어그램, 애착유형, 심리검사, 성격유형" />
+    <meta name="description" content="마인드랩 - MBTI, 에니어그램, 애착유형 등 다양한 심리 검사를 무료로 제공합니다. 회원가입 없이 바로 검사하고 나의 성격 유형을 알아보세요." />
+    <meta name="keywords" content="MBTI, 에니어그램, 애착유형, 심리검사, 성격유형, MBTI테스트, 무료심리검사, INTJ, INFP, ENFP, 에니어그램검사" />
     <meta name="author" content="마인드랩" />
 
     <!-- Open Graph 메타 태그 (페이스북, 카카오톡 등) -->
@@ -29,7 +29,36 @@
     <title>마인드랩 심리 테스트 - MBTI/에니어그램/애착유형</title>
     <meta name="naver-site-verification" content="c0aa4208a5c1bf6c2ea6901ea0e812e8ea49f2c7" />
     <meta name="google-site-verification" content="3Mjcs7bM_iUle9KfeWqQpZ-ocNyE8Xf5Xnv-ivj2_Ww" />
-    
+
+    <!-- 구조화 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "마인드랩",
+      "url": "https://indigolabz.com",
+      "description": "MBTI, 에니어그램, 애착유형 심리 검사를 무료로 제공하는 서비스입니다.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://indigolabz.com/guide/mbti",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "마인드랩",
+      "url": "https://indigolabz.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "yong8master@gmail.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2285464317468764"
      crossorigin="anonymous"></script>
@@ -43,7 +72,150 @@
     </script>
   </head>
   <body>
-    <noscript>이 앱을 실행하기 위해서는 자바스크립트를 활성화해야 합니다.</noscript>
-    <div id="root"></div> 
+    <noscript>
+      <style>
+        .ns-container { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .ns-container h1 { color: #333; }
+        .ns-container h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top: 24px; }
+        .ns-container ul { padding-left: 20px; line-height: 2; }
+        .ns-container a { color: #667eea; }
+        .ns-notice { background: #fff3cd; border: 1px solid #ffc107; padding: 12px; border-radius: 4px; margin-bottom: 20px; }
+      </style>
+      <div class="ns-container">
+        <p class="ns-notice">이 페이지는 자바스크립트가 필요합니다. 자바스크립트를 활성화하면 더 나은 경험을 이용할 수 있습니다.</p>
+        <h1>마인드랩 심리 검사 — MBTI · 에니어그램 · 애착유형</h1>
+        <p>회원가입 없이 무료로 진행하는 심리 검사 서비스입니다.</p>
+        <h2>심리 검사 바로가기</h2>
+        <ul>
+          <li><a href="/test/mbti">MBTI 성격유형 검사</a></li>
+          <li><a href="/test/enneagram">에니어그램 검사</a></li>
+          <li><a href="/test/attachment">애착유형 검사</a></li>
+        </ul>
+        <h2>이론 배경 가이드</h2>
+        <ul>
+          <li><a href="/guide/mbti">MBTI 이론 배경</a></li>
+          <li><a href="/guide/enneagram">에니어그램 이론 배경</a></li>
+          <li><a href="/guide/attachment">애착유형 이론 배경</a></li>
+        </ul>
+        <h2>MBTI 유형별 상세 설명</h2>
+        <ul>
+          <li><a href="/static/mbti/INTJ">INTJ — 용의주도한 전략가</a></li>
+          <li><a href="/static/mbti/INTP">INTP — 논리적인 사색가</a></li>
+          <li><a href="/static/mbti/INFJ">INFJ — 선의의 옹호자</a></li>
+          <li><a href="/static/mbti/INFP">INFP — 열정적인 중재자</a></li>
+          <li><a href="/static/mbti/ISTJ">ISTJ — 청렴결백한 논리주의자</a></li>
+          <li><a href="/static/mbti/ISTP">ISTP — 만능 재주꾼</a></li>
+          <li><a href="/static/mbti/ISFJ">ISFJ — 용감한 수호자</a></li>
+          <li><a href="/static/mbti/ISFP">ISFP — 호기심 많은 예술가</a></li>
+          <li><a href="/static/mbti/ENTJ">ENTJ — 대담한 통솔자</a></li>
+          <li><a href="/static/mbti/ENTP">ENTP — 논쟁을 즐기는 변론가</a></li>
+          <li><a href="/static/mbti/ENFJ">ENFJ — 정의로운 사회운동가</a></li>
+          <li><a href="/static/mbti/ENFP">ENFP — 재기발랄한 활동가</a></li>
+          <li><a href="/static/mbti/ESTJ">ESTJ — 엄격한 관리자</a></li>
+          <li><a href="/static/mbti/ESTP">ESTP — 모험을 즐기는 사업가</a></li>
+          <li><a href="/static/mbti/ESFJ">ESFJ — 사교적인 외교관</a></li>
+          <li><a href="/static/mbti/ESFP">ESFP — 자유로운 영혼의 연예인</a></li>
+        </ul>
+        <h2>기타</h2>
+        <ul>
+          <li><a href="/about">마인드랩 소개</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
+        </ul>
+      </div>
+    </noscript>
+    <div id="root">
+      <!--
+        아래 정적 HTML은 자바스크립트 로딩 전 검색엔진이 읽는 콘텐츠입니다.
+        React가 마운트되면 이 내용은 앱으로 교체됩니다.
+      -->
+      <main style="font-family:sans-serif;max-width:860px;margin:0 auto;padding:20px 16px;color:#333">
+        <header>
+          <h1 style="font-size:1.6rem;color:#2d2d2d">마인드랩 심리 검사 — MBTI · 에니어그램 · 애착유형</h1>
+          <p>회원가입 없이 무료로 진행하는 심리 검사 서비스입니다. MBTI 성격유형 검사, 에니어그램 검사, 애착유형 검사를 통해 나의 성격과 관계 패턴을 이해해보세요.</p>
+        </header>
+
+        <nav style="margin:16px 0">
+          <a href="/test/mbti" style="margin-right:16px;color:#667eea">MBTI 검사</a>
+          <a href="/test/enneagram" style="margin-right:16px;color:#667eea">에니어그램 검사</a>
+          <a href="/test/attachment" style="margin-right:16px;color:#667eea">애착유형 검사</a>
+          <a href="/about" style="color:#667eea">서비스 소개</a>
+        </nav>
+
+        <section>
+          <h2 style="font-size:1.2rem;border-bottom:1px solid #eee;padding-bottom:6px">MBTI 성격유형 검사</h2>
+          <p>MBTI(Myers-Briggs Type Indicator)는 카를 융(Carl Jung)의 심리유형론을 기반으로 개발된 성격 분류 도구입니다. 외향(E)/내향(I), 감각(S)/직관(N), 사고(T)/감정(F), 판단(J)/인식(P)의 네 가지 차원으로 16가지 성격 유형을 분류합니다.</p>
+          <p>한국에서는 소개팅, 직장, 친구 관계 전반에 걸쳐 MBTI가 자기소개의 일부가 됐을 만큼 널리 쓰이고 있습니다. 마인드랩의 MBTI 검사는 이론적 배경에 충실하면서도 한국어로 이해하기 쉽게 제작됐습니다.</p>
+          <p><a href="/test/mbti" style="color:#667eea">▶ MBTI 검사 바로가기</a> | <a href="/guide/mbti" style="color:#667eea">MBTI 이론 배경 읽기</a></p>
+          <h3 style="font-size:1rem;margin-top:12px">MBTI 16가지 유형 상세 설명</h3>
+          <ul style="column-count:2;column-gap:16px;padding-left:20px;line-height:2">
+            <li><a href="/static/mbti/INTJ" style="color:#667eea">INTJ — 용의주도한 전략가</a></li>
+            <li><a href="/static/mbti/INTP" style="color:#667eea">INTP — 논리적인 사색가</a></li>
+            <li><a href="/static/mbti/INFJ" style="color:#667eea">INFJ — 선의의 옹호자</a></li>
+            <li><a href="/static/mbti/INFP" style="color:#667eea">INFP — 열정적인 중재자</a></li>
+            <li><a href="/static/mbti/ISTJ" style="color:#667eea">ISTJ — 청렴결백한 논리주의자</a></li>
+            <li><a href="/static/mbti/ISTP" style="color:#667eea">ISTP — 만능 재주꾼</a></li>
+            <li><a href="/static/mbti/ISFJ" style="color:#667eea">ISFJ — 용감한 수호자</a></li>
+            <li><a href="/static/mbti/ISFP" style="color:#667eea">ISFP — 호기심 많은 예술가</a></li>
+            <li><a href="/static/mbti/ENTJ" style="color:#667eea">ENTJ — 대담한 통솔자</a></li>
+            <li><a href="/static/mbti/ENTP" style="color:#667eea">ENTP — 논쟁을 즐기는 변론가</a></li>
+            <li><a href="/static/mbti/ENFJ" style="color:#667eea">ENFJ — 정의로운 사회운동가</a></li>
+            <li><a href="/static/mbti/ENFP" style="color:#667eea">ENFP — 재기발랄한 활동가</a></li>
+            <li><a href="/static/mbti/ESTJ" style="color:#667eea">ESTJ — 엄격한 관리자</a></li>
+            <li><a href="/static/mbti/ESTP" style="color:#667eea">ESTP — 모험을 즐기는 사업가</a></li>
+            <li><a href="/static/mbti/ESFJ" style="color:#667eea">ESFJ — 사교적인 외교관</a></li>
+            <li><a href="/static/mbti/ESFP" style="color:#667eea">ESFP — 자유로운 영혼의 연예인</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="font-size:1.2rem;border-bottom:1px solid #eee;padding-bottom:6px">에니어그램 검사</h2>
+          <p>에니어그램은 인간의 성격을 9가지 유형으로 분류하는 심리 체계입니다. MBTI가 행동 방식을 보여준다면, 에니어그램은 그 행동의 근본 동기, 기본 두려움과 욕구를 탐색합니다. 오스카 이차조(Oscar Ichazo)와 클라우디오 나란호(Claudio Naranjo)가 현대적 심리학 틀로 발전시킨 이후 전 세계적으로 활용되고 있습니다.</p>
+          <p><a href="/test/enneagram" style="color:#667eea">▶ 에니어그램 검사 바로가기</a> | <a href="/guide/enneagram" style="color:#667eea">에니어그램 이론 배경 읽기</a></p>
+          <h3 style="font-size:1rem;margin-top:12px">에니어그램 9가지 유형 상세 설명</h3>
+          <ul style="padding-left:20px;line-height:2">
+            <li><a href="/static/enneagram/1" style="color:#667eea">1번 유형 — 개혁가 (The Reformer)</a></li>
+            <li><a href="/static/enneagram/2" style="color:#667eea">2번 유형 — 조력가 (The Helper)</a></li>
+            <li><a href="/static/enneagram/3" style="color:#667eea">3번 유형 — 성취자 (The Achiever)</a></li>
+            <li><a href="/static/enneagram/4" style="color:#667eea">4번 유형 — 개인주의자 (The Individualist)</a></li>
+            <li><a href="/static/enneagram/5" style="color:#667eea">5번 유형 — 탐구자 (The Investigator)</a></li>
+            <li><a href="/static/enneagram/6" style="color:#667eea">6번 유형 — 충실한 사람 (The Loyalist)</a></li>
+            <li><a href="/static/enneagram/7" style="color:#667eea">7번 유형 — 열정가 (The Enthusiast)</a></li>
+            <li><a href="/static/enneagram/8" style="color:#667eea">8번 유형 — 도전자 (The Challenger)</a></li>
+            <li><a href="/static/enneagram/9" style="color:#667eea">9번 유형 — 화평가 (The Peacemaker)</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="font-size:1.2rem;border-bottom:1px solid #eee;padding-bottom:6px">애착유형 검사</h2>
+          <p>애착유형(Attachment Style)은 영국의 정신분석학자 존 볼비(John Bowlby)의 애착이론을 기반으로, 성인이 연인 및 대인관계에서 보이는 패턴을 분류하는 검사입니다. 메리 에인스워스(Mary Ainsworth)가 유아 애착을 유형화한 연구가 성인 관계 연구로 확장됐습니다. 안정형, 불안형, 회피형, 혼란형 4가지로 나뉩니다.</p>
+          <p><a href="/test/attachment" style="color:#667eea">▶ 애착유형 검사 바로가기</a> | <a href="/guide/attachment" style="color:#667eea">애착유형 이론 배경 읽기</a></p>
+          <h3 style="font-size:1rem;margin-top:12px">애착유형 4가지 유형 상세 설명</h3>
+          <ul style="padding-left:20px;line-height:2">
+            <li><a href="/static/attachment/secure" style="color:#667eea">안정형 (Secure) — 편안하고 신뢰하는 관계</a></li>
+            <li><a href="/static/attachment/anxious" style="color:#667eea">불안형 (Anxious) — 관계에 집착하고 걱정하는 패턴</a></li>
+            <li><a href="/static/attachment/avoidant" style="color:#667eea">회피형 (Avoidant) — 친밀감을 불편해하는 패턴</a></li>
+            <li><a href="/static/attachment/disorganized" style="color:#667eea">혼란형 (Disorganized) — 관계에서 일관성 없는 패턴</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="font-size:1.2rem;border-bottom:1px solid #eee;padding-bottom:6px">심리 검사 이론 배경 가이드</h2>
+          <p>각 검사의 학술적 배경, 역사, 올바른 활용법을 정리했습니다.</p>
+          <ul style="padding-left:20px;line-height:2">
+            <li><a href="/guide/mbti" style="color:#667eea">MBTI 이론 배경 — 융의 심리유형론부터 한국 MBTI 문화까지</a></li>
+            <li><a href="/guide/enneagram" style="color:#667eea">에니어그램 이론 배경 — 고대 수피즘에서 현대 심리학으로</a></li>
+            <li><a href="/guide/attachment" style="color:#667eea">애착유형 이론 배경 — 볼비와 에인스워스의 애착 연구</a></li>
+          </ul>
+        </section>
+
+        <footer style="margin-top:32px;padding-top:16px;border-top:1px solid #eee;font-size:0.85rem;color:#888">
+          <a href="/about" style="color:#667eea;margin-right:16px">마인드랩 소개</a>
+          <a href="/privacy" style="color:#667eea;margin-right:16px">개인정보처리방침</a>
+          <a href="/terms" style="color:#667eea">이용약관</a>
+          <p style="margin-top:8px">© 2025 마인드랩. 본 서비스는 심리학 전문 기관이 운영하는 서비스가 아닙니다.</p>
+        </footer>
+      </main>
+    </div>
   </body>
-</html> 
+</html>

@@ -55,7 +55,7 @@ const About = () => {
             <Link to="/guide/enneagram" style={{color: '#667eea', marginRight: '20px'}}>에니어그램 이론 배경 →</Link>
             <Link to="/guide/attachment" style={{color: '#667eea'}}>애착유형 이론 배경 →</Link>
           </p>
-          <p style={{fontSize: '0.85rem', color: '#aaa', marginTop: '30px'}}>마지막 업데이트: 2025년 3월 | 본 서비스는 심리학 전문 기관이 운영하는 서비스가 아닙니다.</p>
+          <p style={{fontSize: '0.85rem', color: '#aaa', marginTop: '30px'}}>마지막 업데이트: 2026년 5월 | 본 서비스는 심리학 전문 기관이 운영하는 서비스가 아닙니다.</p>
         </section>
       </div>
     </div>
