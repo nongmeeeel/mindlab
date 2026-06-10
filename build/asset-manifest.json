@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e238cb9f.css",
-    "main.js": "/static/js/main.2c408246.js",
+    "main.js": "/static/js/main.12daaa97.js",
     "static/media/fortune-color.png": "/static/media/fortune-color.e573c2de66b8fb954353.png",
     "static/media/ISTJ.jpg": "/static/media/ISTJ.19bfa1ca48042c0faffa.jpg",
     "static/media/ESTP.jpg": "/static/media/ESTP.3ce46dda9a3628600895.jpg",
@@ -34,10 +34,10 @@
     "static/media/type2.jpg": "/static/media/type2.ac87a6ff3bb9797ad755.jpg",
     "index.html": "/index.html",
     "main.e238cb9f.css.map": "/static/css/main.e238cb9f.css.map",
-    "main.2c408246.js.map": "/static/js/main.2c408246.js.map"
+    "main.12daaa97.js.map": "/static/js/main.12daaa97.js.map"
   },
   "entrypoints": [
     "static/css/main.e238cb9f.css",
-    "static/js/main.2c408246.js"
+    "static/js/main.12daaa97.js"
   ]
 }

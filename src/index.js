@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import ReactGA from 'react-ga4';
 import './index.css';
 import App from './App';
 
-// GA4 초기화
-ReactGA.initialize('G-XXXXXXXXXX');
+// GA4 초기화는 src/utils/analytics.js 단일 소스에서 수행한다.
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
