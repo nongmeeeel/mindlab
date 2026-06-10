@@ -4,12 +4,14 @@ import { FaShareAlt, FaHome, FaCrown, FaComments } from 'react-icons/fa';
 // import { FaDownload} from 'react-icons/fa';
 // import html2canvas from 'html2canvas';
 import Payment from './Payment';
+import { logEvent } from '../utils/analytics';
 
 const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiumPurchase, isPremium }) => {
   const navigate = useNavigate();
   const [showPayment, setShowPayment] = useState(false);
   
   const handleShare = async () => {
+    logEvent('share', { test_type: type, result_type: resultType });
     const shareUrl = window.location.origin;
 
     if (navigator.share) {
@@ -29,6 +31,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   };
 
   const handlePremium = () => {
+    logEvent('unlock_full_result', { test_type: type, result_type: resultType });
     onPremiumPurchase();
     alert("전체 결과가 열렸습니다! 🎉");
     // setShowPayment(true);
@@ -100,6 +103,7 @@ const ActionButtons = ({ position = 'bottom', type, scores, resultType, onPremiu
   // };
 
   const handleKakaoChat = () => {
+    logEvent('contact_kakao', { test_type: type });
     window.open('http://pf.kakao.com/_tHxlxbn/chat', '_blank');
   };
 

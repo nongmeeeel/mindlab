@@ -18,11 +18,7 @@ const MBTIResult = () => {
 
   useEffect(() => {
     if (resultType) {
-      logEvent(
-        'test_complete',
-        'result_view',
-        `mbti_${resultType}`
-      );
+      logEvent('test_complete', { test_type: 'mbti', result_type: resultType });
     }
   }, [resultType]);
 

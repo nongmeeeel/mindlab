@@ -19,11 +19,7 @@ const AttachmentResult = () => {
 
   useEffect(() => {
     if (resultType) {
-      logEvent(
-        'test_complete',
-        'result_view',
-        `attachment_${resultType}`
-      );
+      logEvent('test_complete', { test_type: 'attachment', result_type: resultType });
     }
   }, [resultType]);
 

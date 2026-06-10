@@ -12,13 +12,10 @@ export const logPageView = () => {
   ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 };
 
-// 이벤트 추적
-export const logEvent = (category, action, label) => {
-  ReactGA.event({
-    category: category,
-    action: action,
-    label: label
-  });
+// 이벤트 추적 (GA4 네이티브: 이벤트 이름 + 파라미터)
+// 예) logEvent('test_start', { test_type: 'mbti' })
+export const logEvent = (name, params = {}) => {
+  ReactGA.event(name, params);
 };
 
 // 사용자 속성 설정

@@ -18,11 +18,7 @@ const EnneagramResult = () => {
 
   useEffect(() => {
     if (resultType) {
-      logEvent(
-        'test_complete',
-        'result_view',
-        `enneagram_type${resultType}`
-      );
+      logEvent('test_complete', { test_type: 'enneagram', result_type: resultType });
     }
   }, [resultType]);
 

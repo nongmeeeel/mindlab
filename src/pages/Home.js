@@ -11,11 +11,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleTestStart = (testType) => {
-    logEvent(
-      'test_start',  // category
-      'click',       // action
-      testType       // label
-    );
+    logEvent('test_start', { test_type: testType });
     navigate(`/test/${testType}`);
   };
 
