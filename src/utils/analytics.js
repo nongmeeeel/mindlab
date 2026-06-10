@@ -13,9 +13,11 @@ export const logPageView = () => {
 };
 
 // 이벤트 추적 (GA4 네이티브: 이벤트 이름 + 파라미터)
-// 예) logEvent('test_start', { test_type: 'mbti' })
+// 우리가 만든 커스텀 이벤트는 GA4 기본/자동 이벤트와 구분되도록 'c_' 접두사를 붙인다.
+// (보고서에서 c_* 로 필터하면 우리 이벤트만 볼 수 있음). page_view 등 표준 이벤트는 제외.
+// 예) logEvent('test_start', { test_type: 'mbti' })  ->  GA4 이벤트명 'c_test_start'
 export const logEvent = (name, params = {}) => {
-  ReactGA.event(name, params);
+  ReactGA.event(`c_${name}`, params);
 };
 
 // 사용자 속성 설정
