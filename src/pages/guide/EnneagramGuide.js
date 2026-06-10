@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
 import AdBanner from '../../components/AdBanner';
@@ -7,6 +8,11 @@ import ActionButtons from '../../components/ActionButtons';
 const EnneagramGuide = () => {
   return (
     <div className="guide-page">
+      <Helmet>
+        <title>에니어그램이란? 9가지 유형과 장·가슴·머리 중심 정리 | 마인드랩</title>
+        <meta name="description" content="에니어그램의 역사와 9가지 성격유형, 장 중심·가슴 중심·머리 중심 분류, 건강한 상태와 불건강한 상태를 정리했습니다. MBTI와의 차이도 함께 알아보세요." />
+        <link rel="canonical" href="https://indigolabz.com/guide/enneagram" />
+      </Helmet>
       <div className="guide-container">
         <ActionButtons
           position="top"

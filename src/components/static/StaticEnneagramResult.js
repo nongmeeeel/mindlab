@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { enneagramDescriptions } from '../../data/enneagram/results';
 import EnneagramDetail from '../detail/EnneagramDetail';
 import '../../styles/Result.css';
@@ -31,8 +32,19 @@ const StaticEnneagramResult = ({ resultType }) => {
     setIsPremium(true);
   };
 
+  const canonicalUrl = `https://indigolabz.com/static/enneagram/${resultType}`;
+  const metaDescription = `에니어그램 ${result.title}(${result.subtitle})의 성격 특징과 강점·약점, 건강한 상태와 불건강한 상태를 알아보세요. ${result.description}`.slice(0, 155);
+
   return (
     <div className="result-page">
+      <Helmet>
+        <title>{`에니어그램 ${result.title} - ${result.subtitle} | 마인드랩`}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`에니어그램 ${result.title} - ${result.subtitle}`} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+      </Helmet>
       <div id="result-container" className="result-container enneagram-container">
         <ActionButtons 
           position="top" 

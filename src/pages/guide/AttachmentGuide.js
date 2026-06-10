@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
 import AdBanner from '../../components/AdBanner';
@@ -7,6 +8,11 @@ import ActionButtons from '../../components/ActionButtons';
 const AttachmentGuide = () => {
   return (
     <div className="guide-page">
+      <Helmet>
+        <title>애착유형이란? 볼비의 애착이론과 4가지 유형 정리 | 마인드랩</title>
+        <meta name="description" content="존 볼비와 에인스워스의 애착이론, 안정형·불안형·회피형·혼란형 4가지 성인 애착유형의 특징과 연애 관계 패턴을 정리했습니다." />
+        <link rel="canonical" href="https://indigolabz.com/guide/attachment" />
+      </Helmet>
       <div className="guide-container">
         <ActionButtons
           position="top"

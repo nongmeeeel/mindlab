@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { attachmentDescriptions } from '../../data/attachment/results';
 import AttachmentDetail from '../detail/AttachmentDetail';
 import '../../styles/Result.css';
@@ -6,11 +7,7 @@ import ImageActions from '../ImageActions';
 import ActionButtons from '../ActionButtons';
 
 const StaticAttachmentResult = ({ resultType }) => {
-  console.log('type:', resultType);
-  console.log('available types:', Object.keys(attachmentDescriptions));
-  
   const result = attachmentDescriptions[resultType];
-  console.log('result:', result);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isPremium, setIsPremium] = useState(true);
 
@@ -34,8 +31,19 @@ const StaticAttachmentResult = ({ resultType }) => {
     setIsPremium(true);
   };
 
+  const canonicalUrl = `https://indigolabz.com/static/attachment/${resultType}`;
+  const metaDescription = `${result.title}(${result.subtitle})의 대인관계 특성과 애착 형성 과정을 알아보세요. ${result.relationships}`.slice(0, 155);
+
   return (
     <div className="result-page">
+      <Helmet>
+        <title>{`${result.title} - ${result.subtitle} | 마인드랩`}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`${result.title} - ${result.subtitle}`} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+      </Helmet>
       <div id="result-container" className="result-container attachment-container">
         <ActionButtons 
           position="top" 

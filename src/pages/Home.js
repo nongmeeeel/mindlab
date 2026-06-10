@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaBrain, FaUserCircle, FaHeart, FaBook } from 'react-icons/fa';
 import '../styles/Home.css';
@@ -20,6 +21,11 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <Helmet>
+        <title>마인드랩 - 무료 MBTI·에니어그램·애착유형 심리 검사</title>
+        <meta name="description" content="회원가입 없이 바로 하는 무료 심리 검사. MBTI 성격유형, 에니어그램 9유형, 애착유형 검사로 나를 입체적으로 이해해보세요." />
+        <link rel="canonical" href="https://indigolabz.com/" />
+      </Helmet>
       <div className="home-content">
         <div className="header-section">
           <h1>마인드랩 심리 검사</h1>

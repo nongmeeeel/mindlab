@@ -1,10 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import '../styles/Guide.css';
 import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <div className="guide-page">
+      <Helmet>
+        <title>마인드랩 소개 - 무료 심리검사 서비스 | 마인드랩</title>
+        <meta name="description" content="마인드랩은 회원가입 없이 MBTI·에니어그램·애착유형 검사를 무료로 제공합니다. 서비스를 만든 이유와 운영 철학, 검사 활용법을 소개합니다." />
+        <link rel="canonical" href="https://indigolabz.com/about" />
+      </Helmet>
       <div className="guide-container">
         <h1>마인드랩 소개</h1>
 

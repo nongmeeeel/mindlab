@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import '../../styles/Guide.css';
 import { Link } from 'react-router-dom';
 import AdBanner from '../../components/AdBanner';
@@ -7,6 +8,11 @@ import ActionButtons from '../../components/ActionButtons';
 const MBTIGuide = () => {
   return (
     <div className="guide-page">
+      <Helmet>
+        <title>MBTI란? 융의 심리유형론과 16가지 성격유형 정리 | 마인드랩</title>
+        <meta name="description" content="MBTI의 역사와 4가지 선호 경향(E/I, S/N, T/F, J/P), 16가지 성격유형의 특징을 정리했습니다. 카를 융의 심리유형론에서 출발한 MBTI의 이론적 배경을 알아보세요." />
+        <link rel="canonical" href="https://indigolabz.com/guide/mbti" />
+      </Helmet>
       <div className="guide-container">
         <ActionButtons
           position="top"

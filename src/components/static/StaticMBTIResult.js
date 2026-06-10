@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { mbtiDescriptions } from '../../data/mbti/results';
 import MBTIDetail from '../detail/MBTIDetail';
 import '../../styles/Result.css';
@@ -26,8 +27,19 @@ const StaticMBTIResult = ({ resultType }) => {
     setIsPremium(true);
   };
 
+  const canonicalUrl = `https://indigolabz.com/static/mbti/${resultType}`;
+  const metaDescription = `${resultType} 유형(${result.subtitle})의 성격 특징과 강점·약점, 연애 궁합과 직업 궁합을 알아보세요. ${result.description}`.slice(0, 155);
+
   return (
     <div className="result-page">
+      <Helmet>
+        <title>{`${resultType} 유형 특징 - ${result.subtitle} | 마인드랩`}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`${resultType} 유형 특징 - ${result.subtitle}`} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+      </Helmet>
       <div id="result-container" className="result-container mbti-container">
         <ActionButtons 
           position="top" 
